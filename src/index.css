@@ -1,0 +1,35 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap'); */
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Questrial", sans-serif;
+}
+
+.questrial-regular {
+  font-family: "Questrial", sans-serif;
+  font-weight: 400;
+  font-style: normal; 
+}
+
+
+
+
+.getstarted-section{
+    overflow: hidden !important;
+}
+.testimonials-section{
+    overflow: hidden !important;
+}
+
+
+
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+  .hero-section {
+    margin-left: 1px !important;
+    /* padding: 0 1.5rem !important; */
+  }
+}
