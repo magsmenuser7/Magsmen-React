@@ -1,5 +1,5 @@
 {
-  "homepage": "https://github.com/magsmenuser7/Magsmen-React/",
+  "homepage":"",
   "name": "vite-react-typescript-starter",
   "private": true,
   "version": "0.0.0",
@@ -7,13 +7,11 @@
   "scripts": {
     "start": "react-scripts start",
     "dev": "vite",
-    "build": "vite build && npm run copy404",
-    "build:dev": "vite build --mode development && npm run copy404",
-    "copy404": "node -e \"require('fs').copyFileSync('dist/index.html', 'dist/404.html')\"",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.7",
@@ -34,7 +32,6 @@
     "eslint": "^9.9.1",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.11",
-    "gh-pages": "^6.3.0",
     "globals": "^15.9.0",
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
