@@ -66,7 +66,7 @@ import thebrandjourneyguidingstartupsfromideatoiconic from '/assets/blogs/the-br
 import bannerone from "/assets/banners/banner-one1.png";
 import bannertwo from "/assets/banners/banner-two.png";
 import bannerfive from "/assets/banners/banner-five.jpeg";
-import bannersix from "/assets/banners/banner-six.jpeg";
+// import bannersix from "/assets/banners/banner-six.jpeg";
 import bannerseven from "/assets/banners/banner-seven.jpeg";
 import { image } from 'framer-motion/client';
 
