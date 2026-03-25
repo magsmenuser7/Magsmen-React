@@ -45,7 +45,7 @@ import MagsmenStrategicProposal from './pages/MagsmenStrategicProposal';
 import SorvetIceCreamBrandPositioningAndMarketEntryStrategy from './pages/SorvetIceCreamBrandPositioningAndMarketEntryStrategy';
 import ZohoForm from './pages/ZohoForm';
 import SkinAffair from './pages/SkinAffair';
-
+import TdhContentCalendarApril from './pages/TdhContentCalenderApril';
 
 
 
@@ -122,7 +122,7 @@ function App() {
           <Route path="/sorvet-ice-cream-brand-positioning-and-market-entry-strategy" element={<SorvetIceCreamBrandPositioningAndMarketEntryStrategy />} />
           <Route path="/sri-padmavati-mahila-visvavidyalayam-trupati-audit-form" element={<ZohoForm />} />
           <Route path="/skin-affair" element={<SkinAffair />} />
-
+          <Route path="/tdh-content-calendar-april-2026" element={<TdhContentCalendarApril />} />
 
 
 
