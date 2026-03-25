@@ -459,7 +459,7 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.7 }}
             >
-              A good logo is nice.
+              A good logo is nice.<br />
  {" "} A smart strategy is better.
 
               {/* <AnimatePresence>
