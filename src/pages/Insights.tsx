@@ -66,6 +66,11 @@ import howtobuildyourbrandin30days from '/assets/blogs/magsmen-blog-image_49vQ2c
 // import elevatingyourbrand from 'public/assets/blogs/elevatingyourbrand.png'
 
 import chess from '/assets/blogs/chess.png'
+import ricebrandingproblem from "/assets/blogs/rice-branding-problem.jpg"
+import edibleoilbrandstrategyindia from "/assets/blogs/edible-oil-brands.jpg"
+import fashionjewlleryinindia from "/assets/blogs/Fashion-Jewellery-in-India.jpg"
+import indiandairybrands from "/assets/blogs/indian-diary-brands.jpg"
+import packagedwaterindustry from "/assets/blogs/packaged-water-industry.jpg"
 
 
 const POSTS_PER_PAGE = 6;
@@ -860,6 +865,72 @@ const blogPosts = [
       // image: 'https://images.pexels.com/photos/4110404/pexels-photo-4110404.jpeg',
       slug: 'rebranding-your-business-in-30-days-with-magsmen-proven-strategies',
       imageUrl:howtobuildyourbrandin30days
+    },
+    {
+      id: 62,
+      title: 'Why Most Edible Oil Brands in India Will Never Escape the Price War',
+      excerpt: 'Discover why Indian edible oil brands struggle with differentiation and how strategic brand building can move your business from commodity pricing to category leadership.',
+      category: 'Branding',
+      author: { name: 'Magsmen', avatar: '/assets/avatar/magsmen.png' },
+      date: '2024-10-15',
+      publishedAt: '2026-03-30',
+      readTime: '12:39pm',
+      // image: 'https://images.pexels.com/photos/4110404/pexels-photo-4110404.jpeg',
+      slug: 'edible-oil-brand-strategy-india',
+      imageUrl: edibleoilbrandstrategyindia
+    },
+    {
+      id: 63,
+      title: 'The Rice Branding Problem: Why a Commodity Mindset Is Costing Indian Rice Companies Crores',
+      excerpt: 'India is the world\'s largest rice exporter, yet most domestic rice brands lack strategic positioning. Learn how brand strategy transforms rice businesses from commodity sellers to market leaders.',
+      category: 'Branding',
+      author: { name: 'Magsmen', avatar: '/assets/avatar/magsmen.png' },
+      date: '2024-10-15',
+      publishedAt: '2026-03-30',
+      readTime: '1:39pm',
+      // image: 'https://images.pexels.com/photos/4110404/pexels-photo-4110404.jpeg',
+      slug: 'rice-brand-strategy-india',
+      imageUrl:ricebrandingproblem
+    },
+    {
+      id: 64,
+      title: 'Fashion Jewellery in India: The Category That Grew Without a Brand Strategy',
+      excerpt: 'India\'s fashion jewellery market is exploding, but most brands are invisible. Learn how brand strategy transforms jewellery businesses from sellers into symbols of identity and aspiration.',
+      category: 'Branding',
+      author: { name: 'Magsmen', avatar: '/assets/avatar/magsmen.png' },
+      date: '2024-10-15',
+      publishedAt: '2026-03-30',
+      readTime: '2:39pm',
+      // image: 'https://images.pexels.com/photos/4110404/pexels-photo-4110404.jpeg',
+      slug: 'fashion-jewellery-brand-strategy-india',
+      imageUrl:fashionjewlleryinindia
+    },
+    {
+      id: 65,
+      title: 'Indian Dairy Brands Are Sitting on a Goldmine They Refuse to Mine',
+      excerpt: 'India is the world\'s largest milk producer, but most dairy brands lack strategic positioning. Discover how brand consulting transforms dairy businesses from procurement operations into market leaders.',
+      category: 'Branding',
+      author: { name: 'Magsmen', avatar: '/assets/avatar/magsmen.png' },
+      date: '2024-10-15',
+      publishedAt: '2026-03-30',
+      readTime: '3:39pm',
+      // image: 'https://images.pexels.com/photos/4110404/pexels-photo-4110404.jpeg',
+      slug: 'dairy-brand-strategy-india',
+      imageUrl:indiandairybrands
+    },
+
+    {
+      id: 66,
+      title: 'The Packaged Water Industry Has a Brand Problem Worth Billions',
+      excerpt: 'India\'s packaged water market is growing fast, but most brands are invisible to consumers. Learn how strategic brand positioning creates lasting competitive advantage in the water industry.',
+      category: 'Branding',
+      author: { name: 'Magsmen', avatar: '/assets/avatar/magsmen.png' },
+      date: '2024-10-15',
+      publishedAt: '2026-03-30',
+      readTime: '3:39pm',
+      // image: 'https://images.pexels.com/photos/4110404/pexels-photo-4110404.jpeg',
+      slug: 'packaged-water-brand-strategy-india',
+      imageUrl:packagedwaterindustry
     }
   ];
 
@@ -884,7 +955,7 @@ const paginatedPosts = allPostsExceptFeatured.slice(
 
 const hasNextPage = endIndex < allPostsExceptFeatured.length;
 const hasPrevPage = currentPage > 1;
-
+const sortedPosts = [...blogPosts].reverse();
 
   
 

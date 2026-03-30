@@ -107,7 +107,11 @@ import xxxvideo from "/assets/works/triplex-video.mp4"
 import vsbvideo from "/assets/works/vsbgroup.mp4"
 import zavainevideo from "/assets/works/zavaine-video.mp4"
 
-
+import ricebrandingproblem from "/assets/blogs/rice-branding-problem.jpg"
+import edibleoilbrandstrategyindia from "/assets/blogs/edible-oil-brands.jpg"
+import fashionjewlleryinindia from "/assets/blogs/Fashion-Jewellery-in-India.jpg"
+import indiandairybrands from "/assets/blogs/indian-diary-brands.jpg"
+import packagedwaterindustry from "/assets/blogs/packaged-water-industry.jpg"
 
 
 
@@ -348,22 +352,22 @@ const Home = () => {
 
   const blogs = [
     {
-      title: 'Hyper-Personalization: Crafting Brand Experiences That Speak to Gen Z’s Individuality',
-      slug: 'crafting-brand-experiences-that-speak-to-gen-zs-individuality',
-      description: "Gen Z demands more than just generic ads they seek personalization and authenticity in every brand interaction. To connect with this audience, brands must deliver hyper-personalized experiences that cater to their unique preferences and values. Here's how to do it.",
-      imageUrl: hyperpersonalizationcraftingbrandexperiences
+      title: 'The Packaged Water Industry Has a Brand Problem Worth Billions',
+      slug: 'packaged-water-brand-strategy-india',
+      description: "India's packaged water market is growing fast, but most brands are invisible to consumers. Learn how strategic brand positioning creates lasting competitive advantage in the water industry.",
+      imageUrl: packagedwaterindustry
     },
     {
-      title: 'The Future of Branding: Trends Shaping the Next Decade',
-      slug: 'the-future-of-branding-trends-shaping-the-next-decade',
-      description: 'In the world of branding, what resonates with consumers is evolving quickly. To thrive, brands must not only keep up with these shifts but set the pace for what’s next. At Magsmen Brand Consultants, we’re diving into the top trends set to define branding in the coming decade.',
-      imageUrl: thefutureofbrandingtrendsshapingthenextdecade
+      title: 'Indian Dairy Brands Are Sitting on a Goldmine They Refuse to Mine',
+      slug: 'dairy-brand-strategy-india',
+      description: 'India is the world\'s largest milk producer, but most dairy brands lack strategic positioning. Discover how brand consulting transforms dairy businesses from procurement operations into market leaders.',
+      imageUrl: indiandairybrands
     },
     {
-      title: 'The Brand Journey: Guiding Startups from Idea to Iconic',
-      slug: 'the-brand-journey-guiding-startups-from-idea-to-iconic',
-      description: 'Building an iconic brand doesn’t just happen overnight. It’s a journey that takes a clear purpose, creative consistency, and the right strategy to grow into something people truly recognize and trust.',
-      imageUrl: thebrandjourneyguidingstartupsfromideatoiconic
+      title: 'Fashion Jewellery in India: The Category That Grew Without a Brand Strategy',
+      slug: 'fashion-jewellery-brand-strategy-india',
+      description: 'India\'s fashion jewellery market is exploding, but most brands are invisible. Learn how brand strategy transforms jewellery businesses from sellers into symbols of identity and aspiration.',
+      imageUrl: fashionjewlleryinindia
     }
   ];
 
@@ -1266,7 +1270,7 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
             {blogs.map((blog) => (
               <div key={blog.slug} className="bg-white  shadow-lg overflow-hidden">
-                <img src={blog.imageUrl} alt={blog.title} className="w-full h-48 object-contain" />
+                <img src={blog.imageUrl} alt={blog.title} className="w-full h-48 object-cover" />
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-3 line-clamp-2">{blog.title}</h3>
                   <p className="text-gray-600 mb-4 line-clamp-2">{blog.description}</p>
