@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, Clock } from 'lucide-react';
-import { BlogPost } from '../pages/BlogPosts';
+import { BlogPost } from '../pages/blogPosts';
 
 interface RelatedArticlesProps {
   posts: BlogPost[];
