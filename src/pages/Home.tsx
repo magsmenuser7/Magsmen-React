@@ -352,22 +352,22 @@ const Home = () => {
 
   const blogs = [
     {
-      title: 'The Packaged Water Industry Has a Brand Problem Worth Billions',
-      slug: 'packaged-water-brand-strategy-india',
-      description: "India's packaged water market is growing fast, but most brands are invisible to consumers. Learn how strategic brand positioning creates lasting competitive advantage in the water industry.",
-      imageUrl: packagedwaterindustry
+      title: 'The Rice Branding Problem: Why a Commodity Mindset Is Costing Indian Rice Companies Crores',
+      slug: 'rice-brand-strategy-india',
+      description: "India is the world's largest rice exporter, yet most domestic rice brands lack strategic positioning. Learn how brand strategy transforms rice businesses from commodity sellers to market leaders.",
+      imageUrl: ricebrandingproblem
     },
     {
-      title: 'Indian Dairy Brands Are Sitting on a Goldmine They Refuse to Mine',
-      slug: 'dairy-brand-strategy-india',
-      description: 'India is the world\'s largest milk producer, but most dairy brands lack strategic positioning. Discover how brand consulting transforms dairy businesses from procurement operations into market leaders.',
-      imageUrl: indiandairybrands
+      title: 'Why Most Edible Oil Brands in India Will Never Escape the Price War',
+      slug: 'edible-oil-brand-strategy-india',
+      description: 'Discover why Indian edible oil brands struggle with differentiation and how strategic brand building can move your business from commodity pricing to category leadership.',
+      imageUrl: edibleoilbrandstrategyindia
     },
     {
-      title: 'Fashion Jewellery in India: The Category That Grew Without a Brand Strategy',
-      slug: 'fashion-jewellery-brand-strategy-india',
-      description: 'India\'s fashion jewellery market is exploding, but most brands are invisible. Learn how brand strategy transforms jewellery businesses from sellers into symbols of identity and aspiration.',
-      imageUrl: fashionjewlleryinindia
+      title: 'Hyper-Personalization: Crafting Brand Experiences That Speak to Gen Z\'s Individuality',
+      slug: 'crafting-brand-experiences-that-speak-to-gen-zs-individuality',
+      description: 'Gen Z demands more than just generic ads—they seek personalization and authenticity in every brand interaction. To connect with this audience, brands must deliver hyper-personalized experiences that cater to their unique preferences and values. Here\'s how to do it.',
+      imageUrl: hyperpersonalizationcraftingbrandexperiences
     }
   ];
 
@@ -1265,7 +1265,7 @@ const Home = () => {
       {/* Blogs Section */}
       <section className="py-20 bg-gray-100">
         <div className="container mx-auto px-12">
-          <h2 className="text-3xl font-bold md:text-6xl text-left mb-12">Insights & Blogs</h2>
+          <h2 className="text-3xl font-bold md:text-6xl text-left mb-12">Blogs</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
             {blogs.map((blog) => (

@@ -886,76 +886,78 @@ const blogPosts = [
       category: 'Branding',
       author: { name: 'Magsmen', avatar: '/assets/avatar/magsmen.png' },
       date: '2024-10-15',
-      publishedAt: '2026-03-30',
-      readTime: '1:39pm',
+      publishedAt: '2026-03-31',
+      readTime: '12:00pm',
       // image: 'https://images.pexels.com/photos/4110404/pexels-photo-4110404.jpeg',
       slug: 'rice-brand-strategy-india',
       imageUrl:ricebrandingproblem
-    },
-    {
-      id: 64,
-      title: 'Fashion Jewellery in India: The Category That Grew Without a Brand Strategy',
-      excerpt: 'India\'s fashion jewellery market is exploding, but most brands are invisible. Learn how brand strategy transforms jewellery businesses from sellers into symbols of identity and aspiration.',
-      category: 'Branding',
-      author: { name: 'Magsmen', avatar: '/assets/avatar/magsmen.png' },
-      date: '2024-10-15',
-      publishedAt: '2026-03-30',
-      readTime: '2:39pm',
-      // image: 'https://images.pexels.com/photos/4110404/pexels-photo-4110404.jpeg',
-      slug: 'fashion-jewellery-brand-strategy-india',
-      imageUrl:fashionjewlleryinindia
-    },
-    {
-      id: 65,
-      title: 'Indian Dairy Brands Are Sitting on a Goldmine They Refuse to Mine',
-      excerpt: 'India is the world\'s largest milk producer, but most dairy brands lack strategic positioning. Discover how brand consulting transforms dairy businesses from procurement operations into market leaders.',
-      category: 'Branding',
-      author: { name: 'Magsmen', avatar: '/assets/avatar/magsmen.png' },
-      date: '2024-10-15',
-      publishedAt: '2026-03-30',
-      readTime: '3:39pm',
-      // image: 'https://images.pexels.com/photos/4110404/pexels-photo-4110404.jpeg',
-      slug: 'dairy-brand-strategy-india',
-      imageUrl:indiandairybrands
-    },
-
-    {
-      id: 66,
-      title: 'The Packaged Water Industry Has a Brand Problem Worth Billions',
-      excerpt: 'India\'s packaged water market is growing fast, but most brands are invisible to consumers. Learn how strategic brand positioning creates lasting competitive advantage in the water industry.',
-      category: 'Branding',
-      author: { name: 'Magsmen', avatar: '/assets/avatar/magsmen.png' },
-      date: '2024-10-15',
-      publishedAt: '2026-03-30',
-      readTime: '3:39pm',
-      // image: 'https://images.pexels.com/photos/4110404/pexels-photo-4110404.jpeg',
-      slug: 'packaged-water-brand-strategy-india',
-      imageUrl:packagedwaterindustry
     }
+    // {
+    //   id: 64,
+    //   title: 'Fashion Jewellery in India: The Category That Grew Without a Brand Strategy',
+    //   excerpt: 'India\'s fashion jewellery market is exploding, but most brands are invisible. Learn how brand strategy transforms jewellery businesses from sellers into symbols of identity and aspiration.',
+    //   category: 'Branding',
+    //   author: { name: 'Magsmen', avatar: '/assets/avatar/magsmen.png' },
+    //   date: '2024-10-15',
+    //   publishedAt: '2026-03-30',
+    //   readTime: '2:39pm',
+     
+    //   slug: 'fashion-jewellery-brand-strategy-india',
+    //   imageUrl:fashionjewlleryinindia
+    // },
+    // {
+    //   id: 65,
+    //   title: 'Indian Dairy Brands Are Sitting on a Goldmine They Refuse to Mine',
+    //   excerpt: 'India is the world\'s largest milk producer, but most dairy brands lack strategic positioning. Discover how brand consulting transforms dairy businesses from procurement operations into market leaders.',
+    //   category: 'Branding',
+    //   author: { name: 'Magsmen', avatar: '/assets/avatar/magsmen.png' },
+    //   date: '2024-10-15',
+    //   publishedAt: '2026-03-30',
+    //   readTime: '3:39pm',
+      
+    //   slug: 'dairy-brand-strategy-india',
+    //   imageUrl:indiandairybrands
+    // },
+
+    // {
+    //   id: 66,
+    //   title: 'The Packaged Water Industry Has a Brand Problem Worth Billions',
+    //   excerpt: 'India\'s packaged water market is growing fast, but most brands are invisible to consumers. Learn how strategic brand positioning creates lasting competitive advantage in the water industry.',
+    //   category: 'Branding',
+    //   author: { name: 'Magsmen', avatar: '/assets/avatar/magsmen.png' },
+    //   date: '2024-10-15',
+    //   publishedAt: '2026-03-30',
+    //   readTime: '3:39pm',
+      
+    //   slug: 'packaged-water-brand-strategy-india',
+    //   imageUrl:packagedwaterindustry
+    // }
   ];
 
 
 const Insights: React.FC = () => {
-  const featuredPost = blogPosts[0];
-  const latestPosts = blogPosts.slice(1);
-  const [searchParams] = useSearchParams();
+  // Step 1: Sort first (latest first)
+const sortedPosts = [...blogPosts].sort(
+  (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+);
+
+// Step 2: Extract featured post from sorted list
+const featuredPost = sortedPosts[0];
+
+// Step 3: Remove featured post
+const allPostsExceptFeatured = sortedPosts.slice(1);
+
+// Pagination
+const [searchParams] = useSearchParams();
 const currentPage = Number(searchParams.get("page")) || 1;
 
 const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
 const endIndex = startIndex + POSTS_PER_PAGE;
 
-// const paginatedPosts = blogPosts.slice(startIndex, endIndex);
-// const hasNextPage = endIndex < blogPosts.length;
-const allPostsExceptFeatured = blogPosts.slice(1);
-
-const paginatedPosts = allPostsExceptFeatured.slice(
-  startIndex,
-  endIndex
-);
+const paginatedPosts = allPostsExceptFeatured.slice(startIndex, endIndex);
 
 const hasNextPage = endIndex < allPostsExceptFeatured.length;
 const hasPrevPage = currentPage > 1;
-const sortedPosts = [...blogPosts].reverse();
 
   
 
@@ -968,19 +970,7 @@ const sortedPosts = [...blogPosts].reverse();
           <h1 className="text-2xl md:text-6xl leading-tight md:leading-none mb-4 ">
             <span className="text-black"> Strategic insights and actionable advice to help modern businesses build <span className='text-4xl md:text-6xl font-bold'> ICONIC BRANDS.</span></span>
           </h1>
-          {/* <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Strategic insights, case studies, and actionable advice to help modern businesses build iconic brands.
-          </p> */}
-          {/* <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input 
-              type="email" 
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-300"
-            />
-            <button className="px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors">
-              Join Email Audit
-            </button>
-          </div> */}
+          
         </div>
       </header>
 
@@ -1021,11 +1011,7 @@ const sortedPosts = [...blogPosts].reverse();
                 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
-                    {/* <img 
-                      src={featuredPost.author.avatar} 
-                      alt={featuredPost.author.name}
-                      className="w-10 h-10 rounded-full mr-3"
-                    /> */}
+                    
                     <div>
                       <div className="font-medium text-gray-900">{featuredPost.author.name}</div>
                       <div className="text-sm text-gray-500">{featuredPost.publishedAt}</div>
@@ -1085,11 +1071,7 @@ const sortedPosts = [...blogPosts].reverse();
                   
                   <div className="flex items-center justify-between text-sm text-gray-500">
                     <div className="flex items-center">
-                      {/* <img 
-                        src={post.author.avatar} 
-                        alt={post.author.name}
-                        className="w-6 h-6 rounded-full mr-2"
-                      /> */}
+                      
                       <span>{post.author.name}</span>
                     </div>
                     

@@ -24,7 +24,7 @@ const navigation = [
     ],
   },
   { name: "Case Studies", href: "/case-studies" },
-  { name: "Insights", href: "/insights" },
+  { name: "Blogs", href: "/blogs" },
   { name: "Media", href: "/media" },
   { name: "Careers", href: "/careers" },
   { name: "Partner With Us", href: "/partner-with-us" },

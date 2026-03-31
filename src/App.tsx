@@ -8,7 +8,7 @@ import Expertise from './pages/Expertise';
 import CaseStudies from './pages/CaseStudies';
 import CaseStudyDetail from './pages/CaseStudyDetail';
 import BrandAudit from './pages/BrandAudit';
-import Insights from './pages/Insights';
+import Insights from './pages/Blogs';
 import Careers from './pages/Careers';
 import PartnerWithUs from './pages/PartnerWithUs';
 import Contact from './pages/Contact';
@@ -46,7 +46,7 @@ import SorvetIceCreamBrandPositioningAndMarketEntryStrategy from './pages/Sorvet
 import ZohoForm from './pages/ZohoForm';
 import SkinAffair from './pages/SkinAffair';
 import TdhContentCalendarApril from './pages/TdhContentCalenderApril';
-
+import Blogs from './pages/Blogs';
 
 
 
@@ -81,7 +81,7 @@ function App() {
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/case-studies/:slug" element={<CaseStudyDetail />} />
             <Route path="/brand-audit" element={<BrandAudit />} />
-            <Route path="/insights" element={<Insights />} />
+            <Route path="/blogs" element={<Blogs />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/partner-with-us" element={<PartnerWithUs />} />
             <Route path="/contact" element={<Contact />} />

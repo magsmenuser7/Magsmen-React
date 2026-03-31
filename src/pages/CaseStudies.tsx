@@ -160,10 +160,10 @@ const CaseStudies = () => {
       {/* Hero Section */}
 
       {/* Case Studies Grid */}
-      <section className="bg-white md:py-24 py-10">
+      <section className="bg-white md:py-52 py-10">
         <div className='max-w-7xl px-4 sm:px-6 lg:px-8 mb-0 mx-auto '>
           <div className='flex md:flex-row justify-around mx-auto md:gap-24 gap-5 items-center mt-6 flex-col'>
-            <h1 className='text-black text-8xl font-bold'>Works <br /> <span className='text-8xl font-thin'></span></h1>
+            <h1 className='text-black text-4xl md:text-8xl font-bold'>Works <br /> <span className='text-8xl font-thin'></span></h1>
            <p className='max-w-2xl'>Each project represents a strategic challenge solved through insight, clarity, and execution. Our work spans brand creation, transformation, and growth built to deliver relevance, consistency, and long term impact.</p>
           </div>
         </div>
