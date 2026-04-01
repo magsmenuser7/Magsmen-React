@@ -47,7 +47,7 @@ import ZohoForm from './pages/ZohoForm';
 import SkinAffair from './pages/SkinAffair';
 import TdhContentCalendarApril from './pages/TdhContentCalenderApril';
 import Blogs from './pages/Blogs';
-
+import Stature from './pages/Stature';
 
 
 
@@ -123,6 +123,8 @@ function App() {
           <Route path="/sri-padmavati-mahila-visvavidyalayam-trupati-audit-form" element={<ZohoForm />} />
           <Route path="/skin-affair" element={<SkinAffair />} />
           <Route path="/tdh-content-calendar-april-2026" element={<TdhContentCalendarApril />} />
+          <Route path="/stature" element={<Stature />} />
+
 
 
 
