@@ -1270,7 +1270,7 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
             {blogs.map((blog) => (
               <div key={blog.slug} className="bg-white  shadow-lg overflow-hidden">
-                <img src={blog.imageUrl} alt={blog.title} className="w-full h-48 object-cover" />
+                <img src={blog.imageUrl} alt={blog.title} className="w-full h-58 object-cover " />
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-3 line-clamp-2">{blog.title}</h3>
                   <p className="text-gray-600 mb-4 line-clamp-2">{blog.description}</p>

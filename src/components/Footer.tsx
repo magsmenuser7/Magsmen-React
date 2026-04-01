@@ -45,7 +45,7 @@ const Footer = () => {
               <li><Link to="/about" className="text-gray-300 hover:text-[#683FBF] transition-colors">About</Link></li>
               <li><Link to="/expertise" className="text-gray-300 hover:text-[#683FBF] transition-colors">Expertise</Link></li>
               <li><Link to="/case-studies" className="text-gray-300 hover:text-[#683FBF] transition-colors">Case Studies</Link></li>
-              <li><Link to="/insights" className="text-gray-300 hover:text-[#683FBF] transition-colors">Insights</Link></li>
+              <li><Link to="/blogs" className="text-gray-300 hover:text-[#683FBF] transition-colors">Blogs</Link></li>
               <li><Link to="/media" className="text-gray-300 hover:text-[#683FBF] transition-colors">Media</Link></li>
               <li><Link to="/careers" className="text-gray-300 hover:text-[#683FBF] transition-colors">Careers</Link></li>
               <li><Link to="/partner-with-us" className="text-gray-300 hover:text-[#683FBF] transition-colors">Partner With Us</Link></li>
@@ -74,11 +74,7 @@ const Footer = () => {
       </Link>
     </li>
 
-    {/* <li>
-      <Link to="/image-consulting" className="hover:text-[#683FBF] transition">
-        Image Consulting
-      </Link>
-    </li> */}
+    
 
     <li>
       <Link to="/corporate-rebranding" className="hover:text-[#683FBF] transition">
