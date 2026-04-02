@@ -2980,7 +2980,7 @@ www.magsmen.com | connect@magsmen.com | +91 90449 10449
       avatar: 'https://imgs.search.brave.com/CD7i-jqyB5IY4uBCaXS3FtWOZV0LUCtokZM49K1b6WU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c2lsaWNvbmluZGlh/LmNvbS9pbWFnZXMv/c2ltYWdfaW1hZ2Vz/L3VwbG9hZGVkX2lt/YWdlcy9jb21wYW55/X2xvZ29zL2U5dW5y/LncyMjAuanBn',
       bio: 'Visual designer and brand strategist specializing in storytelling through design.'
     },
-    publishedAt: '30/3/2026',
+    publishedAt: '02/4/2026',
     readTime: '2:39 p.m',
     category: 'Branding',
     tags: ['Fashion Jewellery Brand Strategy India ', 'Gold & Jewellery Branding ', 'fashion & jewwellery'],

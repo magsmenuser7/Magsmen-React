@@ -891,20 +891,20 @@ const blogPosts = [
       // image: 'https://images.pexels.com/photos/4110404/pexels-photo-4110404.jpeg',
       slug: 'rice-brand-strategy-india',
       imageUrl:ricebrandingproblem
-    }
-    // {
-    //   id: 64,
-    //   title: 'Fashion Jewellery in India: The Category That Grew Without a Brand Strategy',
-    //   excerpt: 'India\'s fashion jewellery market is exploding, but most brands are invisible. Learn how brand strategy transforms jewellery businesses from sellers into symbols of identity and aspiration.',
-    //   category: 'Branding',
-    //   author: { name: 'Magsmen', avatar: '/assets/avatar/magsmen.png' },
-    //   date: '2024-10-15',
-    //   publishedAt: '2026-03-30',
-    //   readTime: '2:39pm',
+    },
+    {
+      id: 64,
+      title: 'Fashion Jewellery in India: The Category That Grew Without a Brand Strategy',
+      excerpt: 'India\'s fashion jewellery market is exploding, but most brands are invisible. Learn how brand strategy transforms jewellery businesses from sellers into symbols of identity and aspiration.',
+      category: 'Branding',
+      author: { name: 'Magsmen', avatar: '/assets/avatar/magsmen.png' },
+      date: '2024-03-02',
+      publishedAt: '2026-04-02',
+      readTime: '2:39pm',
      
-    //   slug: 'fashion-jewellery-brand-strategy-india',
-    //   imageUrl:fashionjewlleryinindia
-    // },
+      slug: 'fashion-jewellery-brand-strategy-india',
+      imageUrl:fashionjewlleryinindia
+    },
     // {
     //   id: 65,
     //   title: 'Indian Dairy Brands Are Sitting on a Goldmine They Refuse to Mine',

@@ -352,6 +352,12 @@ const Home = () => {
 
   const blogs = [
     {
+      title: 'Fashion Jewellery in India: The Category That Grew Without a Brand Strategy',
+      slug: 'fashion-jewellery-brand-strategy-india',
+      description: 'India\'s fashion jewellery market is exploding, but most brands are invisible. Learn how brand strategy transforms jewellery businesses from sellers into symbols of identity and aspiration.',
+      imageUrl: fashionjewlleryinindia
+    },
+    {
       title: 'The Rice Branding Problem: Why a Commodity Mindset Is Costing Indian Rice Companies Crores',
       slug: 'rice-brand-strategy-india',
       description: "India is the world's largest rice exporter, yet most domestic rice brands lack strategic positioning. Learn how brand strategy transforms rice businesses from commodity sellers to market leaders.",
@@ -362,13 +368,8 @@ const Home = () => {
       slug: 'edible-oil-brand-strategy-india',
       description: 'Discover why Indian edible oil brands struggle with differentiation and how strategic brand building can move your business from commodity pricing to category leadership.',
       imageUrl: edibleoilbrandstrategyindia
-    },
-    {
-      title: 'Hyper-Personalization: Crafting Brand Experiences That Speak to Gen Z\'s Individuality',
-      slug: 'crafting-brand-experiences-that-speak-to-gen-zs-individuality',
-      description: 'Gen Z demands more than just generic ads—they seek personalization and authenticity in every brand interaction. To connect with this audience, brands must deliver hyper-personalized experiences that cater to their unique preferences and values. Here\'s how to do it.',
-      imageUrl: hyperpersonalizationcraftingbrandexperiences
     }
+    
   ];
 
   const servicePreviewMap: Record<

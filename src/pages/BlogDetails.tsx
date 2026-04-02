@@ -121,12 +121,12 @@ const fromPage = location.state?.fromPage || 1;
 
       {/* Featured Image */}
       {post.imageUrl && (
-        <div className="max-w-4xl mx-auto px-4 -mt-8 relative z-10">
-          <div className="bg-white shadow-lg overflow-hidden">
+        <div className="max-w-4xl  mx-auto -mt-8 relative z-10">
+          <div className=" shadow-lg min-h-[300px] overflow-hidden">
             <img 
               src={post.imageUrl} 
               alt={post.title}
-              className="w-full h-64 md:h-96 object-contain"
+              className="w-full  object-cover"
             />
           </div>
         </div>
