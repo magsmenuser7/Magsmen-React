@@ -74,7 +74,7 @@ import bannerfive from "/assets/banners/banner-five.jpeg";
 import bannerseven from "/assets/banners/banner-seven.jpeg";
 import { image } from 'framer-motion/client';
 
-
+import sumasignature from "/assets/testimonials/suma copy.png"
 
 
 import BrandingPatternLYN from '/assets/works/Branding-Pattern-LYN.jpg'
@@ -270,8 +270,8 @@ const Home = () => {
     { id: 1, rating: 5, name: 'Nikitha Muvva', title: 'Business Analyst', company: '', quote: " Telugu Foods is a renowned brand in over 24+ countries with more than a million happy customers. We hired Magsmen for brand consulting and help us build a digital strategy for Telugu Foods.", imageUrl: telugufoodstestimonial },
     { id: 2, rating: 5, name: 'Manickavel', title: 'Chairman & Managing Director', company: '', quote: "We have been associated with Magsmen for two years. They helped our brand Triplex, a pioneer in the detergent market for 30 years, enter the digital space and proposed a digital strategy.", imageUrl: xxxtestimonial },
     { id: 3, rating: 5, name: 'Kranthi Kiran', title: 'International Business Manager', company: '', quote: "Thanks to Magsmen, we discovered brand architecture and a fresh strategy for VSB. Their rebranding and LinkedIn approach have tripled our followers and marked a new growth phase.", imageUrl: vsbtestimonial },
-    { id: 4, rating: 5, name: '', title: '', company: '', quote: "Magsmen guided our brand identity with unmatched insight. They solved challenges effortlessly, offering clarity and solutions. Truly transformed our brand with strategy and execution.", imageUrl: bhramaratestimonial },
-    { id: 5, rating: 5, name: '', title: '', company: '', quote: "Magsmen is my go-to for reputation management. Their research and rebranding transformed my brand and strategies. The Maheswari Movies launch shows their creativity.", imageUrl: sumatestimonial },
+    { id: 4, rating: 5, name: 'Galla Ramachandra Rao', title: 'Chairman and Managing Director', company: '', quote: "Magsmen guided our brand identity with unmatched insight. They solved challenges effortlessly, offering clarity and solutions. Truly transformed our brand with strategy and execution.", imageUrl: bhramaratestimonial },
+    { id: 5, rating: 5, name: 'Suma Kanakala', title: '', company: '', quote: "Magsmen is my go-to for reputation management. Their research and rebranding transformed my brand and strategies. The Maheswari Movies launch shows their creativity.", imageUrl: sumasignature },
     { id: 6, rating: 5, name: 'Krishnaprasad N.V', title: 'General Manager', company: 'Nexatech', quote: "We hired Magsmen as our brand consultants in March 2021. Thanks to their strategy of bringing a new phase to the brand, we've seen a whole new Tenali Double Horse with a redefined vision.", imageUrl: tenalidoublehorsetestimonial },
   ];
 
