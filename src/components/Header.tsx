@@ -6,6 +6,10 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import logo01 from "/assets/banners/logo-01.svg";      // BLACK logo
 import logolight from "/assets/banners/logo-light.svg"; // WHITE logo
+import newlogowhite from "/assets/white_logo22.png"
+import newlogoblack from "/assets/Artboard 1 copy 5@72x-100.jpg11.png"
+
+
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -128,7 +132,7 @@ const Header = () => {
           >
             <div className="p-2 md:p-3">
               <img
-                src={useWhiteLogo ? logolight : logo01}
+                src={newlogoblack ? newlogoblack : newlogowhite}
                 alt="MagsmenLogo"
                 className="h-8 sm:h-10 md:h-20 md:w-20 object-contain"
               />
