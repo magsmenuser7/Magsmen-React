@@ -48,7 +48,7 @@ import SkinAffair from './pages/SkinAffair';
 import TdhContentCalendarApril from './pages/TdhContentCalenderApril';
 import Blogs from './pages/Blogs';
 import Stature from './pages/Stature';
-
+import SkinAffairSelect from './pages/SkinAffairStrategy.tsx';
 
 
 // 2. Define a Layout Component that includes Header and Footer
@@ -124,6 +124,7 @@ function App() {
           <Route path="/skin-affair" element={<SkinAffair />} />
           <Route path="/tdh-content-calendar-april-2026" element={<TdhContentCalendarApril />} />
           <Route path="/stature" element={<Stature />} />
+          <Route path="/skin-affair-strategy" element={<SkinAffairSelect />} />
 
 
 
