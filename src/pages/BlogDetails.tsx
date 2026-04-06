@@ -53,13 +53,13 @@ const fromPage = location.state?.fromPage || 1;
           <div className="relative z-[9999] p-4">
           <button
   onClick={() => {
-    navigate(`/insights?page=${fromPage}`);
+    navigate(`/blogs?page=${fromPage}`);
     window.scrollTo({ top: 0 });
   }}
   className="inline-flex items-center text-gray-300 hover:text-white mb-8 transition-colors"
 >
   <ArrowLeft className="w-4 h-4 mr-2" />
-  Back to Insights
+  Back to Blogs
 </button>
 
 </div>

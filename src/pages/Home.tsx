@@ -351,6 +351,13 @@ const Home = () => {
   ];
 
   const blogs = [
+
+    {
+      title: 'Indian Dairy Brands Are Sitting on a Goldmine They Refuse to Mine',
+      slug: 'dairy-brand-strategy-india',
+      description: 'India is the world\'s largest milk producer, but most dairy brands lack strategic positioning. Discover how brand consulting transforms dairy businesses from procurement operations into market leaders.',
+      imageUrl: indiandairybrands
+    },
     {
       title: 'Fashion Jewellery in India: The Category That Grew Without a Brand Strategy',
       slug: 'fashion-jewellery-brand-strategy-india',
@@ -363,12 +370,7 @@ const Home = () => {
       description: "India is the world's largest rice exporter, yet most domestic rice brands lack strategic positioning. Learn how brand strategy transforms rice businesses from commodity sellers to market leaders.",
       imageUrl: ricebrandingproblem
     },
-    {
-      title: 'Why Most Edible Oil Brands in India Will Never Escape the Price War',
-      slug: 'edible-oil-brand-strategy-india',
-      description: 'Discover why Indian edible oil brands struggle with differentiation and how strategic brand building can move your business from commodity pricing to category leadership.',
-      imageUrl: edibleoilbrandstrategyindia
-    }
+    
     
   ];
 

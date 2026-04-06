@@ -905,19 +905,19 @@ const blogPosts = [
       slug: 'fashion-jewellery-brand-strategy-india',
       imageUrl:fashionjewlleryinindia
     },
-    // {
-    //   id: 65,
-    //   title: 'Indian Dairy Brands Are Sitting on a Goldmine They Refuse to Mine',
-    //   excerpt: 'India is the world\'s largest milk producer, but most dairy brands lack strategic positioning. Discover how brand consulting transforms dairy businesses from procurement operations into market leaders.',
-    //   category: 'Branding',
-    //   author: { name: 'Magsmen', avatar: '/assets/avatar/magsmen.png' },
-    //   date: '2024-10-15',
-    //   publishedAt: '2026-03-30',
-    //   readTime: '3:39pm',
+    {
+      id: 65,
+      title: 'Indian Dairy Brands Are Sitting on a Goldmine They Refuse to Mine',
+      excerpt: 'India is the world\'s largest milk producer, but most dairy brands lack strategic positioning. Discover how brand consulting transforms dairy businesses from procurement operations into market leaders.',
+      category: 'Branding',
+      author: { name: 'Magsmen', avatar: '/assets/avatar/magsmen.png' },
+      date: '2024-10-15',
+      publishedAt: '2026-04-06',
+      readTime: '11:10am',
       
-    //   slug: 'dairy-brand-strategy-india',
-    //   imageUrl:indiandairybrands
-    // },
+      slug: 'dairy-brand-strategy-india',
+      imageUrl:indiandairybrands
+    },
 
     // {
     //   id: 66,
@@ -977,7 +977,7 @@ const hasPrevPage = currentPage > 1;
       <main className="max-w-6xl mx-auto px-4 py-16">
         {/* Featured Insight */}
         <section className="mb-16">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">Featured Insight</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">Featured Blog</h2>
           
           <Link 
             to={`/blog/${featuredPost.slug}`}
@@ -1031,7 +1031,7 @@ const hasPrevPage = currentPage > 1;
 
         {/* Latest Insights */}
         <section>
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">Latest Insights</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">Latest Blogs</h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {paginatedPosts.map((post) => (
@@ -1100,7 +1100,7 @@ const hasPrevPage = currentPage > 1;
   {/* PREVIOUS */}
   {hasPrevPage ? (
     <Link
-      to={`/insights?page=${currentPage - 1}`}
+      to={`/blogs?page=${currentPage - 1}`}
       className="flex items-center gap-4 text-lg text-black"
     >
       <span className="hover:-translate-x-1 transition-transform">
@@ -1115,7 +1115,7 @@ const hasPrevPage = currentPage > 1;
   {/* NEXT */}
   {hasNextPage && (
     <Link
-      to={`/insights?page=${currentPage + 1}`}
+      to={`/blogs?page=${currentPage + 1}`}
       className="flex items-center gap-4 text-lg text-black"
     >
       <span className="block w-px h-6 bg-black" />
