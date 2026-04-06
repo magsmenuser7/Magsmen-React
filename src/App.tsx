@@ -49,7 +49,7 @@ import TdhContentCalendarApril from './pages/TdhContentCalenderApril';
 import Blogs from './pages/Blogs';
 import Stature from './pages/Stature';
 import SkinAffairSelect from './pages/SkinAffairStrategy.tsx';
-
+import SkinAffairSprintReport from './pages/SkinAffairSprintReport.tsx';
 
 // 2. Define a Layout Component that includes Header and Footer
 const MainLayout = () => {
@@ -125,7 +125,7 @@ function App() {
           <Route path="/tdh-content-calendar-april-2026" element={<TdhContentCalendarApril />} />
           <Route path="/stature" element={<Stature />} />
           <Route path="/skin-affair-strategy" element={<SkinAffairSelect />} />
-
+          <Route path="/skin-affair-sprint-report" element={<SkinAffairSprintReport />} />
 
 
 
