@@ -33,6 +33,7 @@ import { Radar } from 'react-chartjs-2';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import logo from "/assets/Artboard 1 copy 5@72x-8.png"
+import whitelogo from "/assets/white_logo.png"
 
 // Register ChartJS
 ChartJS.register(
@@ -84,11 +85,12 @@ const App = () => {
         <div className="relative z-10 mx-auto max-w-7xl px-6">
           <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
             <div className="space-y-4">
-              <div className="animate-pulse">
+              {/* <div className="animate-pulse">
                 <h2 className="mb-1 text-sm font-bold tracking-[0.2em] text-white uppercase">M A G S M E N</h2>
                 <p className="text-[10px] tracking-[0.4em] text-purple-300/80 uppercase">Strategy Consultants</p>
-              </div>
-              {/* <img src={logo} alt="Magsmen Logo" className="h-16 w-16" /> */}
+              </div> */}
+              
+              <img src={whitelogo} alt="Magsmen Logo" className="h-46 w-36" />
              
               <h1 className="font-serif text-4xl font-semibold leading-tight md:text-6xl">
                 Skin Affair <span className="mt-2 block font-sans text-2xl font-light tracking-wider text-purple-200 uppercase md:text-3xl">Sprint Diagnostics</span>
@@ -451,7 +453,7 @@ const App = () => {
           </div>
           <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-slate-100 pt-8 text-[10px] font-bold uppercase tracking-widest text-slate-400 md:flex-row">
             <p>© 2026 Skin Affair Diagnostics - Confidential</p>
-            <p>A division of Grofessors Innovations Pvt Ltd.</p>
+            <p>A division of Grofesion Innovations Pvt Ltd.</p>
           </div>
         </div>
       </footer>
