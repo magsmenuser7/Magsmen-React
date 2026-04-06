@@ -1,311 +1,462 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  MapPin, Stethoscope, Palette, Building, User, Target, 
-  CheckCircle, Clock, ChevronRight, Activity, ShieldCheck, 
-  TrendingUp, Sparkles, Map, Network, BarChart
+  TrendingUp, 
+  MapPin, 
+  CheckCircle2, 
+  Clock, 
+  Target, 
+  Activity, 
+  UserCheck, 
+  Map as MapIcon, 
+  Store, 
+  User, 
+  Smartphone, 
+  Layout, 
+  Palette, 
+  ShieldCheck, 
+  Zap, 
+  GitMerge, 
+  Layers,
+  ChevronRight,
+  Info
 } from 'lucide-react';
+import { 
+  Chart as ChartJS, 
+  RadialLinearScale, 
+  PointElement, 
+  LineElement, 
+  Filler, 
+  Tooltip, 
+  Legend 
+} from 'chart.js';
+import { Radar } from 'react-chartjs-2';
+import { motion, AnimatePresence } from 'framer-motion';
 
-// --- Magsmen Strategic Client Report ---
-// Designed for high-impact executive presentation.
+import logo from "/assets/Artboard 1 copy 5@72x-8.png"
 
-const SkinAffairSprintReport = () => {
+// Register ChartJS
+ChartJS.register(
+  RadialLinearScale,
+  PointElement,
+  LineElement,
+  Filler,
+  Tooltip,
+  Legend
+);
+
+const App = () => {
   const [activeTab, setActiveTab] = useState('overview');
-  const [activeCity, setActiveCity] = useState<string | null>(null);
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    setIsLoaded(true);
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Strategic Data Mapping
-  const cities = [
-    { id: 'delhi', name: 'Delhi', top: '15%', left: '45%', focus: 'Market Entry Gaps & Premium Positioning' },
-    { id: 'mumbai', name: 'Mumbai', top: '50%', left: '30%', focus: 'Communication Strategies & Influencers' },
-    { id: 'hyderabad', name: 'Hyderabad', top: '65%', left: '50%', focus: 'On-Ground Audits & Benchmark (Arna Clinic)' },
-    { id: 'bangalore', name: 'Bangalore', top: '80%', left: '40%', focus: 'Holistic Skin Health Opportunities' },
+  const tabs = [
+    { id: 'overview', label: 'Executive Overview' },
+    { id: 'intelligence', label: 'Market Intelligence' },
+    { id: 'architecture', label: 'Brand Architecture' },
+    { id: 'pipeline', label: 'Strategic Pipeline' },
+    { id: 'about', label: 'About Magsmen' },
   ];
 
-  const completedMilestones = [
-    {
-      id: 1,
-      icon: <Activity className="w-6 h-6 text-emerald-400" />,
-      title: "Market & Positioning Intelligence",
-      description: "Deep-dive analysis of premium aesthetic clinics across HYD, BLR, BOM, and DEL. Mapped communication strategies to expose strategic entry gaps for Skin Affair.",
-    },
-    {
-      id: 2,
-      icon: <Network className="w-6 h-6 text-blue-400" />,
-      title: "Influencer Physician Mapping",
-      description: "Evaluated top-tier doctors across 4 metros. Identified massive whitespace in 'holistic skin health'. Insights presented to Dr. Srujana.",
-    },
-    {
-      id: 3,
-      icon: <Building className="w-6 h-6 text-purple-400" />,
-      title: "Sub-Brand Architectural Review",
-      description: "Comprehensive review of sub-brand interiors and spatial direction. Aligned directly with Dr. Srujana to ensure cohesive brand translation.",
-    },
-    {
-      id: 4,
-      icon: <Palette className="w-6 h-6 text-pink-400" />,
-      title: "Visual Identity & Chromatic Alignment",
-      description: "Directed focused discussions with the interior designer. Secured a cohesive color palette that anchors the physical space to the overarching brand identity.",
-    },
-    {
-      id: 5,
-      icon: <MapPin className="w-6 h-6 text-red-400" />,
-      title: "Experiential Clinic Audits (HYD)",
-      description: "Conducted rigorous on-ground surveys of premium spaces. Benchmarked Arna Clinic to reverse-engineer optimal patient experiences. Detailed diagnostic report generated.",
-    },
-    {
-      id: 6,
-      icon: <User className="w-6 h-6 text-amber-400" />,
-      title: "Personal Brand Positioning & Audit",
-      description: "Executed a comprehensive audit and competitor mapping to establish Dr. Srujana's distinct archetype and tone. Engineered a robust positioning framework aligning her personal stature with clinical authority.",
-    },
-    {
-      id: 7,
-      icon: <ShieldCheck className="w-6 h-6 text-indigo-400" />,
-      title: "Verbal Identity & IP Assurance",
-      description: "Explored brand narratives and nomenclature options. Conducted preliminary domain and trademark feasibility checks to safeguard brand assets.",
-    },
-    {
-      id: 8,
-      icon: <BarChart className="w-6 h-6 text-cyan-400" />,
-      title: "Digital Analytics & Content Architecture",
-      description: "Analyzed historical social media performance metrics to diagnose engagement patterns and audience sentiment. Developed foundational content pillars to systematically amplify digital authority and market connection.",
+  const containerVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.6, staggerChildren: 0.1 }
     }
-  ];
+  };
 
-  const upcomingPipeline = [
-    { id: 1, title: "Complete Clinical Experiential Surveys", desc: "Finalize remaining on-ground audits to solidify benchmark data." },
-    { id: 2, title: "Strategic Pricing Analysis", desc: "Develop a premium pricing matrix based on market gap diagnostics." },
-    { id: 3, title: "Palette Confirmation Execution", desc: "Final lock-in of visual assets for both Skin Affair and the Sub-brand." },
-    { id: 4, title: "Skin Affair Upgradation Strategy", desc: "Execute the brief prepared by Koushik and Ajay to elevate current brand stature." },
-    { id: 5, title: "Nomenclature Optimization", desc: "Finalize brand naming architecture with a refined 'Indian touch' as requested." }
-  ];
+  const itemVariants = {
+    hidden: { opacity: 0, y: 10 },
+    visible: { opacity: 1, y: 0 }
+  };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-emerald-500/30 p-4 md:p-8 relative overflow-hidden">
-      {/* Subtle Strategic Grid Background */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20 pointer-events-none"></div>
-      
-      {/* Header */}
-      <header className={`relative z-10 max-w-7xl mx-auto mb-12 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-slate-800 pb-6">
-          <div>
-            <div className="flex items-center gap-3 mb-2">
-              <Sparkles className="w-8 h-8 text-emerald-400" />
-              <h1 className="text-3xl font-light tracking-tight text-white">
-                <span className="font-bold">Magsmen</span> Sprint Report
+    <div className="min-h-screen bg-[#F9F8FC] font-sans text-slate-900 selection:bg-purple-100 selection:text-purple-900">
+      {/* Hero Header */}
+      <header className="relative overflow-hidden bg-gradient-to-br from-black via-[#1E1037] to-[#4C1D95] pt-16 pb-24 text-white">
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-purple-400 via-transparent to-transparent"></div>
+        <div className="relative z-10 mx-auto max-w-7xl px-6">
+          <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
+            <div className="space-y-4">
+              <div className="animate-pulse">
+                <h2 className="mb-1 text-sm font-bold tracking-[0.2em] text-white uppercase">M A G S M E N</h2>
+                <p className="text-[10px] tracking-[0.4em] text-purple-300/80 uppercase">Strategy Consultants</p>
+              </div>
+              {/* <img src={logo} alt="Magsmen Logo" className="h-16 w-16" /> */}
+             
+              <h1 className="font-serif text-4xl font-semibold leading-tight md:text-6xl">
+                Skin Affair <span className="mt-2 block font-sans text-2xl font-light tracking-wider text-purple-200 uppercase md:text-3xl">Sprint Diagnostics</span>
               </h1>
             </div>
-            <p className="text-slate-400 text-sm tracking-widest uppercase ml-11">
-              Client: Skin Affair | Phase: Discovery & Diagnosis (Day 1-15)
-            </p>
-          </div>
-          <div className="mt-4 md:mt-0 flex gap-2">
-            <button 
-              onClick={() => setActiveTab('overview')}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${activeTab === 'overview' ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' : 'bg-slate-900 text-slate-400 hover:text-white'}`}
-            >
-              Strategic Overview
-            </button>
-            <button 
-              onClick={() => setActiveTab('pipeline')}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${activeTab === 'pipeline' ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' : 'bg-slate-900 text-slate-400 hover:text-white'}`}
-            >
-              Foresight Pipeline
-            </button>
+            <div className="border-l-2 border-purple-500 pl-6 text-left">
+              <p className="text-sm font-medium text-purple-200">Prepared for Skin Affair</p>
+              <p className="mt-1 text-xs text-purple-300/70">Phase 1: Discovery (Day 1-15)</p>
+              <p className="mt-0.5 text-xs text-purple-400">{new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}</p>
+            </div>
           </div>
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto">
-        {activeTab === 'overview' && (
-          <div className="space-y-12">
-            
-            {/* Top Section: Map & Executive Summary */}
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
-              
-              {/* Executive Summary */}
-              <div className="lg:col-span-2 space-y-6">
-                <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 relative overflow-hidden group">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 rounded-full blur-3xl group-hover:bg-emerald-500/10 transition-all duration-700"></div>
-                  <h2 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
-                    <TrendingUp className="w-5 h-5 text-emerald-400" />
-                    Executive Intelligence
-                  </h2>
-                  <p className="text-slate-400 leading-relaxed text-sm mb-4">
-                    Over the initial 15-day sprint, Magsmen has executed a rigorous discovery protocol for Skin Affair. We have transition from abstract concepts to a concrete strategic foundation, mapping the competitive landscape across India's top four metropolitan markets.
-                  </p>
-                  <p className="text-slate-400 leading-relaxed text-sm">
-                    Our focus has been twofold: identifying critical white-space positioning in <strong className="text-slate-200">holistic skin health</strong> and architecting a cohesive visual, verbal, and experiential identity for Dr. Srujana's portfolio.
-                  </p>
-                </div>
+      {/* Navigation */}
+      <nav className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 shadow-lg backdrop-blur-md' : 'bg-white border-b border-purple-100'}`}>
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="flex items-center space-x-8 overflow-x-auto scrollbar-hide py-1">
+            {tabs.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`relative py-5 text-sm font-semibold tracking-wide transition-all whitespace-nowrap ${
+                  activeTab === tab.id ? 'text-purple-700' : 'text-slate-500 hover:text-purple-400'
+                }`}
+              >
+                {tab.label}
+                {activeTab === tab.id && (
+                  <motion.div 
+                    layoutId="activeTab"
+                    className="absolute bottom-0 left-0 h-1 w-full rounded-t-full bg-purple-600"
+                  />
+                )}
+              </button>
+            ))}
+          </div>
+        </div>
+      </nav>
 
-                {/* Stat Cards */}
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-slate-900 border border-slate-800 rounded-2xl p-5 hover:border-emerald-500/50 hover:shadow-[0_0_20px_rgba(16,185,129,0.15)] hover:-translate-y-1 transition-all duration-300">
-                    <div className="text-3xl font-light text-white mb-1">04</div>
-                    <div className="text-xs text-slate-400 uppercase tracking-wider">Metros Audited</div>
-                  </div>
-                  <div className="bg-slate-900 border border-slate-800 rounded-2xl p-5 hover:border-emerald-500/50 hover:shadow-[0_0_20px_rgba(16,185,129,0.15)] hover:-translate-y-1 transition-all duration-300">
-                    <div className="text-3xl font-light text-white mb-1">07</div>
-                    <div className="text-xs text-slate-400 uppercase tracking-wider">Milestones Met</div>
-                  </div>
-                </div>
+      {/* Content Area */}
+      <main className="mx-auto max-w-7xl px-6 py-12">
+        <AnimatePresence mode="wait">
+          {activeTab === 'overview' && (
+            <motion.div
+              key="overview"
+              initial="hidden"
+              animate="visible"
+              exit={{ opacity: 0, y: -20 }}
+              variants={containerVariants}
+              className="space-y-10"
+            >
+              {/* Stats Grid */}
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+                {[
+                  { label: 'Metros Audited', val: '04', sub: 'HYD, BLR, BOM, DEL', icon: MapPin },
+                  { label: 'Strategic Milestones', val: '08', sub: '100% Delivery Rate', icon: CheckCircle2 },
+                  { label: 'Sprint Duration', val: '15', sub: 'Days - Phase 1 Complete', icon: Clock },
+                ].map((stat, i) => (
+                  <motion.div key={i} variants={itemVariants} className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#110C1D] to-[#2D1B69] p-8 shadow-xl">
+                    <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-purple-500/10 blur-2xl group-hover:bg-purple-500/20 transition-all"></div>
+                    <p className="text-xs font-bold uppercase tracking-widest text-purple-300">{stat.label}</p>
+                    <div className="mt-2 text-5xl font-serif text-white">{stat.val}</div>
+                    <div className="mt-4 flex items-center gap-2 text-xs text-purple-200/60">
+                      <stat.icon className="h-3 w-3" /> {stat.sub}
+                    </div>
+                  </motion.div>
+                ))}
               </div>
 
-              {/* Interactive Market Map */}
-              <div className="lg:col-span-3 bg-slate-900 border border-slate-800 rounded-2xl p-6 relative flex flex-col items-center justify-center min-h-[400px] hover:border-slate-700 transition-colors duration-500">
-                <h3 className="absolute top-6 left-6 text-sm font-semibold tracking-widest text-slate-300 uppercase flex items-center gap-2">
-                  <Map className="w-4 h-4 text-emerald-500" />
-                  Strategic Market Network
-                </h3>
-                
-                {/* Abstract India Map Container */}
-                <div className="relative w-full max-w-sm h-[350px] mt-8 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-800/40 via-slate-900/0 to-slate-900/0 border border-slate-800/50 rounded-xl group/map">
-                  
-                  {/* Connecting Lines (SVG) */}
-                  <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ filter: 'drop-shadow(0 0 8px rgba(16, 185, 129, 0.4))' }}>
-                    <path d="M 45% 15% L 30% 50% L 50% 65% L 40% 80%" fill="none" stroke="#10b981" strokeWidth="1.5" strokeDasharray="150" strokeDashoffset="150" className="animate-draw-line opacity-60" />
-                    <path d="M 45% 15% L 50% 65%" fill="none" stroke="#10b981" strokeWidth="1.5" strokeDasharray="150" strokeDashoffset="150" className="animate-draw-line opacity-60" style={{ animationDelay: '0.5s' }} />
-                  </svg>
+              {/* Thesis Card */}
+              <motion.div variants={itemVariants} className="rounded-2xl border-l-4 border-purple-600 bg-white p-10 shadow-sm ring-1 ring-purple-50">
+                <div className="flex gap-6 items-start">
+                  <div className="rounded-full bg-purple-100 p-3">
+                    <Target className="h-6 w-6 text-purple-600" />
+                  </div>
+                  <div>
+                    <h3 className="mb-2 text-sm font-bold uppercase tracking-widest text-purple-900">The Strategic Thesis</h3>
+                    <p className="text-xl font-medium leading-relaxed text-slate-800">
+                      Over the initial 15-day sprint, we have transitioned Skin Affair from abstract ambition to a concrete architectural foundation. We have identified a critical <span className="cursor-help border-b border-dashed border-purple-400 font-bold text-purple-700 decoration-2 underline-offset-4">White Space</span> in "holistic skin health," positioning Dr. Srujana as the definitive category authority.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
 
-                  {/* City Nodes */}
-                  {cities.map((city) => (
-                    <div 
-                      key={city.id}
-                      className="absolute group cursor-pointer z-10"
-                      style={{ top: city.top, left: city.left, transform: 'translate(-50%, -50%)' }}
-                      onMouseEnter={() => setActiveCity(city.id)}
-                      onMouseLeave={() => setActiveCity(null)}
-                    >
-                      {/* Pulse Effect */}
-                      <div className="absolute inset-0 bg-emerald-500 rounded-full animate-ping opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
-                      <div className={`relative z-10 w-4 h-4 rounded-full border-2 transition-all duration-500 ease-out ${activeCity === city.id ? 'bg-emerald-400 border-white scale-150 shadow-[0_0_20px_rgba(52,211,153,0.8)]' : 'bg-slate-900 border-emerald-500 shadow-[0_0_10px_rgba(52,211,153,0.3)] hover:scale-125'}`}></div>
-                      
-                      {/* Label */}
-                      <span className="absolute top-6 left-1/2 -translate-x-1/2 text-xs font-semibold text-slate-300 tracking-wider drop-shadow-md">
-                        {city.name}
-                      </span>
+              {/* Insights */}
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+                <motion.div variants={itemVariants} className="rounded-2xl bg-[#1A1A1A] p-8 text-white shadow-2xl ring-1 ring-white/5">
+                  <div className="flex items-center gap-3 text-purple-300">
+                    <Activity className="h-5 w-5" />
+                    <h3 className="font-serif text-xl font-semibold">Positioning Gap Detected</h3>
+                  </div>
+                  <p className="mt-4 text-sm font-light leading-relaxed text-slate-300">
+                    Premium clinics across audited metros rely heavily on functional, procedural communication. Emotional connection and long-term skin health narratives are underserved.
+                  </p>
+                  <div className="mt-6 border-t border-white/10 pt-4 text-xs italic text-purple-400/80">
+                    Implication: Capture market share by shifting from "treatments" to "architectural dermatology."
+                  </div>
+                </motion.div>
 
-                      {/* Tooltip */}
-                      <div className={`absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-48 bg-slate-800/90 backdrop-blur-md border border-slate-700 rounded-xl p-3 shadow-2xl transition-all duration-400 pointer-events-none z-20 ${activeCity === city.id ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'}`}>
-                        <div className="text-[10px] uppercase text-emerald-400 font-bold mb-1">Intelligence Area</div>
-                        <div className="text-xs text-white leading-tight">{city.focus}</div>
-                      </div>
+                <motion.div variants={itemVariants} className="rounded-2xl bg-[#1A1A1A] p-8 text-white shadow-2xl ring-1 ring-white/5">
+                  <div className="flex items-center gap-3 text-purple-300">
+                    <UserCheck className="h-5 w-5" />
+                    <h3 className="font-serif text-xl font-semibold">Physician Authority</h3>
+                  </div>
+                  <p className="mt-4 text-sm font-light leading-relaxed text-slate-300">
+                    Analysis shows a saturation of "influencer-first" doctors lacking deep clinical gravitas. Dr. Srujana's brand must bridge this gap with clinical supremacy.
+                  </p>
+                  <div className="mt-6 border-t border-white/10 pt-4 text-xs italic text-purple-400/80">
+                    Implication: Personal brand engineering must prioritize clinical authority over social vanity.
+                  </div>
+                </motion.div>
+              </div>
+            </motion.div>
+          )}
+
+          {activeTab === 'intelligence' && (
+            <motion.div
+              key="intelligence"
+              initial="hidden"
+              animate="visible"
+              variants={containerVariants}
+              className="space-y-12"
+            >
+              <div className="grid gap-8 lg:grid-cols-2">
+                <motion.div variants={itemVariants} className="group rounded-2xl bg-white p-8 shadow-sm transition-all hover:shadow-xl ring-1 ring-slate-100">
+                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-purple-50 text-purple-600 transition-colors group-hover:bg-purple-600 group-hover:text-white">
+                    <MapIcon className="h-7 w-7" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-slate-900">Pan-India Mapping</h3>
+                  <p className="mt-4 text-slate-600 leading-relaxed">
+                    Intelligence gathering across premium aesthetic clinics in <span className="font-bold text-purple-700">Hyderabad, Bangalore, Mumbai, and Delhi</span>.
+                  </p>
+                  <ul className="mt-8 space-y-4">
+                    {['Evaluated top-tier doctors', 'Identified holistic whitespace', 'Insights formalized'].map((item, idx) => (
+                      <li key={idx} className="flex items-center gap-3 text-sm text-slate-700">
+                        <CheckCircle2 className="h-4 w-4 text-purple-500" /> {item}
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+
+                <motion.div variants={itemVariants} className="group rounded-2xl bg-white p-8 shadow-sm transition-all hover:shadow-xl ring-1 ring-slate-100">
+                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-purple-50 text-purple-600 transition-colors group-hover:bg-purple-600 group-hover:text-white">
+                    <Store className="h-7 w-7" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-slate-900">Experiential Audits</h3>
+                  <p className="mt-4 text-slate-600 leading-relaxed">
+                    Rigorous on-ground surveys of premium spaces to benchmark standard of care and spatial patient journeys.
+                  </p>
+                  <div className="mt-8 rounded-xl bg-slate-50 p-4 ring-1 ring-slate-200/50">
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-purple-600">Output Summary</p>
+                    <p className="mt-2 text-sm text-slate-800">Experiential blueprint generated to outpace local premium competitors.</p>
+                  </div>
+                </motion.div>
+              </div>
+
+              {/* Radar Chart */}
+              <motion.div variants={itemVariants} className="rounded-2xl bg-white p-10 shadow-sm ring-1 ring-slate-100">
+                <div className="mb-8 flex items-end justify-between">
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-900">Brand Communication Saturation</h3>
+                    <p className="text-sm text-slate-500">Directional mapping of competitor messaging themes</p>
+                  </div>
+                  <div className="hidden items-center gap-4 text-xs md:flex">
+                    <div className="flex items-center gap-2"><span className="h-3 w-3 rounded-full bg-slate-400"></span> Competitors</div>
+                    <div className="flex items-center gap-2"><span className="h-3 w-3 rounded-full bg-purple-600"></span> Skin Affair</div>
+                  </div>
+                </div>
+                <div className="h-[400px]">
+                  <Radar 
+                    data={{
+                      labels: ['Clinical Focus', 'Holistic Health', 'Influencer', 'Aesthetics', 'Patient Exp.', 'Digital Authority'],
+                      datasets: [
+                        {
+                          label: 'Market Average',
+                          data: [85, 30, 90, 75, 60, 80],
+                          backgroundColor: 'rgba(107, 114, 128, 0.2)',
+                          borderColor: 'rgba(107, 114, 128, 0.8)',
+                          borderWidth: 2,
+                        },
+                        {
+                          label: 'Skin Affair Opportunity',
+                          data: [95, 90, 60, 95, 90, 85],
+                          backgroundColor: 'rgba(124, 58, 237, 0.2)',
+                          borderColor: 'rgba(124, 58, 237, 1)',
+                          borderWidth: 3,
+                        }
+                      ]
+                    }}
+                    options={{
+                      maintainAspectRatio: false,
+                      scales: {
+                        r: {
+                          angleLines: { display: true, color: '#F1F5F9' },
+                          grid: { color: '#F1F5F9' },
+                          pointLabels: { font: { size: 12, family: 'sans-serif' }, color: '#64748b' },
+                          ticks: { display: false }
+                        }
+                      },
+                      plugins: { legend: { display: false } }
+                    }}
+                  />
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+
+          {activeTab === 'architecture' && (
+            <motion.div
+              key="architecture"
+              initial="hidden"
+              animate="visible"
+              variants={containerVariants}
+              className="grid gap-6 md:grid-cols-2"
+            >
+              {[
+                { title: 'Personal Brand Audit', icon: User, text: 'Engineered a framework aligning Dr. Srujana’s personal stature with clinical authority.' },
+                { title: 'Digital Content Architecture', icon: Smartphone, text: 'Analyzed engagement patterns to develop foundational content pillars for systematic authority.' },
+                { title: 'Sub-Brand Review', icon: Layout, text: 'Review of sub-brand interiors to ensure cohesive translation into the physical space.' },
+                { title: 'Visual Identity Alignment', icon: Palette, text: 'Secured a cohesive color palette that anchors physical space to the brand identity.' },
+              ].map((item, i) => (
+                <motion.div key={i} variants={itemVariants} className="group rounded-2xl bg-white p-8 shadow-sm transition-all hover:shadow-lg ring-1 ring-slate-100 flex gap-6">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-purple-50 text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                    <item.icon className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-bold text-slate-900">{item.title}</h4>
+                    <p className="mt-2 text-sm leading-relaxed text-slate-600">{item.text}</p>
+                  </div>
+                </motion.div>
+              ))}
+              <motion.div variants={itemVariants} className="md:col-span-2 rounded-2xl bg-gradient-to-r from-purple-900 to-indigo-900 p-8 text-white flex gap-6">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/10">
+                  <ShieldCheck className="h-6 w-6 text-purple-300" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold">Verbal Identity & IP Assurance</h4>
+                  <p className="mt-2 text-sm text-purple-100/80">Conducted preliminary domain and trademark feasibility checks to safeguard the brand assets and nomenclature.</p>
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+
+          {activeTab === 'pipeline' && (
+            <motion.div
+              key="pipeline"
+              initial="hidden"
+              animate="visible"
+              variants={containerVariants}
+              className="space-y-12"
+            >
+              <div className="rounded-3xl bg-gradient-to-br from-purple-50 to-indigo-100 p-12 text-center shadow-inner">
+                <Zap className="mx-auto h-12 w-12 text-purple-600" />
+                <h2 className="mt-6 font-serif text-3xl font-bold text-slate-900">Next Phase: Execution Readiness</h2>
+                <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
+                  Shifting focus to operationalization, financial positioning, and final asset lock-in.
+                </p>
+              </div>
+
+              <div className="relative space-y-12 before:absolute before:left-6 before:top-2 before:h-full before:w-0.5 before:bg-purple-200 md:before:left-1/2">
+                {[
+                  { title: 'Complete Clinical Surveys', desc: 'Finalize remaining on-ground audits for solid benchmark data.', side: 'left' },
+                  { title: 'Strategic Pricing Analysis', desc: 'Develop a premium pricing matrix based on market gap diagnostics.', side: 'right' },
+                  { title: 'Palette Confirmation', desc: 'Final lock-in of visual assets for both Skin Affair and the Sub-brand.', side: 'left' },
+                  { title: 'Upgradation Strategy', desc: 'Execute the elevation brief prepared by the strategy team.', side: 'right' },
+                ].map((step, i) => (
+                  <motion.div key={i} variants={itemVariants} className={`relative flex flex-col md:flex-row ${step.side === 'right' ? 'md:flex-row-reverse' : ''} gap-12`}>
+                    <div className="absolute left-6 z-10 flex h-4 w-4 -translate-x-1/2 items-center justify-center rounded-full bg-purple-600 ring-4 ring-purple-100 md:left-1/2"></div>
+                    <div className={`ml-12 md:ml-0 md:w-1/2 ${step.side === 'left' ? 'md:text-right md:pr-16' : 'md:pl-16'}`}>
+                      <h4 className="text-xl font-bold text-slate-900">{step.title}</h4>
+                      <p className="mt-2 text-slate-600">{step.desc}</p>
+                    </div>
+                    <div className="hidden md:block md:w-1/2"></div>
+                  </motion.div>
+                ))}
+              </div>
+
+              <div className="rounded-2xl border-l-4 border-amber-400 bg-amber-50 p-6 flex gap-4">
+                <Info className="h-6 w-6 text-amber-600 shrink-0" />
+                <p className="text-sm font-medium text-amber-900">
+                  <span className="font-bold">DECISION REQUIRED:</span> Proceed with pricing analysis concurrent to final clinic surveys. Locking the sub-brand nomenclature is the immediate priority.
+                </p>
+              </div>
+            </motion.div>
+          )}
+
+          {activeTab === 'about' && (
+            <motion.div
+              key="about"
+              initial="hidden"
+              animate="visible"
+              variants={containerVariants}
+              className="space-y-12"
+            >
+              <div className="rounded-3xl bg-slate-900 p-16 text-center text-white shadow-2xl relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+                <h2 className="relative z-10 font-serif text-5xl font-bold">Performance-Driven Branding</h2>
+                <p className="relative z-10 mx-auto mt-6 max-w-2xl text-xl text-slate-400">
+                  Magsmen transforms businesses into category leaders through rigorous strategy, identity, and market alignment.
+                </p>
+                <div className="relative z-10 mt-12 flex flex-wrap justify-center gap-12">
+                  {[
+                    { l: 'Brands', v: '30+' }, { l: 'Industries', v: '16+' }, 
+                    { l: 'Views', v: '90M+' }, { l: 'Rating', v: '4.9' }
+                  ].map((stat, i) => (
+                    <div key={i} className="text-center">
+                      <div className="text-3xl font-bold text-purple-400">{stat.v}</div>
+                      <div className="text-[10px] uppercase tracking-widest text-slate-500">{stat.l}</div>
                     </div>
                   ))}
                 </div>
               </div>
-            </div>
 
-            {/* Milestones Grid */}
-            <div className="relative z-10">
-              <h3 className="text-xl font-light text-white mb-6 flex items-center gap-2 border-b border-slate-800 pb-4">
-                <CheckCircle className="w-5 h-5 text-emerald-400" />
-                Executed Diagnostics & Strategy
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {completedMilestones.map((milestone, index) => (
-                  <div 
-                    key={milestone.id} 
-                    className="animate-fade-in-up group bg-slate-900/80 backdrop-blur-sm border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-6 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_30px_-15px_rgba(16,185,129,0.3)] relative overflow-hidden cursor-default"
-                    style={{ animationDelay: `${index * 150}ms`, opacity: 0, animationFillMode: 'forwards' }}
-                  >
-                    {/* Hover Gradient Background */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                    
-                    <div className="relative z-10">
-                      <div className="bg-slate-950/80 w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500 border border-slate-800 group-hover:border-emerald-500/50 group-hover:shadow-[0_0_15px_rgba(16,185,129,0.2)]">
-                        <div className="group-hover:animate-float drop-shadow-md">
-                          {milestone.icon}
-                        </div>
-                      </div>
-                      <h4 className="text-lg font-medium text-white mb-3 group-hover:text-emerald-300 transition-colors duration-300">
-                        {milestone.title}
-                      </h4>
-                      <p className="text-slate-400 text-sm leading-relaxed group-hover:text-slate-300 transition-colors duration-300">
-                        {milestone.description}
-                      </p>
-                    </div>
+              <div className="grid gap-12 md:grid-cols-2">
+                <div className="space-y-8">
+                  <div className="flex items-center gap-3 text-slate-900">
+                    <GitMerge className="h-6 w-6 text-purple-600" />
+                    <h3 className="text-2xl font-bold">The Methodology</h3>
                   </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
-
-        {activeTab === 'pipeline' && (
-          <div className="max-w-4xl mx-auto space-y-8 relative z-10 animate-fade-in">
-            <div className="bg-slate-900/80 backdrop-blur-sm border border-slate-800 rounded-2xl p-8 relative overflow-hidden hover:border-emerald-500/30 transition-colors duration-500">
-              <div className="absolute right-0 top-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-[100px] pointer-events-none"></div>
-              <h2 className="text-2xl font-light text-white mb-2 flex items-center gap-3">
-                <Target className="w-6 h-6 text-emerald-400 animate-pulse" />
-                Strategic Delivery Pipeline
-              </h2>
-              <p className="text-slate-400 text-sm mb-8">
-                The immediate action items engineered to transition from strategy to tangible brand architecture.
-              </p>
-
-              <div className="space-y-6">
-                {upcomingPipeline.map((item, index) => (
-                  <div key={item.id} className="flex gap-4 group">
-                    <div className="flex flex-col items-center mt-1">
-                      <div className="w-8 h-8 rounded-full border border-slate-700 bg-slate-800 flex items-center justify-center group-hover:border-emerald-500 group-hover:bg-emerald-500/20 group-hover:shadow-[0_0_15px_rgba(16,185,129,0.4)] transition-all duration-300">
-                        <Clock className="w-4 h-4 text-slate-400 group-hover:text-emerald-400" />
+                  <div className="space-y-4">
+                    {['Understand the Problem', 'Define Direction', 'Build the System', 'Enable Implementation'].map((step, i) => (
+                      <div key={i} className="flex items-center gap-4 rounded-xl border border-slate-100 bg-white p-4 shadow-sm transition-transform hover:scale-[1.02]">
+                        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-purple-100 text-sm font-bold text-purple-700">{i + 1}</span>
+                        <span className="font-semibold text-slate-800">{step}</span>
                       </div>
-                      {index !== upcomingPipeline.length - 1 && (
-                        <div className="w-px h-full bg-slate-800 my-2 group-hover:bg-emerald-500/50 transition-colors duration-300"></div>
-                      )}
-                    </div>
-                    <div className="bg-slate-950/50 border border-slate-800/50 rounded-xl p-5 flex-1 group-hover:border-emerald-500/30 group-hover:-translate-y-1 transition-all duration-300 hover:shadow-[0_8px_20px_-10px_rgba(16,185,129,0.2)]">
-                      <h4 className="text-white font-medium mb-1 group-hover:text-emerald-300 transition-colors">
-                        {item.title}
-                      </h4>
-                      <p className="text-slate-400 text-sm group-hover:text-slate-300 transition-colors">{item.desc}</p>
-                    </div>
+                    ))}
                   </div>
-                ))}
+                </div>
+                <div className="space-y-8">
+                  <div className="flex items-center gap-3 text-slate-900">
+                    <Layers className="h-6 w-6 text-purple-600" />
+                    <h3 className="text-2xl font-bold">The Ecosystem</h3>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    {['Magsmen (Branding)', 'MIBBS (Scale)', 'InTalks (Media)', 'SanStrategies (Ventures)'].map((sys, i) => (
+                      <div key={i} className="flex h-32 flex-col items-center justify-center rounded-2xl bg-slate-50 border border-slate-200 text-center p-4">
+                        <span className="font-bold text-slate-900">{sys.split(' (')[0]}</span>
+                        <span className="text-xs text-slate-500 mt-1">{sys.split(' (')[1].replace(')', '')}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        )}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </main>
 
-      {/* Required CSS for custom animations */}
-      <style dangerouslySetInnerHTML={{__html: `
-        @keyframes float {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-5px); }
-        }
-        .animate-float {
-          animation: float 2s ease-in-out infinite;
-        }
-        @keyframes fadeInUp {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in-up {
-          animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-        @keyframes drawLine {
-          to { stroke-dashoffset: 0; }
-        }
-        .animate-draw-line {
-          animation: drawLine 2s ease-out forwards;
-        }
-        .animate-fade-in {
-          animation: fadeIn 0.6s ease-out forwards;
-        }
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(10px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-      `}} />
+      {/* Footer */}
+      <footer className="mt-24 border-t border-slate-200 bg-white py-16">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="flex flex-col items-center justify-between gap-12 md:flex-row">
+            <div>
+              <h2 className="text-xl font-bold tracking-[0.2em] text-slate-900 uppercase">M A G S M E N</h2>
+              <p className="mt-2 text-sm text-slate-500">Strategy Consultants | HYD · GNT · AUS</p>
+            </div>
+            <div className="flex gap-8">
+              <button className="rounded-full bg-purple-600 px-8 py-3 text-sm font-bold text-white shadow-lg shadow-purple-200 transition-all hover:bg-purple-700 hover:shadow-xl">Contact Strategy Team</button>
+            </div>
+          </div>
+          <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-slate-100 pt-8 text-[10px] font-bold uppercase tracking-widest text-slate-400 md:flex-row">
+            <p>© 2026 Skin Affair Diagnostics - Confidential</p>
+            <p>A division of Grofessors Innovations Pvt Ltd.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
 
-export default SkinAffairSprintReport;
+export default App;
