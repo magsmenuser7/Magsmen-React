@@ -50,6 +50,7 @@ import Blogs from './pages/Blogs';
 import Stature from './pages/Stature';
 import SkinAffairSelect from './pages/SkinAffairStrategy.tsx';
 import SkinAffairSprintReport from './pages/SkinAffairSprintReport.tsx';
+import BctProposal from './pages/BctProposal.tsx';
 
 // 2. Define a Layout Component that includes Header and Footer
 const MainLayout = () => {
@@ -126,7 +127,7 @@ function App() {
           <Route path="/stature" element={<Stature />} />
           <Route path="/skin-affair-strategy" element={<SkinAffairSelect />} />
           <Route path="/skin-affair-sprint-report" element={<SkinAffairSprintReport />} />
-
+          <Route path="/bct-proposal" element={<BctProposal />} />
 
 
 
