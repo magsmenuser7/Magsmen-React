@@ -60,7 +60,7 @@ const App = () => {
     { id: 'intelligence', label: 'Market Intelligence' },
     { id: 'architecture', label: 'Brand Architecture' },
     { id: 'pipeline', label: 'Strategic Pipeline' },
-    { id: 'about', label: 'About Magsmen' },
+    // { id: 'about', label: 'About Magsmen' },
   ];
 
   const containerVariants = {
