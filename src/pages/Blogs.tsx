@@ -919,19 +919,19 @@ const blogPosts = [
       imageUrl:indiandairybrands
     },
 
-    // {
-    //   id: 66,
-    //   title: 'The Packaged Water Industry Has a Brand Problem Worth Billions',
-    //   excerpt: 'India\'s packaged water market is growing fast, but most brands are invisible to consumers. Learn how strategic brand positioning creates lasting competitive advantage in the water industry.',
-    //   category: 'Branding',
-    //   author: { name: 'Magsmen', avatar: '/assets/avatar/magsmen.png' },
-    //   date: '2024-10-15',
-    //   publishedAt: '2026-03-30',
-    //   readTime: '3:39pm',
+    {
+      id: 66,
+      title: 'The Packaged Water Industry Has a Brand Problem Worth Billions',
+      excerpt: 'India\'s packaged water market is growing fast, but most brands are invisible to consumers. Learn how strategic brand positioning creates lasting competitive advantage in the water industry.',
+      category: 'Branding',
+      author: { name: 'Magsmen', avatar: '/assets/avatar/magsmen.png' },
+      date: '2024-04-08',
+      publishedAt: '2026-04-08',
+      readTime: '2:20pm',
       
-    //   slug: 'packaged-water-brand-strategy-india',
-    //   imageUrl:packagedwaterindustry
-    // }
+      slug: 'packaged-water-brand-strategy-india',
+      imageUrl:packagedwaterindustry
+    }
   ];
 
 

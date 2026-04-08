@@ -353,6 +353,13 @@ const Home = () => {
   const blogs = [
 
     {
+      title: 'The Packaged Water Industry Has a Brand Problem Worth Billions',
+      slug: 'packaged-water-brand-strategy-india',
+      description: "India\'s packaged water market is growing fast, but most brands are invisible to consumers. Learn how strategic brand positioning creates lasting competitive advantage in the water industry.",
+      imageUrl: packagedwaterindustry
+    },
+
+    {
       title: 'Indian Dairy Brands Are Sitting on a Goldmine They Refuse to Mine',
       slug: 'dairy-brand-strategy-india',
       description: 'India is the world\'s largest milk producer, but most dairy brands lack strategic positioning. Discover how brand consulting transforms dairy businesses from procurement operations into market leaders.',
@@ -364,12 +371,7 @@ const Home = () => {
       description: 'India\'s fashion jewellery market is exploding, but most brands are invisible. Learn how brand strategy transforms jewellery businesses from sellers into symbols of identity and aspiration.',
       imageUrl: fashionjewlleryinindia
     },
-    {
-      title: 'The Rice Branding Problem: Why a Commodity Mindset Is Costing Indian Rice Companies Crores',
-      slug: 'rice-brand-strategy-india',
-      description: "India is the world's largest rice exporter, yet most domestic rice brands lack strategic positioning. Learn how brand strategy transforms rice businesses from commodity sellers to market leaders.",
-      imageUrl: ricebrandingproblem
-    },
+    
     
     
   ];
