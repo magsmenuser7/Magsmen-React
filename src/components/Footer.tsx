@@ -26,7 +26,7 @@ const Footer = () => {
               <a href="https://x.com/magsmenindia" target='_blank' className="text-gray-300 hover:text-[#683FBF] transition-colors">
                 <X className="w-8 h-10" />
               </a>
-              <a href="https://www.facebook.com/magsmenindia" target='_blank' className="text-gray-300 hover:text-[#683FBF] transition-colors">
+              <a href="https://www.facebook.com/brandwithmagsmen" target='_blank' className="text-gray-300 hover:text-[#683FBF] transition-colors">
                 <Facebook className="w-8 h-10" />
               </a>
               <a href="https://www.instagram.com/magsmenindia/" target='_blank' className="text-gray-300 hover:text-[#683FBF] transition-colors">

@@ -1,0 +1,596 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
+
+.snigdha-proposal-wrapper {
+  --black: #0a0a0a;
+  --dark: #1a1a1a;
+  --mid: #2e2e2e;
+  --accent: #c8a96e;
+  --accent-light: #e8d5b0;
+  --white: #ffffff;
+  --off-white: #f8f6f2;
+  --light-grey: #e8e4dc;
+  --text-grey: #6b6460;
+
+  font-family: 'Inter', sans-serif;
+  background: var(--white);
+  color: var(--black);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* COVER PAGE */
+.snigdha-proposal-wrapper .cover {
+  min-height: 100vh;
+  background: var(--black);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.snigdha-proposal-wrapper .cover::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(135deg, #2a2a2a 0%, transparent 60%);
+  border-radius: 50%;
+}
+
+.snigdha-proposal-wrapper .cover::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  left: -80px;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, transparent 40%, #1a1a1a 100%);
+  border-radius: 50%;
+}
+
+.snigdha-proposal-wrapper .cover-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  z-index: 2;
+}
+
+.snigdha-proposal-wrapper .logo-area {
+  display: flex;
+  flex-direction: column;
+}
+
+.snigdha-proposal-wrapper .logo-mark {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 2px;
+}
+
+.snigdha-proposal-wrapper .logo-mark span { color: var(--accent); }
+
+.snigdha-proposal-wrapper .logo-sub {
+  font-size: 10px;
+  color: var(--text-grey);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.snigdha-proposal-wrapper .confidential-tag {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--text-grey);
+  text-transform: uppercase;
+  border: 1px solid #333;
+  padding: 6px 14px;
+  border-radius: 2px;
+}
+
+.snigdha-proposal-wrapper .cover-mid {
+  position: relative;
+  z-index: 2;
+}
+
+.snigdha-proposal-wrapper .cover-eyebrow {
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.snigdha-proposal-wrapper .cover-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.snigdha-proposal-wrapper .cover-subline {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--accent-light);
+  line-height: 1.3;
+  margin-bottom: 40px;
+}
+
+.snigdha-proposal-wrapper .cover-divider {
+  width: 80px;
+  height: 2px;
+  background: var(--accent);
+  margin-bottom: 32px;
+}
+
+.snigdha-proposal-wrapper .cover-tagline {
+  font-size: 13px;
+  color: #888;
+  font-style: italic;
+  max-width: 480px;
+  line-height: 1.8;
+}
+
+.snigdha-proposal-wrapper .cover-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  z-index: 2;
+}
+
+.snigdha-proposal-wrapper .cover-meta { display: flex; flex-direction: column; gap: 6px; }
+
+.snigdha-proposal-wrapper .meta-row {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+}
+
+.snigdha-proposal-wrapper .meta-label {
+  color: var(--text-grey);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  min-width: 80px;
+}
+
+.snigdha-proposal-wrapper .meta-value { color: var(--white); }
+
+.snigdha-proposal-wrapper .cover-brand-mark {
+  font-size: 11px;
+  color: #444;
+  text-align: right;
+  letter-spacing: 1px;
+}
+
+/* PAGE SECTIONS */
+.snigdha-proposal-wrapper .page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 60px;
+}
+
+.snigdha-proposal-wrapper .page-break {
+  border-top: 1px solid var(--light-grey);
+  margin: 0;
+  padding-top: 80px;
+}
+
+/* SECTION HEADERS */
+.snigdha-proposal-wrapper .section-number {
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.snigdha-proposal-wrapper .section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--black);
+  line-height: 1.2;
+  margin-bottom: 32px;
+}
+
+.snigdha-proposal-wrapper .section-intro {
+  font-size: 16px;
+  color: var(--mid);
+  line-height: 1.8;
+  margin-bottom: 40px;
+  max-width: 720px;
+}
+
+/* PULL QUOTE / HIGHLIGHT BOX */
+.snigdha-proposal-wrapper .highlight-box {
+  background: var(--black);
+  color: var(--white);
+  padding: 36px 40px;
+  margin: 40px 0;
+  border-left: 4px solid var(--accent);
+  position: relative;
+}
+
+.snigdha-proposal-wrapper .highlight-box p {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+.snigdha-proposal-wrapper .highlight-box .attr {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-top: 16px;
+  font-style: normal;
+}
+
+/* ACCENT BOX */
+.snigdha-proposal-wrapper .accent-box {
+  background: var(--off-white);
+  border-left: 4px solid var(--accent);
+  padding: 28px 32px;
+  margin: 32px 0;
+}
+
+.snigdha-proposal-wrapper .accent-box p { font-size: 14px; line-height: 1.8; color: var(--mid); margin-bottom: 0; }
+.snigdha-proposal-wrapper .accent-box strong { color: var(--black); }
+
+/* TWO COLUMN */
+.snigdha-proposal-wrapper .two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin: 32px 0;
+}
+
+.snigdha-proposal-wrapper .col-card {
+  background: var(--off-white);
+  padding: 28px;
+}
+
+.snigdha-proposal-wrapper .col-card h4 {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.snigdha-proposal-wrapper .col-card p { font-size: 13px; line-height: 1.8; color: var(--mid); margin-bottom: 0; }
+
+/* TABLE */
+.snigdha-proposal-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 32px 0;
+  font-size: 13px;
+}
+
+.snigdha-proposal-wrapper thead tr {
+  background: var(--black);
+  color: var(--white);
+}
+
+.snigdha-proposal-wrapper thead th {
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.snigdha-proposal-wrapper tbody tr { border-bottom: 1px solid var(--light-grey); }
+.snigdha-proposal-wrapper tbody tr:nth-child(even) { background: var(--off-white); }
+
+.snigdha-proposal-wrapper tbody td {
+  padding: 14px 16px;
+  color: var(--mid);
+  vertical-align: top;
+  line-height: 1.6;
+}
+
+.snigdha-proposal-wrapper tbody td:first-child { color: var(--black); font-weight: 500; }
+
+/* ENGAGEMENT CARD */
+.snigdha-proposal-wrapper .engagement-card {
+  border: 1px solid var(--light-grey);
+  margin: 32px 0;
+  overflow: hidden;
+}
+
+.snigdha-proposal-wrapper .eng-header {
+  background: var(--black);
+  padding: 24px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.snigdha-proposal-wrapper .eng-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: var(--white);
+}
+
+.snigdha-proposal-wrapper .eng-tag {
+  background: var(--accent);
+  color: var(--black);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 6px 14px;
+  text-transform: uppercase;
+}
+
+.snigdha-proposal-wrapper .eng-body { padding: 32px; }
+
+.snigdha-proposal-wrapper .eng-body p { font-size: 14px; line-height: 1.8; color: var(--mid); margin-bottom: 20px; }
+
+.snigdha-proposal-wrapper .eng-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  background: var(--off-white);
+  padding: 24px;
+  margin-top: 8px;
+}
+
+.snigdha-proposal-wrapper .eng-meta-item { display: flex; flex-direction: column; gap: 4px; }
+
+.snigdha-proposal-wrapper .eng-meta-label {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-grey);
+}
+
+.snigdha-proposal-wrapper .eng-meta-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.snigdha-proposal-wrapper .eng-meta-note { font-size: 11px; color: var(--text-grey); }
+
+/* DELIVERABLES LIST */
+.snigdha-proposal-wrapper .deliverables {
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.snigdha-proposal-wrapper .deliverables li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--light-grey);
+  font-size: 13px;
+  color: var(--mid);
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.snigdha-proposal-wrapper .deliverables li::before {
+  content: '→';
+  color: var(--accent);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* INVESTMENT SUMMARY */
+.snigdha-proposal-wrapper .investment-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.snigdha-proposal-wrapper .investment-row:last-child { border-bottom: none; }
+
+.snigdha-proposal-wrapper .inv-label { font-size: 14px; color: var(--mid); }
+.snigdha-proposal-wrapper .inv-label strong { color: var(--black); display: block; font-size: 16px; margin-bottom: 2px; }
+.snigdha-proposal-wrapper .inv-amount { font-size: 22px; font-weight: 700; color: var(--black); text-align: right; }
+.snigdha-proposal-wrapper .inv-note { font-size: 11px; color: var(--text-grey); display: block; }
+
+.snigdha-proposal-wrapper .investment-total {
+  background: var(--black);
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.snigdha-proposal-wrapper .inv-total-label {
+  color: var(--accent-light);
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.snigdha-proposal-wrapper .inv-total-amount {
+  color: var(--white);
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* NEXT STEPS */
+.snigdha-proposal-wrapper .steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 32px 0;
+}
+
+.snigdha-proposal-wrapper .step-card {
+  border-top: 3px solid var(--accent);
+  padding: 24px 0 0;
+}
+
+.snigdha-proposal-wrapper .step-num {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--light-grey);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.snigdha-proposal-wrapper .step-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.snigdha-proposal-wrapper .step-desc { font-size: 12px; color: var(--text-grey); line-height: 1.7; }
+
+/* CONTACT */
+.snigdha-proposal-wrapper .contact-section {
+  background: var(--black);
+  padding: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.snigdha-proposal-wrapper .contact-left h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.snigdha-proposal-wrapper .contact-left p { color: #888; font-size: 13px; max-width: 360px; line-height: 1.8; margin-bottom: 0;}
+
+.snigdha-proposal-wrapper .contact-right {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.snigdha-proposal-wrapper .contact-item { font-size: 12px; color: #888; }
+.snigdha-proposal-wrapper .contact-item strong { color: var(--accent-light); display: block; font-size: 13px; }
+
+.snigdha-proposal-wrapper .footer-bar {
+  background: #050505;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.snigdha-proposal-wrapper .footer-bar span { font-size: 11px; color: #444; letter-spacing: 1px; }
+
+/* BODY TEXT */
+.snigdha-proposal-wrapper p { margin-bottom: 16px; }
+.snigdha-proposal-wrapper p:last-child { margin-bottom: 0; }
+
+.snigdha-proposal-wrapper h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: var(--black);
+  margin: 40px 0 16px;
+}
+
+.snigdha-proposal-wrapper h3:first-child { margin-top: 0; }
+
+.snigdha-proposal-wrapper .body-text { font-size: 14px; line-height: 1.85; color: var(--mid); }
+
+.snigdha-proposal-wrapper .inline-stat {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--black);
+  font-weight: 700;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 2px;
+  margin: 0 2px;
+}
+
+.snigdha-proposal-wrapper .section-rule {
+  border: none;
+  border-top: 1px solid var(--light-grey);
+  margin: 60px 0;
+}
+
+/* TOC */
+.snigdha-proposal-wrapper .toc-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px dotted var(--light-grey);
+  font-size: 13px;
+}
+
+.snigdha-proposal-wrapper .toc-item span:first-child { color: var(--mid); }
+.snigdha-proposal-wrapper .toc-item .toc-num {
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: 1px;
+}
+
+@media print {
+  .snigdha-proposal-wrapper .cover { page-break-after: always; }
+}
+
+
+/* Keep page structure */
+.snigdha-proposal-wrapper .page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 60px;
+}
+
+/* Center only important elements */
+.section-number,
+.section-title,
+.highlight-box,
+.accent-box {
+  text-align: center;
+}
+
+.section-title {
+  text-align: center;
+}
+
+.section-number {
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.body-text {
+  text-align: left; /* keeps readability strong */
+  max-width: 700px;
+  margin: 0 auto; /* gives nice centered text block feel */
+}
+
+.logo-area {
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center;
+}
+
+.logo-img {
+  max-width: 290px; /* adjust based on your design */
+  height: auto;
+}
