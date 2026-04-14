@@ -12,6 +12,7 @@ import {
   TrendingUp,
   Award
 } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const PartnerWithUs = () => {
   const [activeTab, setActiveTab] = useState('vendors');
@@ -136,22 +137,46 @@ const PartnerWithUs = () => {
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // In a real app, this would submit to your backend
-    console.log('Partnership application submitted:', { ...formData, partnershipType: activeTab });
-    alert('Application submitted successfully! We\'ll review your application and get back to you within 5 business days.');
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      company: '',
-      website: '',
-      experience: '',
-      services: '',
-      portfolio: '',
-      message: ''
-    });
+  e.preventDefault();
+
+  const serviceId = "service_kg4syyc";
+  const templateId = "template_d5fru99";
+  const publicKey = "tQ8edXl0r_tbtMiT2";
+
+  const templateParams = {
+    name: formData.name,
+    email: formData.email,
+    phone: formData.phone,
+    company: formData.company,
+    website: formData.website,
+    experience: formData.experience,
+    services: formData.services,
+    portfolio: formData.portfolio,
+    message: formData.message,
+    partnershipType: activeTab
   };
+
+  emailjs.send(serviceId, templateId, templateParams, publicKey)
+    .then(() => {
+      alert("Application submitted successfully!");
+      
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        company: '',
+        website: '',
+        experience: '',
+        services: '',
+        portfolio: '',
+        message: ''
+      });
+    })
+    .catch((error) => {
+  console.error("FULL ERROR:", error);
+  alert(JSON.stringify(error));
+});
+};
 
   const currentContent = partnershipContent[activeTab as keyof typeof partnershipContent];
 

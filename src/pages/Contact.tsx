@@ -12,6 +12,7 @@ import {
   Users,
   Calendar
 } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -70,27 +71,45 @@ const Contact = () => {
     'Let\'s discuss'
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // In a real app, this would submit to your backend
-    console.log('Contact form submitted:', formData);
-    setIsSubmitted(true);
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        projectType: '',
-        budget: '',
-        timeline: '',
-        message: ''
-      });
-    }, 3000);
+ const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
+
+  const serviceId = "service_kg4syyc";
+  const templateId = "template_lr0rx5d";
+  const publicKey = "tQ8edXl0r_tbtMiT2";
+
+  const templateParams = {
+    name: formData.name,
+    email: formData.email,
+    phone: formData.phone,
+    company: formData.company,
+    message: formData.message
   };
+
+  emailjs
+    .send(serviceId, templateId, templateParams, publicKey)
+    .then(() => {
+      setIsSubmitted(true);
+
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          company: '',
+          projectType: '',
+          budget: '',
+          timeline: '',
+          message: ''
+        });
+      }, 3000);
+    })
+    .catch((error) => {
+      console.error("EmailJS Error:", error);
+      alert("Failed to send message. Try again.");
+    });
+};
 
   if (isSubmitted) {
     return (

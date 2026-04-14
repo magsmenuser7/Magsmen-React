@@ -177,15 +177,15 @@ const AnimatedIcon: React.FC<AnimatedIconProps> = ({ icon, gradient }) => {
     </div>
 
    {/* RIGHT VISUAL (BRAND ELEMENT IMAGE) */}
-<div className="flex justify-end items-end">
-  <video
-    src={magsmenbrandconsultingservice850x400}
-    className="max-w-full max-h-[420px] object-contain"
-    autoPlay
-    loop
-    muted
-    playsInline
-  />
+      <div className="flex justify-end items-end ">
+        <video
+          src={magsmenbrandconsultingservice850x400}
+          className="max-w-full max-h-[420px] object-contain"
+          autoPlay
+          loop
+          muted
+          playsInline
+      />
 </div>
 
   </div>
@@ -216,7 +216,7 @@ const AnimatedIcon: React.FC<AnimatedIconProps> = ({ icon, gradient }) => {
     </div>
 
     {/* RIGHT — SCROLLING FEATURES */}
-    <div className="lg:col-span-2 space-y-8">
+    <div className="lg:col-span-2 space-y-2">
       {serviceData.details.features.map((feature, index) => (
         <div
           key={index}
