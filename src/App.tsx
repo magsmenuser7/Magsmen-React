@@ -131,7 +131,7 @@ function App() {
           <Route path="/skin-affair-sprint-report" element={<SkinAffairSprintReport />} />
           <Route path="/bct-proposal" element={<BctProposal />} />
           <Route path="/snigdha-strategic-proposal" element={<SnigdhaProposal />} />
-          <Route path="/strategy-and-brand-consulting-proposal" element={<SubbayaGariHotel />} />
+          <Route path="/subbayya-gari-hotel-consulting-proposal" element={<SubbayaGariHotel />} />
 
 
 
