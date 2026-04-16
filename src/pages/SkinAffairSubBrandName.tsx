@@ -4,6 +4,7 @@ import {
   BookOpen, X, Tag, ShieldCheck, Gem, Star, Phone, Mail, Globe 
 } from 'lucide-react';
 import logo from "/assets/white_logo22.png"
+import horizontallogo from "/assets/Artboard 1 copy 272x-8 (1).png"
 
 Chart.defaults.font.family = "'DM Sans', sans-serif";
 Chart.defaults.color = '#64748b';
@@ -985,8 +986,9 @@ export default function SkinAffairSubBrandName() {
         <div className="max-w-[1320px] mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-12">
             <div>
-              <div className="tracking-[0.2em] text-white uppercase text-[16px] font-bold mb-2">MAGSMEN BRAND CONSULTANTS</div>
-              <p className="text-xs text-gray-400 max-w-sm">Strategic brand consulting firm operating across India and Australia, specializing in building brands that perform.</p>
+              {/* <div className="tracking-[0.2em] text-white uppercase text-[16px] font-bold mb-2">MAGSMEN STRATEGY CONSULTANTS</div> */}
+              <img src={horizontallogo} alt="Magsmen Logo" className="h-10 mb-2" />
+              <p className="text-xs text-gray-400 max-w-sm">Operating across India and Australia, specializing in building brands that perform.</p>
             </div>
             <div className="text-left md:text-right text-sm text-gray-400 space-y-1">
               <p className="flex items-center md:justify-end gap-2"><Phone size={14} /> +91 90449 10449</p>
