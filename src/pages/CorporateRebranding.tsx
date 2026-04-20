@@ -6,11 +6,12 @@ import { useNavigate, Link } from 'react-router-dom';
 import corporaterebranding from '/assets/services/corporate_rebranding.jpg';
 
 import magsmencorporaterebrandingconsultingservice from "/assets/services/magsmen-corporate-rebranding-consulting-service-850x400.mp4"
-
+import { Routes, Route } from "react-router-dom";
 
 import zavainevideo from "/assets/works/zavaine-video.mp4"
 import telugufoods from "/assets/works/telugu-foods.mp4"
 import suryacolorsvideo from "/assets/works/surya-colors-video.mp4"
+import xxxvideo from "/assets/works/triplex-video.mp4"
 
 
 // Data for the Corporate Rebranding page
@@ -78,47 +79,35 @@ const CorporateRebrandingPage = () => {
     <div className="min-h-screen  pt-16">
       {/* bg-gradient-to-br from-gray-200 to-white */}
       <div className="max-w-8xl mx-auto py-8 mt-4">
-        {/* <button
+        <button
                   onClick={handleBack}
                   className="flex items-center text-gray-600 hover:text-purple-600 ml-24 transition-all duration-300 mt-6  mb-8 group bg-white px-6 py-3 rounded-full shadow-md hover:shadow-lg"
                 >
                   <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform duration-300" />
                   Back to Services
-                </button> */}
+                </button>
 
        
 
-           {/* REDESIGNED MIDDLE SECTION */}
-<section className="w-full flex justify-center py-24">
-  <div className="w-[80%] grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
-    
-    {/* LEFT CONTENT */}
-    <div>
-      <h1 className="text-4xl lg:text-6xl text-black mb-6 leading-tight">
-        {/* {serviceData.details.title}{" "} */}
-        {/* <span className="font-thin opacity-80">
-          {serviceData.details.title }{serviceData.details.title_two}
-        </span> */}
-      </h1>
+                   {/* REDESIGNED MIDDLE SECTION */}
+<section className="w-full min-h-[60vh] bg-white flex flex-col items-center justify-center px-0 text-center">
 
-      <h1 className="text-black md:text-6xl leading-relaxed max-w-xl ">
-        {serviceData.details.heroDescription}
-      </h1>
-    </div>
-
-   {/* RIGHT VISUAL (BRAND ELEMENT IMAGE) */}
-<div className="flex justify-end items-end">
+  <div className="mb-10 flex justify-center">
   <video
     src={magsmencorporaterebrandingconsultingservice}
-    className="max-w-full max-h-[420px] object-contain"
     autoPlay
     loop
     muted
     playsInline
+    className="w-80 md:w-96"
   />
 </div>
 
-  </div>
+  {/* CONTENT */}
+  <h1 className="text-2xl md:text-5xl lg:text-3xl font-semibold text-black leading-tight max-w-4xl">
+    We refresh and realign your brand to keep pace with evolving markets , refining what exists while strengthening what’s next.
+  </h1>
+
 </section>
 
 
@@ -145,11 +134,98 @@ const CorporateRebrandingPage = () => {
           </ul>
         </div>
 
+<section className="py-24 bg-white">
+  <div className="max-w-7xl mx-auto px-6 md:px-14">
+
+   
+    <div className="mb-16 text-center">
+      <h1 className="text-4xl md:text-6xl font-light text-black tracking-tight">
+        Related Work
+      </h1>
+      <p className='pt-5'>
+        We explore how strategy, identity, and execution come together to shape meaningful brands. From positioning frameworks to visual systems, this work reflects our approach to building brands with clarity and long-term intent.
+      </p>
+    </div>
+
+   
+    <div className="grid md:grid-cols-2 gap-12">
 
 
-<div className="py-28 bg-gray-150">
+       <Link to="/case-studies/surya-colors">
+        <div className="bg-[#f5f5f5] rounded-[40px] p-6 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border-black/40 border-[0.5px]">
+
+          <div className="rounded-[28px] overflow-hidden mb-6">
+            <video className="w-full h-[240px] object-cover" autoPlay muted loop>
+              <source src={suryacolorsvideo} type="video/mp4" />
+            </video>
+            
+          </div>
+          
+
+          <p className="text-gray-700 text-sm leading-relaxed">
+           Stabilised and scaled a regional paints brand through a structured digital and brand-led growth strategy.
+          </p>
+
+          <div className="flex justify-end mt-6 ">
+            <button className="bg-black text-white text-xl px-8 py-2 rounded-2xl hover:bg-purple-700 transition font-medium">
+              Visit
+            </button>
+          </div>
+        </div>
+      </Link>
+
+       <Link to="/case-studies/triplex">
+        <div className="bg-[#f5f5f5] rounded-[40px] p-6 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2
+        border-black/40 border-[0.5px]">
+
+          <div className="rounded-[28px] overflow-hidden mb-6">
+            <video className="w-full h-[240px] object-cover" autoPlay muted loop>
+              <source src={xxxvideo} type="video/mp4" />
+            </video>
+          </div>
+
+          <p className="text-gray-700 text-sm leading-relaxed">
+            Built Triplex’s digital-first presence, transforming a strong regional detergent brand into a high-engagement, multi-market digital player.
+          </p>
+
+          <div className="flex justify-end mt-6">
+            <button className="bg-black text-white text-xl px-8 py-2 rounded-2xl hover:bg-purple-700  transition font-medium">
+              Visit
+            </button>
+          </div>
+        </div>
+      </Link>
+      
+
+      
+      <Link to="/case-studies/telugu-foods">
+        <div className="bg-[#f5f5f5] rounded-[40px] p-6 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border-black/40 border-[0.5px]">
+
+          <div className="rounded-[28px] overflow-hidden mb-6">
+            <video className="w-full h-[240px] object-cover" autoPlay muted loop>
+              <source src={telugufoods} type="video/mp4" />
+            </video>
+          </div>
+
+          <p className="text-gray-700 text-sm leading-relaxed">
+            Built a strong digital-first food brand by driving awareness, engagement, and B2B growth through an integrated marketing strategy.
+          </p>
+
+          <div className="flex justify-end mt-6">
+            <button className="bg-black text-white text-xl font-medium px-8 py-2 rounded-2xl hover:bg-purple-700 transition">
+              Visit
+            </button>
+          </div>
+        </div>
+      </Link>
+    </div>
+  </div>
+      </section>
+
+
+{/* <div className="py-28 bg-gray-150">
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-6 mx-auto items-start justify-center max-w-7xl px-4 md:px-0">
-     {/* TEXT BLOCK */}
+     
     <div>
       <h1 className="text-5xl md:text-8xl font-bold text-black pl-5">
         Related <br /> <span className="font-thin">Work</span>
@@ -161,7 +237,7 @@ const CorporateRebrandingPage = () => {
     </div>
 
 
-        {/* video 1 */}
+       
  <div className="relative w-full h-full shadow-xl group overflow-hidden rounded-3xl">
       <video
         src={zavainevideo}
@@ -172,7 +248,7 @@ const CorporateRebrandingPage = () => {
         playsInline
       />
 
-      {/* Smooth overlay animation */}
+     
       <div
         className="
           absolute inset-0
@@ -196,7 +272,7 @@ const CorporateRebrandingPage = () => {
 
 
    
-{/* video 2 */}
+
    <div className="relative shadow-xl group overflow-hidden rounded-3xl">
       <video
         src={telugufoods}
@@ -207,7 +283,7 @@ const CorporateRebrandingPage = () => {
         playsInline
       />
 
-      {/* Smooth overlay animation */}
+     
       <div
         className="
           absolute inset-0
@@ -230,7 +306,7 @@ const CorporateRebrandingPage = () => {
     </div>
 
 
-        {/* video 3 */}
+       
  <div className="relative shadow-xl group overflow-hidden rounded-3xl">
       <video
         src={suryacolorsvideo}
@@ -241,7 +317,7 @@ const CorporateRebrandingPage = () => {
         playsInline
       />
 
-      {/* Smooth overlay animation */}
+     
       <div
         className="
           absolute inset-0
@@ -265,7 +341,7 @@ const CorporateRebrandingPage = () => {
 
 
   </div>
-</div>
+</div> */}
 
         {/* CTA Section */}
         <div className="mt-12 bg-gradient-to-r from-black to-purple-900 p-12 text-center text-white relative overflow-hidden mb-[-35px]">
@@ -280,11 +356,11 @@ const CorporateRebrandingPage = () => {
               {/* <button className="bg-white text-black px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
                 Schedule Free Consultation
               </button> */}
-              <button 
-              onClick={() => navigate('/case-studies')}
-              className="border-2 border-white text-white px-8 py-4 font-semibold hover:bg-white hover:text-black transition-all duration-300">
-                View Case Studies
-              </button>
+              <Link to="/case-studies">
+                <button className="border-2 border-white text-white px-8 py-4 font-semibold hover:bg-white hover:text-black transition-all duration-300">
+                  View Case Studies
+                </button>
+              </Link>
             </div>
           </div>
         </div>

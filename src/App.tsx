@@ -21,7 +21,7 @@ import BrandCreationPage from './pages/BrandCreation';
 import LinkFluencePage from './pages/LinkFluence';
 import LaunchpadPage from './pages/Launchpad';
 import BlogDetail from './pages/BlogDetails';
-import ScrollToTopWithHash from './components/ScrollToTopWithHash';
+import ScrollToTopWithHash from './components/ScrollToTopWithHash.tsx';
 import WorkDetails from './pages/workDetails'
 import Media from './pages/Media';
 import PrivacyPolicy from './pages/PrivacyPolicy';
@@ -73,7 +73,7 @@ function App() {
     <Router>
 
       <div className="min-h-screen bg-white">
-        <ScrollToTopWithHash headerOffset={80} />
+        <ScrollToTopWithHash />
         
         <Routes>
           {/* GROUP 1: All pages that REQUIRE Header & Footer */}
@@ -134,6 +134,8 @@ function App() {
           <Route path="/snigdha-strategic-proposal" element={<SnigdhaProposal />} />
           <Route path="/subbayya-gari-hotel-consulting-proposal" element={<SubbayaGariHotel />} />
           <Route path="/skin-affair-sub-brand-name" element={<SkinAffairSubBrandName />} />
+         
+
 
 
         </Routes>

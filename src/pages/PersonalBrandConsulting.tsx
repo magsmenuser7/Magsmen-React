@@ -11,7 +11,7 @@ import {
 import { useNavigate, Link } from 'react-router-dom';
 
 import personalbrandconsulting from '/assets/services/magsmen-personal-brand-consulting-servic-850x400.mp4';
-
+import { Routes, Route } from "react-router-dom";
 import tenalidoublehorsevideo from "/assets/works/tenali-double-horse.mp4"
 import xxxvideo from "/assets/works/triplex-video.mp4"
 import vsbvideo from "/assets/works/vsbgroup.mp4"
@@ -135,26 +135,42 @@ const AnimatedIcon: React.FC<{ icon: React.ReactNode; gradient: string }> = ({ i
     <div className="min-h-screen pt-16">
       {/* bg-gradient-to-br bg-gradient-to-br from-gray-200 to-white */}
       <div className="max-w-8xl mx-auto  py-8 mt-4">
-        {/* <button
+        <button
                   onClick={handleBack}
                   className="flex items-center text-gray-600 hover:text-purple-600 ml-24 transition-all duration-300 mt-6  mb-8 group bg-white px-6 py-3 rounded-full shadow-md hover:shadow-lg"
                 >
                   <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform duration-300" />
                   Back to Services
-                </button> */}
+                </button>
 
-        
+                {/* REDESIGNED MIDDLE SECTION */}
+<section className="w-full min-h-[60vh] bg-white flex flex-col items-center justify-center px-0 text-center">
 
-<section className="w-full flex justify-center py-24">
+  <div className="mb-10 flex justify-center">
+  <video
+    src={personalbrandconsulting}
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="w-80 md:w-96"
+  />
+</div>
+
+  {/* CONTENT */}
+  <h1 className="text-2xl md:text-5xl lg:text-3xl  font-semibold text-black leading-tight max-w-4xl">
+We help individuals identify the right platforms for their goals and craft a powerful presence that connects with the right audience. Don’t just build a brand — build influence.
+  </h1>
+
+</section>
+
+{/* <section className="w-full flex justify-center py-24">
   <div className="w-[80%] grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
     
-    {/* LEFT CONTENT */}
+   
     <div>
       <h1 className="text-4xl lg:text-6xl text-black mb-6 leading-tight">
-        {/* {serviceData.details.title}{" "} */}
-        {/* <span className="font-thin opacity-80">
-          {serviceData.details.title }{serviceData.details.title_two}
-        </span> */}
+       
       </h1>
 
       <h1 className="text-black md:text-6xl leading-relaxed max-w-xl ">
@@ -162,7 +178,7 @@ const AnimatedIcon: React.FC<{ icon: React.ReactNode; gradient: string }> = ({ i
       </h1>
     </div>
 
-   {/* RIGHT VISUAL (BRAND ELEMENT IMAGE) */}
+   
 <div className="flex justify-end items-end">
   <video
     src={personalbrandconsulting}
@@ -175,7 +191,7 @@ const AnimatedIcon: React.FC<{ icon: React.ReactNode; gradient: string }> = ({ i
 </div>
 
   </div>
-</section>
+</section> */}
 
 
 
@@ -198,7 +214,7 @@ const AnimatedIcon: React.FC<{ icon: React.ReactNode; gradient: string }> = ({ i
     </div>
 
     {/* RIGHT — SCROLLING FEATURES */}
-    <div className="lg:col-span-2 space-y-8">
+    <div className="lg:col-span-2 space-y-2">
       {serviceData.details.features.map((feature, index) => (
         <div
           key={index}
@@ -213,127 +229,92 @@ const AnimatedIcon: React.FC<{ icon: React.ReactNode; gradient: string }> = ({ i
 </section>
 
 
+ <section className="py-24 bg-white">
+  <div className="max-w-7xl mx-auto px-6 md:px-14">
 
-
-<div className="py-28 bg-gray-150">
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-6 mx-auto items-start justify-center max-w-7xl px-4 md:px-0">
-     {/* TEXT BLOCK */}
-    <div>
-      <h1 className="text-5xl md:text-8xl font-bold text-black pl-5">
-        Related <br /> <span className="font-thin">Work</span>
+   
+    <div className="mb-16 text-center">
+      <h1 className="text-4xl md:text-6xl font-light text-black tracking-tight">
+        Related Work
       </h1>
-
-      <p className="mt-6 pl-5">
-       We explore how strategy, identity, and execution come together to shape meaningful brands. From positioning frameworks to visual systems, this work reflects our approach to building brands with clarity and long-term intent.
+      <p className='pt-5'>
+        We explore how strategy, identity, and execution come together to shape meaningful brands. From positioning frameworks to visual systems, this work reflects our approach to building brands with clarity and long-term intent.
       </p>
     </div>
 
-
-        {/* video 1 */}
- <div className="relative w-full h-full shadow-xl group overflow-hidden rounded-3xl">
-      <video
-        src={tenalidoublehorsevideo}
-        className="w-full h-full object-contain"
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
-
-      {/* Smooth overlay animation */}
-      <div
-        className="
-          absolute inset-0
-          bg-black/60
-          transform -translate-x-full opacity-0
-          group-hover:translate-x-0 group-hover:opacity-100
-          transition-all duration-700
-          ease-[cubic-bezier(0.25,0.46,0.45,0.94)]
-          flex items-center justify-center
-          will-change-transform
-        "
-      >
-        <Link
-          to="/case-studies/tenali-double-horse"
-          className="text-white text-2xl font-semibold tracking-wide hover:underline"
-        >
-          Tenali Double Horse
-        </Link>
-      </div>
-    </div>
-
-
    
-{/* video 2 */}
-   <div className="relative shadow-xl group overflow-hidden rounded-3xl">
-      <video
-        src={xxxvideo}
-        className="w-full h-full object-contain"
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
+    <div className="grid md:grid-cols-2 gap-12">
 
-      {/* Smooth overlay animation */}
-      <div
-        className="
-          absolute inset-0
-          bg-black/60
-          transform -translate-x-full opacity-0
-          group-hover:translate-x-0 group-hover:opacity-100
-          transition-all duration-700
-          ease-[cubic-bezier(0.25,0.46,0.45,0.94)]
-          flex items-center justify-center
-          will-change-transform
-        "
-      >
-        <Link
-          to="/case-studies/triplex"
-          className="text-white text-2xl font-semibold tracking-wide hover:underline"
-        >
-          XXX
-        </Link>
-      </div>
+
+      <Link to="/case-studies/triplex">
+        <div className="bg-[#f5f5f5] rounded-[40px] p-6 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2
+        border-black/40 border-[0.5px]">
+
+          <div className="rounded-[28px] overflow-hidden mb-6">
+            <video className="w-full h-[240px] object-cover" autoPlay muted loop>
+              <source src={xxxvideo} type="video/mp4" />
+            </video>
+          </div>
+
+          <p className="text-gray-700 text-sm leading-relaxed">
+            Built Triplex’s digital-first presence, transforming a strong regional detergent brand into a high-engagement, multi-market digital player.
+          </p>
+
+          <div className="flex justify-end mt-6">
+            <button className="bg-black text-white text-xl px-8 py-2 rounded-2xl hover:bg-purple-700  transition font-medium">
+              Visit
+            </button>
+          </div>
+        </div>
+      </Link>
+
+      <Link to="/case-studies/vsb-group">
+        <div className="bg-[#f5f5f5] rounded-[40px] p-6 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border-black/40 border-[0.5px]">
+
+          <div className="rounded-[28px] overflow-hidden mb-6">
+            <video className="w-full h-[240px] object-cover" autoPlay muted loop>
+              <source src={vsbvideo} type="video/mp4" />
+            </video>
+          </div>
+
+          <p className="text-gray-700 text-sm leading-relaxed">
+            Transformed VSB Group into a globally consistent yet locally adaptable export brand across 45 international markets.
+          </p>
+
+          <div className="flex justify-end mt-6">
+            <button className="bg-black text-white text-xl px-8 py-2 rounded-2xl hover:bg-purple-700 transition font-medium">
+              Visit
+            </button>
+          </div>
+        </div>
+      </Link>
+      
+
+      
+      <Link to="/case-studies/tenali-double-horse">
+        <div className="bg-[#f5f5f5] rounded-[40px] p-6 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border-black/40 border-[0.5px]">
+
+          <div className="rounded-[28px] overflow-hidden mb-6">
+            <video className="w-full h-[240px] object-cover" autoPlay muted loop>
+              <source src={tenalidoublehorsevideo} type="video/mp4" />
+            </video>
+          </div>
+
+          <p className="text-gray-700 text-sm leading-relaxed">
+            Re-architected TDH from a “single-roof, hero-product-led” brand into a future-ready Group plus vertical system.
+          </p>
+
+          <div className="flex justify-end mt-6">
+            <button className="bg-black text-white text-xl px-8 py-2 rounded-2xl hover:bg-purple-700 transition font-medium">
+              Visit
+            </button>
+          </div>
+        </div>
+      </Link>
+
     </div>
-
-
-        {/* video 3 */}
- <div className="relative shadow-xl group overflow-hidden rounded-3xl">
-      <video
-        src={vsbvideo}
-        className="object-contain"
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
-
-      {/* Smooth overlay animation */}
-      <div
-        className="
-          absolute inset-0
-          bg-black/60
-          transform -translate-x-full opacity-0
-          group-hover:translate-x-0 group-hover:opacity-100
-          transition-all duration-700
-          ease-[cubic-bezier(0.25,0.46,0.45,0.94)]
-          flex items-center justify-center
-          will-change-transform
-        "
-      >
-        <Link
-          to="/case-studies/vsb-group"
-          className="text-white text-2xl font-semibold tracking-wide hover:underline"
-        >
-          VSB Group
-        </Link>
-      </div>
-    </div>
-
-
   </div>
-</div>
+      </section>
 
         {/* CTA Section */}
         <div className="mt-12 bg-gradient-to-r from-black to-purple-900 p-12 text-center text-white relative overflow-hidden mb-[-35px]">
@@ -348,11 +329,11 @@ const AnimatedIcon: React.FC<{ icon: React.ReactNode; gradient: string }> = ({ i
               {/* <button className="bg-white text-black px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
                 Schedule Free Consultation
               </button> */}
-              <button 
-              onClick={() => navigate('/case-studies')}
-              className="border-2 border-white text-white px-8 py-4 font-semibold hover:bg-white hover:text-black transition-all duration-300">
-                View Case Studies
-              </button>
+              <Link to="/case-studies">
+                <button className="border-2 border-white text-white px-8 py-4 font-semibold hover:bg-white hover:text-black transition-all duration-300">
+                  View Case Studies
+                </button>
+              </Link>
             </div>
           </div>
         </div>

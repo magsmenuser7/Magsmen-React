@@ -16,7 +16,7 @@ import tdhrishika from "/assets/works/tdh-rishika.mp4"
 import tenalidoublehorsevideo from "/assets/works/tenali-double-horse.mp4"
 import xxxvideo from "/assets/works/triplex-video.mp4"
 
-
+import { Routes, Route } from "react-router-dom";
 
 
 // Data for the Brand Expresso page with updated features matching the image
@@ -133,13 +133,13 @@ const BrandExpressoPage = () => {
     <div className="min-h-screen pt-16">
       {/* bg-gradient-to-br from-gray-200 to-white  */}
       <div className="max-w-8xl mx-auto  py-8 mt-4">
-        {/* <button
+        <button
           onClick={handleBack}
           className="flex items-center text-gray-600 mt-5 ml-24 hover:text-purple-600 transition-all duration-300 mb-8 group bg-white px-6 py-3 rounded-full shadow-md hover:shadow-lg"
         >
           <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform duration-300" />
           Back to Services
-        </button> */}
+        </button>
 
        
 
@@ -147,37 +147,25 @@ const BrandExpressoPage = () => {
 
 
 
-{/* REDESIGNED MIDDLE SECTION */}
-<section className="w-full flex justify-center py-24">
-  <div className="w-[80%] grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
-    
-    {/* LEFT CONTENT */}
-    <div>
-      <h1 className="text-4xl lg:text-6xl text-black mb-6 leading-tight">
-        {/* {serviceData.details.title}{" "} */}
-        {/* <span className="font-thin opacity-80">
-          {serviceData.details.title }{serviceData.details.title_two}
-        </span> */}
-      </h1>
+        {/* REDESIGNED MIDDLE SECTION */}
+<section className="w-full min-h-[60vh] bg-white flex flex-col items-center justify-center px-0 text-center">
 
-      <h1 className="text-black md:text-6xl leading-relaxed max-w-xl">
-        {serviceData.details.heroDescription}
-      </h1>
-    </div>
-
-   {/* RIGHT VISUAL (BRAND ELEMENT IMAGE) */}
-<div className="flex justify-end items-end">
+  <div className="mb-10 flex justify-center">
   <video
     src={brandexpressovideo}
-    className="max-w-full max-h-[420px] object-contain"
     autoPlay
     loop
     muted
     playsInline
+    className="w-80 md:w-96"
   />
 </div>
 
-  </div>
+  {/* CONTENT */}
+  <h1 className="text-2xl md:text-5xl lg:text-3xl font-semibold text-black leading-tight max-w-4xl">
+    Re-energize your brand in 90 days. We refine your identity, sharpen your presence, and prepare you for a confident, comeback-ready launch.
+  </h1>
+
 </section>
 
 
@@ -202,7 +190,7 @@ const BrandExpressoPage = () => {
     </div>
 
     {/* RIGHT — SCROLLING FEATURES */}
-    <div className="lg:col-span-2 space-y-8">
+    <div className="lg:col-span-2 space-y-2">
       {serviceData.details.features.map((feature, index) => (
         <div
           key={index}
@@ -218,9 +206,96 @@ const BrandExpressoPage = () => {
 
 
 
-<div className="py-28 bg-gray-150">
+<section className="py-24 bg-white">
+  <div className="max-w-7xl mx-auto px-6 md:px-14">
+
+   
+    <div className="mb-16 text-center">
+      <h1 className="text-4xl md:text-6xl font-light text-black tracking-tight">
+        Related Work
+      </h1>
+      <p className='pt-5'>
+        We explore how strategy, identity, and execution come together to shape meaningful brands. From positioning frameworks to visual systems, this work reflects our approach to building brands with clarity and long-term intent.
+      </p>
+    </div>
+
+   
+    <div className="grid md:grid-cols-2 gap-12">
+
+
+      <Link to="/case-studies/tenali-double-horse">
+        <div className="bg-[#f5f5f5] rounded-[40px] p-6 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border-black/40 border-[0.5px]">
+
+          <div className="rounded-[28px] overflow-hidden mb-6">
+            <video className="w-full h-[240px] object-cover" autoPlay muted loop>
+              <source src={tenalidoublehorsevideo} type="video/mp4" />
+            </video>
+          </div>
+
+          <p className="text-gray-700 text-sm leading-relaxed">
+            Re-architected TDH from a “single-roof, hero-product-led” brand into a future-ready Group plus vertical system.
+          </p>
+
+          <div className="flex justify-end mt-6">
+            <button className="bg-black text-white text-xl px-8 py-2 rounded-2xl hover:bg-purple-700 transition font-medium">
+              Visit
+            </button>
+          </div>
+        </div>
+      </Link>
+
+       <Link to="/case-studies/triplex">
+        <div className="bg-[#f5f5f5] rounded-[40px] p-6 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2
+        border-black/40 border-[0.5px]">
+
+          <div className="rounded-[28px] overflow-hidden mb-6">
+            <video className="w-full h-[240px] object-cover" autoPlay muted loop>
+              <source src={xxxvideo} type="video/mp4" />
+            </video>
+          </div>
+
+          <p className="text-gray-700 text-sm leading-relaxed">
+            Built Triplex’s digital-first presence, transforming a strong regional detergent brand into a high-engagement, multi-market digital player.
+          </p>
+
+          <div className="flex justify-end mt-6">
+            <button className="bg-black text-white text-xl px-8 py-2 rounded-2xl hover:bg-purple-700  transition font-medium">
+              Visit
+            </button>
+          </div>
+        </div>
+      </Link>
+      
+      <Link to="/case-studies/vsb-group">
+        <div className="bg-[#f5f5f5] rounded-[40px] p-6 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border-black/40 border-[0.5px]">
+
+          <div className="rounded-[28px] overflow-hidden mb-6">
+            <video className="w-full h-[240px] object-cover" autoPlay muted loop>
+              <source src={vsbvideo} type="video/mp4" />
+            </video>
+          </div>
+
+          <p className="text-gray-700 text-sm leading-relaxed">
+            Transformed VSB Group into a globally consistent yet locally adaptable export brand across 45 international markets.
+          </p>
+
+          <div className="flex justify-end mt-6">
+            <button className="bg-black text-white text-xl px-8 py-2 rounded-2xl hover:bg-purple-700 transition font-medium">
+              Visit
+            </button>
+          </div>
+        </div>
+      </Link>
+
+      
+    </div>
+  </div>
+      </section>
+
+
+{/* <div className="py-28 bg-gray-150">
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-6 mx-auto items-start justify-center max-w-7xl px-4 md:px-0">
-     {/* TEXT BLOCK */}
+   
     <div>
       <h1 className="text-5xl md:text-8xl font-bold text-black pl-5">
         Related <br /> <span className="font-thin">Work</span>
@@ -232,7 +307,7 @@ const BrandExpressoPage = () => {
     </div>
 
 
-        {/* video 1 */}
+       
  <div className="relative w-full h-full shadow-xl group overflow-hidden rounded-3xl">
       <video
         src={vsbvideo}
@@ -243,7 +318,7 @@ const BrandExpressoPage = () => {
         playsInline
       />
 
-      {/* Smooth overlay animation */}
+  
       <div
         className="
           absolute inset-0
@@ -267,7 +342,7 @@ const BrandExpressoPage = () => {
 
 
    
-{/* video 2 */}
+
    <div className="relative shadow-xl group overflow-hidden rounded-3xl">
       <video
         src={tenalidoublehorsevideo}
@@ -278,7 +353,7 @@ const BrandExpressoPage = () => {
         playsInline
       />
 
-      {/* Smooth overlay animation */}
+    
       <div
         className="
           absolute inset-0
@@ -301,7 +376,7 @@ const BrandExpressoPage = () => {
     </div>
 
 
-        {/* video 3 */}
+       
  <div className="relative shadow-xl group overflow-hidden rounded-3xl">
       <video
         src={xxxvideo}
@@ -312,7 +387,7 @@ const BrandExpressoPage = () => {
         playsInline
       />
 
-      {/* Smooth overlay animation */}
+     
       <div
         className="
           absolute inset-0
@@ -336,7 +411,7 @@ const BrandExpressoPage = () => {
 
 
   </div>
-</div>
+</div> */}
 
 
 
@@ -357,7 +432,7 @@ const BrandExpressoPage = () => {
                 Schedule a Consultation
               </button> */}
               <button 
-              onClick={() => navigate('')}
+              onClick={() => navigate('/final-brand-presentation-for-printing')}
               className="border-2 border-white text-white px-8 py-4 font-semibold hover:bg-white hover:text-black transition-all duration-300">
                 View Our Portfolio
               </button>

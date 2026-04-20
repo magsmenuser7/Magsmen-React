@@ -11,7 +11,7 @@ import launchpadvideo from "/assets/services/magsmen-lanuchpad-page-video-850x40
 import xxxvideo from "/assets/works/zavaine-video.mp4"
 import vsbvideo from "/assets/works/vsbgroup.mp4"
 import zavainevideo from "/assets/works/zavaine-video.mp4"
-
+import { Routes, Route } from "react-router-dom";
 
 // Data for the Launchpad page
 const serviceData = {
@@ -146,47 +146,34 @@ const AnimatedIcon: React.FC<AnimatedIconProps> = ({ icon, gradient }) => {
     <div className="min-h-screen  py-16">
       {/* bg-gradient-to-br from-gray-200 to-white */}
       <div className="max-w-8xl mx-auto py-8 mt-4">
-        {/* <button
+        <button
           onClick={handleBack}
           className="flex items-center mt-5 ml-24 text-gray-600 hover:text-purple-600 transition-all duration-300 mb-8 group bg-white px-6 py-3 rounded-full shadow-md hover:shadow-lg "
         >
           <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform duration-300" />
           Back to Services
-        </button> */}
+        </button>
 
        
+        {/* REDESIGNED MIDDLE SECTION */}
+<section className="w-full min-h-[60vh] bg-white flex flex-col items-center justify-center px-0 text-center">
 
-{/* REDESIGNED MIDDLE SECTION */}
-<section className="w-full flex justify-center py-24">
-  <div className="w-[80%] grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
-    
-    {/* LEFT CONTENT */}
-    <div>
-      <h1 className="text-4xl lg:text-6xl text-black mb-6 leading-tight">
-        {/* {serviceData.details.title}{" "} */}
-        {/* <span className="font-thin opacity-80">
-          {serviceData.details.title }{serviceData.details.title_two}
-        </span> */}
-      </h1>
-
-      <h1 className="text-black md:text-5xl leading-relaxed max-w-xl">
-        {serviceData.details.heroDescription}
-      </h1>
-    </div>
-
-   {/* RIGHT VISUAL (BRAND ELEMENT IMAGE) */}
-<div className="flex justify-end items-end">
+  <div className="mb-10 flex justify-center">
   <video
     src={launchpadvideo}
-    className="max-w-full max-h-[420px] object-contain"
     autoPlay
     loop
     muted
     playsInline
+    className="w-80 md:w-96"
   />
 </div>
 
-  </div>
+  {/* CONTENT */}
+  <h1 className="text-2xl md:text-5xl lg:text-3xl font-semibold text-black leading-tight max-w-4xl">
+    We craft brands with clarity, confidence, and cohesion, built to stand out today and scale tomorrow.
+  </h1>
+
 </section>
 
 
@@ -210,7 +197,7 @@ const AnimatedIcon: React.FC<AnimatedIconProps> = ({ icon, gradient }) => {
     </div>
 
     {/* RIGHT — SCROLLING FEATURES */}
-    <div className="lg:col-span-2 space-y-8">
+    <div className="lg:col-span-2 space-y-2">
       {serviceData.details.features.map((feature, index) => (
         <div
           key={index}
@@ -243,11 +230,99 @@ const AnimatedIcon: React.FC<AnimatedIconProps> = ({ icon, gradient }) => {
         </div>
 
 
+<section className="py-24 bg-white">
+  <div className="max-w-7xl mx-auto px-6 md:px-14">
+
+   
+    <div className="mb-16 text-center">
+      <h1 className="text-4xl md:text-6xl font-light text-black tracking-tight">
+        Related Work
+      </h1>
+      <p className='pt-5'>
+        We explore how strategy, identity, and execution come together to shape meaningful brands. From positioning frameworks to visual systems, this work reflects our approach to building brands with clarity and long-term intent.
+      </p>
+    </div>
+
+   
+    <div className="grid md:grid-cols-2 gap-12">
 
 
-<div className="py-28 bg-gray-150">
+        <Link to="/case-studies/vsb-group">
+        <div className="bg-[#f5f5f5] rounded-[40px] p-6 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border-black/40 border-[0.5px]">
+
+          <div className="rounded-[28px] overflow-hidden mb-6">
+            <video className="w-full h-[240px] object-cover" autoPlay muted loop>
+              <source src={vsbvideo} type="video/mp4" />
+            </video>
+          </div>
+
+          <p className="text-gray-700 text-sm leading-relaxed">
+            Transformed VSB Group into a globally consistent yet locally adaptable export brand across 45 international markets.
+          </p>
+
+          <div className="flex justify-end mt-6">
+            <button className="bg-black text-white text-xl px-8 py-2 rounded-2xl hover:bg-purple-700 transition font-medium">
+              Visit
+            </button>
+          </div>
+        </div>
+      </Link>
+
+     
+      <Link to="/case-studies/zavaine">
+        <div className="bg-[#f5f5f5] rounded-[40px] p-6 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border-black/40 border-[0.5px]">
+
+          <div className="rounded-[28px] overflow-hidden mb-6">
+            <video className="w-full h-[240px] object-cover" autoPlay muted loop>
+              <source src={zavainevideo} type="video/mp4" />
+            </video>
+          </div>
+
+          <p className="text-gray-700 text-sm leading-relaxed">
+            Built India’s first detergent tablet brand from scratch and positioned it as a modern, eco-friendly alternative in the home-care category.
+          </p>
+
+          <div className="flex justify-end mt-6">
+            <button className="bg-black font-medium text-white text-xl px-8 py-2 rounded-2xl hover:bg-purple-700 transition">
+              Visit
+            </button>
+          </div>
+        </div>
+      </Link>
+
+       <Link to="/case-studies/tenali-double-horse">
+        <div className="bg-[#f5f5f5] rounded-[40px] p-6 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border-black/40 border-[0.5px]">
+
+          <div className="rounded-[28px] overflow-hidden mb-6">
+            <video className="w-full h-[240px] object-cover" autoPlay muted loop>
+              <source src={tenalidoublehorsevideo} type="video/mp4" />
+            </video>
+          </div>
+
+          <p className="text-gray-700 text-sm leading-relaxed">
+            Re-architected TDH from a “single-roof, hero-product-led” brand into a future-ready Group plus vertical system.
+          </p>
+
+          <div className="flex justify-end mt-6">
+            <button className="bg-black text-white text-xl px-8 py-2 rounded-2xl hover:bg-purple-700 transition font-medium">
+              Visit
+            </button>
+          </div>
+        </div>
+      </Link>
+
+      
+     
+
+      
+    </div>
+  </div>
+      </section>
+
+
+{/* <div className="py-28 bg-gray-150">
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-6 mx-auto items-start justify-center max-w-7xl px-4 md:px-0">
-     {/* TEXT BLOCK */}
+    
     <div>
       <h1 className="text-5xl md:text-8xl font-bold text-black pl-5">
         Related <br /> <span className="font-thin">Work</span>
@@ -259,7 +334,7 @@ const AnimatedIcon: React.FC<AnimatedIconProps> = ({ icon, gradient }) => {
     </div>
 
 
-        {/* video 1 */}
+       
  <div className="relative shadow-xl group overflow-hidden rounded-3xl">
       <video
         src={tenalidoublehorsevideo}
@@ -270,7 +345,7 @@ const AnimatedIcon: React.FC<AnimatedIconProps> = ({ icon, gradient }) => {
         playsInline
       />
 
-      {/* Smooth overlay animation */}
+     
       <div
         className="
           absolute inset-0
@@ -294,7 +369,7 @@ const AnimatedIcon: React.FC<AnimatedIconProps> = ({ icon, gradient }) => {
 
 
    
-{/* video 2 */}
+
    <div className="relative shadow-xl group overflow-hidden rounded-3xl">
       <video
         src={vsbvideo}
@@ -305,7 +380,7 @@ const AnimatedIcon: React.FC<AnimatedIconProps> = ({ icon, gradient }) => {
         playsInline
       />
 
-      {/* Smooth overlay animation */}
+     
       <div
         className="
           absolute inset-0
@@ -328,7 +403,7 @@ const AnimatedIcon: React.FC<AnimatedIconProps> = ({ icon, gradient }) => {
     </div>
 
 
-        {/* video 3 */}
+       
  <div className="relative shadow-xl group overflow-hidden rounded-3xl">
       <video
         src={zavainevideo}
@@ -339,7 +414,7 @@ const AnimatedIcon: React.FC<AnimatedIconProps> = ({ icon, gradient }) => {
         playsInline
       />
 
-      {/* Smooth overlay animation */}
+     
       <div
         className="
           absolute inset-0
@@ -363,7 +438,7 @@ const AnimatedIcon: React.FC<AnimatedIconProps> = ({ icon, gradient }) => {
 
 
   </div>
-</div>
+</div> */}
 
 
         
@@ -377,12 +452,18 @@ const AnimatedIcon: React.FC<AnimatedIconProps> = ({ icon, gradient }) => {
               Let's discuss how our brand consulting services can help you achieve your goals and create lasting impact.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/contact">
               <button className="bg-white text-black px-8 py-4 font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
                 Schedule Free Consultation
               </button>
+              </Link>
+
+
+            <Link to="/case-studies">
               <button className="border-2 border-white text-white px-8 py-4 font-semibold hover:bg-white hover:text-black transition-all duration-300">
-                View Case Studies
-              </button>
+               View Case Studies
+             </button>
+            </Link>
             </div>
           </div>
         </div>

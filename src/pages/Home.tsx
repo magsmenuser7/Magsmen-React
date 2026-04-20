@@ -681,7 +681,7 @@ const Home = () => {
 
     </div>
   </div>
-</section>
+      </section>
 
               {/* <section className="py-24 bg-white">
    <div className="grid md:grid-cols-2 gap-10 mx-auto items-center justify-center max-w-7xl px-6 md:px-14">  

@@ -306,7 +306,8 @@ export default function ServicesPage() {
   </div>
 </section> */}
 
-{/* <section className="w-full bg-white text-black py-24 px-6 md:px-16">
+{/* new layout 3 */}
+<section className="w-full bg-white text-black py-24 px-6 md:px-16">
   <div className="max-w-7xl mx-auto">
 
    
@@ -372,11 +373,11 @@ export default function ServicesPage() {
 
     </div>
   </div>
-</section> */}
+</section>
 
 
     {/* existing layout */}
- <section className="w-full text-black px-6 md:px-16 py-24 mx-auto max-w-7xl">
+ {/* <section className="w-full text-black px-6 md:px-16 py-24 mx-auto max-w-7xl">
         
        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
@@ -425,7 +426,7 @@ export default function ServicesPage() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
     </div>
   );
