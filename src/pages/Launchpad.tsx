@@ -55,10 +55,10 @@ const serviceData = {
 
 // Content for the "How it works" section, based on your image
 const howItWorksContent = [
-  'To participate in Launchpad, Magismen offers an attractive proposition for entrepreneurs and businesses by taking a stake in their ventures without charging any fees. This means that we share the risk and rewards with you, and our success is linked to your success. We believe that this aligns our interests and helps us work together towards a common goal.',
+  'To participate in Launchpad, Magsmen offers an attractive proposition for entrepreneurs and businesses by taking a stake in their ventures without charging any fees. This means that we share the risk and rewards with you, and our success is linked to your success. We believe that this aligns our interests and helps us work together towards a common goal.',
   'Dev online. From website design implementation world of digital. Our stake in your venture is a testament to our confidence in your business and our commitment to help you achieve your goals. We are not just another service provider, but a partner in your journey. Our investment in your venture means that we have a vested interest in its success, and we work tirelessly to help you achieve that success.',
   'We understand that taking an equity stake in your venture is a big decision, and that is why we ensure that our evaluation process is rigorous, transparent and fair. We assess each venture on its own merit and take into account various factors such as market potential, team capabilities, and financial viability.',
-  'At Magismen, we are committed to building long-term relationships with our clients, and our stake in your venture is a reflection of that commitment. We believe that by sharing the risk and rewards with you, we can work together to create value and achieve success.'
+  'At Magsmen, we are committed to building long-term relationships with our clients, and our stake in your venture is a reflection of that commitment. We believe that by sharing the risk and rewards with you, we can work together to create value and achieve success.'
 ];
 
 // Reusable component for the collapsible features section
