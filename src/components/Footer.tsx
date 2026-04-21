@@ -174,7 +174,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-300">
-            © 2023 Magsmen Strategy Consultants. All rights reserved.
+            © 2020 Magsmen Strategy Consultants. All rights reserved.
           </p>
         </div>
       </div>

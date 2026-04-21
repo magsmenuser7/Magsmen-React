@@ -9,8 +9,8 @@ import logolight from "/assets/banners/logo-light.svg"; // WHITE logo
 import newlogowhite from "/assets/white_logo22.png"
 import newlogoblack from "/assets/Artboard 1 copy 5@72x-100.jpg11.png"
 
-
-
+import claritylogo from "/assets/logos/magsmen-new-logo-removebg-preview.png"
+import claritylogowhite from "/assets/logos/Artboard 1 copy 5@72x-8.png"
 const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
@@ -132,9 +132,9 @@ const Header = () => {
           >
             <div className="p-2 md:p-3">
               <img
-                src={newlogoblack ? newlogoblack : newlogowhite}
+                src={claritylogo ? claritylogo : newlogowhite}
                 alt="MagsmenLogo"
-                className="h-8 sm:h-10 md:h-20 md:w-20 object-contain"
+                className="h-8 sm:h-10 md:h-20 md:w-24 object-contain"
               />
             </div>
           </Link>

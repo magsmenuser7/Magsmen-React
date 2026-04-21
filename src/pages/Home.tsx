@@ -490,7 +490,7 @@ const Home = () => {
                 </motion.span>
               </AnimatePresence> */}
 
-              <p className='md:text-2xl text-xl tracking-wider py-5 font-normal text-black'>We study your customers and culture, so your brand doesn’t just look good it works.
+              <p className='md:text-2xl text-xl tracking-wider py-5 font-normal text-black'>We study your customers and culture, so your brand doesn’t just look good, it works.
 </p>
             </motion.h1>
 
