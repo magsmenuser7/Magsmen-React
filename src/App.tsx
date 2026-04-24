@@ -54,6 +54,7 @@ import BctProposal from './pages/BctProposal.tsx';
 import SnigdhaProposal from './pages/SnigdhaProposal.tsx';
 import SubbayaGariHotel from './pages/SubbayiGariHotel.tsx';
 import  SkinAffairSubBrandName from './pages/SkinAffairSubBrandName.tsx';
+import SkinAffairStrategicAnalysis from './pages/SkinAffairStrategicAnalysis.tsx';
 
 // 2. Define a Layout Component that includes Header and Footer
 const MainLayout = () => {
@@ -134,7 +135,7 @@ function App() {
           <Route path="/snigdha-strategic-proposal" element={<SnigdhaProposal />} />
           <Route path="/subbayya-gari-hotel-consulting-proposal" element={<SubbayaGariHotel />} />
           <Route path="/skin-affair-sub-brand-name" element={<SkinAffairSubBrandName />} />
-         
+          <Route path="/skin-affair-strategic-analysis" element={<SkinAffairStrategicAnalysis />} />
 
 
 
