@@ -146,7 +146,7 @@ export default function  BiomInnovations() {
 
     setTimeout(() => {
       setIsLoggedIn(true);
-      window.open(subbayagarihotel, '_blank');
+      window.open(biominnovations, '_blank');
     }, 800);
 
   } catch (err) {

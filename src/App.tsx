@@ -136,7 +136,7 @@ function App() {
           <Route path="/subbayya-gari-hotel-consulting-proposal" element={<SubbayaGariHotel />} />
           <Route path="/skin-affair-sub-brand-name" element={<SkinAffairSubBrandName />} />
           <Route path="/skin-affair-strategic-analysis" element={<SkinAffairStrategicAnalysis />} />
-          <Route path="/consulting-scope-for-biom-innovations" element={<BiomInnovations />} />
+          <Route path="/strategic-proposal-for-biom-innovations-pvt-ltd" element={<BiomInnovations />} />
 
 
         </Routes>
