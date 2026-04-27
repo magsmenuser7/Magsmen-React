@@ -56,6 +56,10 @@ import SubbayaGariHotel from './pages/SubbayiGariHotel.tsx';
 import  SkinAffairSubBrandName from './pages/SkinAffairSubBrandName.tsx';
 import SkinAffairStrategicAnalysis from './pages/SkinAffairStrategicAnalysis.tsx';
 import BiomInnovations from './pages/BiomInnovations.tsx'
+import BrandAssesment from './pages/BrandAssesment.tsx';
+
+
+
 // 2. Define a Layout Component that includes Header and Footer
 const MainLayout = () => {
   return (
@@ -137,6 +141,8 @@ function App() {
           <Route path="/skin-affair-sub-brand-name" element={<SkinAffairSubBrandName />} />
           <Route path="/skin-affair-strategic-analysis" element={<SkinAffairStrategicAnalysis />} />
           <Route path="/strategic-proposal-for-biom-innovations-pvt-ltd" element={<BiomInnovations />} />
+          <Route path="/brand-assessment" element={<BrandAssesment />} />
+
 
 
         </Routes>
