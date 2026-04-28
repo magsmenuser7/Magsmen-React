@@ -454,69 +454,84 @@ export default function ServicesDeck() {
 
   if (!isLoggedIn) {
     return (
-      <div className="min-h-screen bg-slate-100 flex items-center justify-center p-6 font-sans">
-        <div className="w-full max-w-md bg-white rounded-3xl shadow-xl p-8 border border-slate-200">
-
-          <div className="flex flex-col items-center mb-8 text-center">
-            <div className="p-4 bg-slate-100 rounded-2xl mb-4 text-[#1E293B]">
-              <LayoutDashboard className="w-8 h-8" />
+      <div
+    className="relative min-h-screen bg-cover 
+               bg-[position:90%_center] 
+               md:bg-center 
+               flex items-center justify-center md:justify-end 
+               p-4 md:p-6 font-sans"
+    style={{
+      backgroundImage: `url('/assets/Final Brand presentation for printing.png')`
+    }}
+  >
+        {/* Optional overlay for better readability */}
+        <div className="absolute inset-0 bg-black/20"></div>
+  
+        {/* LOGIN CARD */}
+        <div className="relative w-full max-w-md mr-0 md:mr-28 ">
+          <div className="bg-white/90 backdrop-blur-lg rounded-3xl shadow-2xl p-8 border border-white/30">
+  
+            <div className="flex flex-col items-center mb-8 text-center">
+              <div className="p-4 bg-slate-100 rounded-2xl mb-4 text-[#1E293B]">
+                <LayoutDashboard className="w-8 h-8" />
+              </div>
+              <h1 className="text-xl font-bold text-[#1E293B] uppercase">
+                Strategic Dashboard
+              </h1>
+              <p className="text-slate-500 text-sm mt-2">
+                Enter your email to access
+              </p>
             </div>
-            <h1 className="text-xl font-bold text-[#1E293B] uppercase">
-              Strategic Dashboard
-            </h1>
-            <p className="text-slate-500 text-sm mt-2">
-              Enter your email to access
-            </p>
-          </div>
-
-          <form onSubmit={handleLogin} className="space-y-6">
-
-            <div>
-              <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">
-                Email
-              </label>
-              <div className="relative mt-2">
-                <div className="absolute inset-y-0 left-0 pl-4 flex items-center text-slate-400">
-                  <Mail className="w-5 h-5" />
+  
+            <form onSubmit={handleLogin} className="space-y-6">
+  
+              <div>
+                <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">
+                  Email
+                </label>
+                <div className="relative mt-2">
+                  <div className="absolute inset-y-0 left-0 pl-4 flex items-center text-slate-400">
+                    <Mail className="w-5 h-5" />
+                  </div>
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-[#1E293B]/20"
+                    placeholder="example@email.com"
+                  />
                 </div>
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-[#1E293B]/20"
-                  placeholder="example@email.com"
-                />
               </div>
-            </div>
-
-            {error && (
-              <div className="flex items-center gap-2 text-red-500 bg-red-50 p-3 rounded-xl text-xs">
-                <AlertCircle className="w-4 h-4" />
-                {error}
-              </div>
-            )}
-
-            {successMessage && (
-              <div className="text-green-600 bg-green-50 p-3 rounded-xl text-xs">
-                {successMessage}
-              </div>
-            )}
-
-            <button
-              type="submit"
-              disabled={isLoading}
-              className="w-full bg-[#1E293B] text-white font-semibold py-3 rounded-xl flex items-center justify-center gap-2"
-            >
-              {isLoading ? (
-                <Loader2 className="w-5 h-5 animate-spin" />
-              ) : (
-                <>
-                  Access Dashboard
-                  <ChevronRight className="w-4 h-4" />
-                </>
+  
+              {error && (
+                <div className="flex items-center gap-2 text-red-500 bg-red-50 p-3 rounded-xl text-xs">
+                  <AlertCircle className="w-4 h-4" />
+                  {error}
+                </div>
               )}
-            </button>
-          </form>
+  
+              {successMessage && (
+                <div className="text-green-600 bg-green-50 p-3 rounded-xl text-xs">
+                  {successMessage}
+                </div>
+              )}
+  
+              <button
+                type="submit"
+                disabled={isLoading}
+                className="w-full bg-[#1E293B] text-white font-semibold py-3 rounded-xl flex items-center justify-center gap-2"
+              >
+                {isLoading ? (
+                  <Loader2 className="w-5 h-5 animate-spin" />
+                ) : (
+                  <>
+                    Access Dashboard
+                    <ChevronRight className="w-4 h-4" />
+                  </>
+                )}
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     );

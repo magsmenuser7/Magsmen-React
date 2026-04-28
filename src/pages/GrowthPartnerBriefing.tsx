@@ -39,6 +39,7 @@ import {
   Loader2,
   Mail
 } from 'lucide-react';
+import backgroungimage from "/assets/Final Brand presentation for printing.png"
 
 
 export default function GrowthPartnerBriefing() {
@@ -258,10 +259,24 @@ type UserData = {
 };
   // ================= LOGIN SCREEN =================
 
-  if (!isLoggedIn) {
-    return (
-      <div className="min-h-screen bg-slate-100 flex items-center justify-center p-6 font-sans">
-        <div className="w-full max-w-md bg-white rounded-3xl shadow-xl p-8 border border-slate-200">
+ if (!isLoggedIn) {
+  return (
+    <div
+  className="relative min-h-screen bg-cover 
+             bg-[position:90%_center] 
+             md:bg-center 
+             flex items-center justify-center md:justify-end 
+             p-4 md:p-6 font-sans"
+  style={{
+    backgroundImage: `url('/assets/Final Brand presentation for printing.png')`
+  }}
+>
+      {/* Optional overlay for better readability */}
+      <div className="absolute inset-0 bg-black/20"></div>
+
+      {/* LOGIN CARD */}
+      <div className="relative w-full max-w-md mr-0 md:mr-28 ">
+        <div className="bg-white/90 backdrop-blur-lg rounded-3xl shadow-2xl p-8 border border-white/30">
 
           <div className="flex flex-col items-center mb-8 text-center">
             <div className="p-4 bg-slate-100 rounded-2xl mb-4 text-[#1E293B]">
@@ -325,8 +340,9 @@ type UserData = {
           </form>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
+}
 
 
   return (
