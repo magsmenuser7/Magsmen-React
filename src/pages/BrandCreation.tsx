@@ -231,7 +231,7 @@ const AnimatedIcon: React.FC<AnimatedIconProps> = ({ icon, gradient }) => {
           </div>
 
           <p className="text-gray-700 text-sm leading-relaxed">
-            Built a strong digital-first food brand by driving awareness, engagement, and B2B growth through an integrated marketing strategy.
+            Built a strong digital first food brand by driving awareness, engagement, and B2B growth through an integrated marketing strategy.
           </p>
 
           <div className="flex justify-end mt-6">

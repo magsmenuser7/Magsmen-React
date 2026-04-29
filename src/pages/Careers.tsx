@@ -41,7 +41,7 @@ const Careers = () => {
       location: 'Guntur, AP',
       type: 'Full-time',
       experience: '4-6 years',
-      description: 'Lead brand strategy development for Fortune 500 and high-growth Indian companies. Drive positioning, messaging, and go-to-market strategies.',
+      description: 'Lead brand strategy development for Fortune 500 and high growth Indian companies. Drive positioning, messaging, and go-to-market strategies.',
       responsibilities: [
         'Develop comprehensive brand strategies for diverse clients',
         'Conduct market research and competitive analysis',
@@ -142,11 +142,11 @@ const Careers = () => {
     {
       icon: <Award className="w-6 h-6" />,
       title: 'Recognition',
-      description: 'Performance-based rewards and public recognition for great work'
+      description: 'Performance based rewards and public recognition for great work'
     },
     {
       icon: <Heart className="w-6 h-6" />,
-      title: 'Work-Life Balance',
+      title: 'Work Life Balance',
       description: 'Flexible working arrangements and wellness programs'
     },
     {
@@ -157,7 +157,7 @@ const Careers = () => {
     {
       icon: <Laptop className="w-6 h-6" />,
       title: 'Latest Tools',
-      description: 'Access to cutting-edge software and technology'
+      description: 'Access to cutting edge software and technology'
     }
   ];
 
@@ -238,7 +238,7 @@ const Careers = () => {
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Join Magsmen?</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We're not just building brands – we're building careers, fostering innovation, and creating impact that matters.
+              We're not just building brands. We're building careers, fostering innovation, and creating impact that matters.
             </p>
           </motion.div>
 

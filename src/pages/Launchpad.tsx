@@ -279,7 +279,7 @@ const AnimatedIcon: React.FC<AnimatedIconProps> = ({ icon, gradient }) => {
           </div>
 
           <p className="text-gray-700 text-sm leading-relaxed">
-            Built India’s first detergent tablet brand from scratch and positioned it as a modern, eco-friendly alternative in the home-care category.
+            Built India’s first detergent tablet brand from scratch and positioned it as a modern, eco-friendly alternative in the home care category.
           </p>
 
           <div className="flex justify-end mt-6">
@@ -300,7 +300,7 @@ const AnimatedIcon: React.FC<AnimatedIconProps> = ({ icon, gradient }) => {
           </div>
 
           <p className="text-gray-700 text-sm leading-relaxed">
-            Re-architected TDH from a “single-roof, hero-product-led” brand into a future-ready Group plus vertical system.
+            Re-architected TDH from a “single roof, hero product led” brand into a future-ready Group plus vertical system.
           </p>
 
           <div className="flex justify-end mt-6">

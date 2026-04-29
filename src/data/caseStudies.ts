@@ -217,7 +217,7 @@ export const caseStudies: CaseStudy[] = [
     title: "Telugu Foods",
     tag: "Brand Growth & Market Expansion",
     description:
-      "Built a strong digital-first food brand by driving awareness, engagement, and B2B growth through an integrated marketing strategy.",
+      "Built a strong digital first food brand by driving awareness, engagement, and B2B growth through an integrated marketing strategy.",
 
     client: "Telugu Foods",
     industry: "Food & FMCG",
@@ -230,12 +230,12 @@ export const caseStudies: CaseStudy[] = [
       "E-commerce & PAN-India Growth Strategy",
     ],
     timeline: "Ongoing Brand & Growth Engagement",
-    outcome: "Built a strong digital-first food brand by driving awareness, engagement, and B2B growth through an integrated marketing strategy.",
+    outcome: "Built a strong digital first food brand by driving awareness, engagement, and B2B growth through an integrated marketing strategy.",
 
     challengeIntro:
       "Telugu Foods faced low brand visibility and sales pressure in a crowded food market. The brand lacked a clear digital and social media strategy, and its B2B business was underperforming despite strong product potential.",
     challengeHighlight:
-      "Main Insight: Consistent digital engagement and community-driven communication are critical for food brands to scale in competitive markets.",
+      "Main Insight: Consistent digital engagement and community driven communication are critical for food brands to scale in competitive markets.",
     stakes:
       "Reason Identified: Absence of a structured digital strategy and limited B2B engagement restricted brand growth and recall.",
 
@@ -257,7 +257,7 @@ export const caseStudies: CaseStudy[] = [
     type: "foundation",
     title: "Strategy & Direction",
     description:
-      "We designed a comprehensive digital-first strategy supported by influencer marketing, events, and structured annual planning.",
+      "We designed a comprehensive digital first strategy supported by influencer marketing, events, and structured annual planning.",
     coreInsight:
       "Food brands grow faster when they build daily relevance through conversation, not just campaigns.",
     strategicPivot:
@@ -274,17 +274,17 @@ export const caseStudies: CaseStudy[] = [
     {
       title: "Color Strategy",
       description:
-        "Community-driven and culturally rooted.",
+        "Community driven and culturally rooted.",
     },
     {
       title: "Influencer Strategy:",
       description:
-        "Credible, regional, and high-engagement",
+        "Credible, regional, and high engagement",
     },
     {
       title: "B2B Experience:",
       description:
-        "Relationship-led through shows, events, and direct engagement",
+        "Relationship led through shows, events, and direct engagement",
     },
   ],
 }
@@ -355,7 +355,7 @@ work: {
     {
       title: "Mobile Experience",
       description:
-        "Mobile-first design with 78% improvement in conversion rate",
+        "Mobile first design with 78% improvement in conversion rate",
     },
     {
       title: "Product Pages",
@@ -464,7 +464,7 @@ moreWork: {
       title: "UrbanNest: Premium Living Redefined",
       video: triplexvideo,
       description:
-        "Positioning a luxury real estate brand for ultra-high-net-worth individuals",
+        "Positioning a luxury real estate brand for ultra high net worth individuals",
     },
   ],
 },
@@ -576,7 +576,7 @@ work: {
     {
       title: "Mobile Experience",
       description:
-        "Mobile-first design with 78% improvement in conversion rate",
+        "Mobile first design with 78% improvement in conversion rate",
     },
     {
       title: "Product Pages",
@@ -594,9 +594,9 @@ work: {
   film: {
     title: "From Soil to Soul",
     description:
-      "A 90-second documentary-style brand film celebrating real farmers, real processes, and the messy beauty of organic food production. No actors, no scripting—just authentic stories that build trust and emotional connection.",
+      "A 90-second documentary style brand film celebrating real farmers, real processes, and the messy beauty of organic food production. No actors, no scripting just authentic stories that build trust and emotional connection.",
     result:
-      "Result: 2.4M views, 86% completion rate, featured by Campaign India as “authenticity-first marketing done right.”",
+      "Result: 2.4M views, 86% completion rate, featured by Campaign India as “authenticity first marketing done right.”",
   video: suryacolorsvideo,     // OR iframe URL
   poster: "/assets/films/from-soil-to-soul.jpg",   // thumbnail
   },
@@ -618,7 +618,7 @@ work: {
 impact: {
   title: "Final Positioning",
   subtitle:
-    "A stable, growth-ready paints brand with expanding product depth and multi-market presence.",
+    "A stable, growth-ready paints brand with expanding product depth and multi market presence.",
 
   blocks: [
     {
@@ -664,7 +664,7 @@ moreWork: {
       title: "UrbanNest: Premium Living Redefined",
       video:vsbvideo,
       description:
-        "Positioning a luxury real estate brand for ultra-high-net-worth individuals",
+        "Positioning a luxury real estate brand for ultra high net worth individuals",
     },
   ],
 },
@@ -691,7 +691,7 @@ moreWork: {
     title: "Tenali Double Horse (TDH Group)",
     tag: "Brand repositioning, Portfolio/Brand architecture redesign, Expansion readiness (collabs, global presence, acquisitions)",
     description:
-      "  Re-architected TDH from a “single-roof, hero-product-led” brand into a future-ready Group plus vertical system, then repositioned communication to a women-centric modern household brand, unlocking scale, partnerships, and ROI-efficient growth.",
+      "  Re-architected TDH from a “single roof, hero product led” brand into a future-ready Group plus vertical system, then repositioned communication to a women centric modern household brand, unlocking scale, partnerships, and ROI-efficient growth.",
 
     client: " Tenali Double Horse (TDH Group)",
     industry: " FMCG (Staples, traditional foods, packaged foods, multi-SKU portfolio)",
@@ -703,15 +703,15 @@ moreWork: {
       "GTM / Market Entry (collaboration enablement plus global event readiness)",
       "Campaigns / Content (select initiatives, brand moments, Global Events, visibility briefs)",
     ],
-    timeline: " Not specified (multi-phase engagement across architecture, repositioning, CSR, collabs, and launch support)",
-    outcome: "Created a category-led vertical structure plus brand foundation layer that improved internal clarity, sharpened consumer relevance, and made growth initiatives repeatable (lower effort per ROI via clearer targeting, modular narratives, and scalable playbooks).",
+    timeline: " Not specified (multi phase engagement across architecture, repositioning, CSR, collabs, and launch support)",
+    outcome: "Created a category led vertical structure plus brand foundation layer that improved internal clarity, sharpened consumer relevance, and made growth initiatives repeatable (lower effort per ROI via clearer targeting, modular narratives, and scalable playbooks).",
 
     challengeIntro:
-      "TDH had all products under one umbrella, causing consumers to associate the brand primarily with hero products, limiting discoverability of other SKUs and restricting category-level growth. Additionally, despite legacy strength, the brand lacked a defined niche audience lens to modernize communication without losing trust.",
+      "TDH had all products under one umbrella, causing consumers to associate the brand primarily with hero products, limiting discoverability of other SKUs and restricting category level growth. Additionally, despite legacy strength, the brand lacked a defined niche audience lens to modernize communication without losing trust.",
     challengeHighlight:
       "Main Insight (Sharp strategic truth). A legacy FMCG brand doesn’t scale on heritage alone, scale happens when the portfolio is structured like a system and communication is anchored to a clear, ownable user (not “everyone”).",
     stakes:
-      "Reason Identified (Why the problem existed).“One-roof” branding blurred category roles and reinforced only hero-product memory structures. Lack of defined audience-led narrative meant the brand couldn’t intentionally growrelevance with modern household decision-makers. Expansion moments (collabs, events, acquisitions) required a repeatable framework,not one-off execution",
+      "Reason Identified (Why the problem existed).“One roof” branding blurred category roles and reinforced only hero product memory structures. Lack of defined audience led narrative meant the brand couldn’t intentionally growrelevance with modern household decision makers. Expansion moments (collabs, events, acquisitions) required a repeatable framework,not one-off execution",
 
       strategy: [
   {
@@ -731,11 +731,11 @@ moreWork: {
     type: "foundation",
     title: " Strategy & Direction",
     description:
-      "Shifted TDH from product-led familiarity to category-led clarity, while evolving brand voice to win the modern household without breaking legacy trust.",
+      "Shifted TDH from product led familiarity to category-led clarity, while evolving brand voice to win the modern household without breaking legacy trust.",
     coreInsight:
       "The household purchase decision is emotionally anchored in trust, but repeated buying is driven by relevance plus clarity at the shelf and in the mind.",
     strategicPivot:
-      "From: “Everything under TDH, known for hero products” To: “TDH Group with distinct verticals, category-first navigation, modern women-centric household relevance”",
+      "From: “Everything under TDH, known for hero products” To: “TDH Group with distinct verticals, category first navigation, modern women centric household relevance”",
     brandPromise:
       " Traditional trust, structured for modern living, clear categories, dependable quality, and a brand that actively invests back into community wellbeing.",
   },
@@ -822,7 +822,7 @@ work: {
 impact: {
   title: "Final Positioning",
   subtitle:
-    "TDH now stands as a future-ready FMCG group brand, rooted in traditional trust, organized by category-led verticals, modernized for the women-led household decision, and amplified by a purpose layer that scales credibility with every consumer purchase.",
+    "TDH now stands as a future ready FMCG group brand, rooted in traditional trust, organized by category led verticals, modernized for the women led household decision, and amplified by a purpose layer that scales credibility with every consumer purchase.",
 
   blocks: [
     {
@@ -830,7 +830,7 @@ impact: {
       items: [
         "Perception shift: From “hero-product-known traditional brand” → to a structured group brand with modern household relevance.",
         "Clarity: Clear vertical/category logic improved consumer navigation and internal decision-making.",
-        "Relevance: Women-centric positioning improved message fit with the household decision-maker.",
+        "Relevance: Women centric positioning improved message fit with the household decision maker.",
       ],
     },
     
@@ -892,7 +892,7 @@ moreWork: {
     title: "Triplex",
     tag: "Digital Brand Building & Market Expansion",
     description:
-      "Built Triplex’s digital-first presence, transforming a strong regional detergent brand into a high-engagement, multi-market digital player.",
+      "Built Triplex’s digital first presence, transforming a strong regional detergent brand into a high engagement, multi-market digital player.",
 
     client: "Triplex",
     industry: "FMCG – Home Care (Detergents)",
@@ -911,7 +911,7 @@ moreWork: {
     challengeIntro:
       "Triplex, a leading detergent brand in the Telugu states, lacked a strong and consistent digital and social media presence. Despite market leadership offline, the brand needed clearer digital positioning, stronger engagement, and active reputation management to sustain competitiveness and scale.",
     challengeHighlight:
-      "Main Insight: Market leadership offline does not automatically translate to digital relevance.Triplex needed a structured, content-led digital system to build recall, trust, and engagement consistently.",
+      "Main Insight: Market leadership offline does not automatically translate to digital relevance.Triplex needed a structured, content led digital system to build recall, trust, and engagement consistently.",
     stakes:
       "",
 
@@ -934,7 +934,7 @@ moreWork: {
     description:
       "",
     coreInsight:
-      "Home-care brands win digitally when they combine utility, trust, and cultural relevance.",
+      "Home care brands win digitally when they combine utility, trust, and cultural relevance.",
     strategicPivot:
       "Position Triplex as a dependable, high performance detergent brand with strong regional connect and modern digital presence.",
     brandPromise:
@@ -981,7 +981,7 @@ work: {
     {
       title: "Mobile Experience",
       description:
-        "Mobile-first design with 78% improvement in conversion rate",
+        "Mobile first design with 78% improvement in conversion rate",
     },
     {
       title: "Product Pages",
@@ -1065,7 +1065,7 @@ moreWork: {
       emoji: "🏠",
       title: "UrbanNest: Premium Living Redefined",
       description:
-        "Positioning a luxury real estate brand for ultra-high-net-worth individuals",
+        "Positioning a luxury real estate brand for ultra high net worth individuals",
     },
   ],
 },
@@ -1109,7 +1109,7 @@ moreWork: {
     outcome: "Transformed VSB Group into a globally consistent yet locally adaptable export brand across 45 international markets",
 
     challengeIntro:
-      "VSB Group, one of South India’s leading granite and quartz exporters, had strong operational scale but lacked a cohesive and modern brand presence. The brand needed a complete overhaul—online and offline—along with a clear brand architecture and market-specific positioning for the 45 countries it exports to.",
+      "VSB Group, one of South India’s leading granite and quartz exporters, had strong operational scale but lacked a cohesive and modern brand presence. The brand needed a complete overhaul online and offline along with a clear brand architecture and market specific positioning for the 45 countries it exports to.",
     challengeHighlight:
       "To build a strong, scalable global brand system with clear brand architecture, distinct company level positioning, and tailored communication for international markets.",
     stakes:
@@ -1139,13 +1139,13 @@ moreWork: {
     strategicPivot:
       "Create a strong parent brand supported by clearly positioned sub brands, with flexible communication tailored for each export market.",
     brandPromise:
-      " World-class stone solutions delivered with trust, scale, and global expertise.",
+      " World class stone solutions delivered with trust, scale, and global expertise.",
   },
   {
   type: "visual",
   title: "Visual",
   description:
-    "Master brand identity system for VSB Group, Sub-brand identity alignment within the group, Global-ready brand stationery and corporate collaterals, Export-focused portfolio and presentation systems, Event and expo branding for India and Germany",
+    "Master brand identity system for VSB Group, Sub-brand identity alignment within the group, Global ready brand stationery and corporate collaterals, Export focused portfolio and presentation systems, Event and expo branding for India and Germany",
   
 }
 ],
@@ -1178,7 +1178,7 @@ work: {
 
       hero: {
         caption:
-          "Complete packaging system across 12 SKUs—unified visual language with product-specific color coding",
+          "Complete packaging system across 12 SKUs—unified visual language with product specific color coding",
         cta: "Product Range",
       },
 
@@ -1212,7 +1212,7 @@ work: {
     {
       title: "Mobile Experience",
       description:
-        "Mobile-first design with 78% improvement in conversion rate",
+        "Mobile first design with 78% improvement in conversion rate",
     },
     {
       title: "Product Pages",
@@ -1258,7 +1258,7 @@ impact: {
       heading: "Business & Brand Results:",
       items: [
         "Established a unique and consistent global brand identity",
-        "Enabled country-specific positioning across 45 markets",
+        "Enabled country specific positioning across 45 markets",
         "Improved digital visibility and B2B credibility",
         "Expanded reach through international expos in India and Germany",
         "Drove stronger B2B inquiries and partnerships",
@@ -1293,7 +1293,7 @@ moreWork: {
       emoji: "🏠",
       title: "UrbanNest: Premium Living Redefined",
       description:
-        "Positioning a luxury real estate brand for ultra-high-net-worth individuals",
+        "Positioning a luxury real estate brand for ultra high net worth individuals",
     },
   ],
 },
@@ -1334,7 +1334,7 @@ moreWork: {
       "E-commerce & PAN-India Growth Strategy",
     ],
     timeline: "Brand Launch & Scale Phase",
-    outcome: "Built India’s first detergent tablet brand from scratch and positioned it as a modern, eco-friendly alternative in the home-care category.",
+    outcome: "Built India’s first detergent tablet brand from scratch and positioned it as a modern, eco-friendly alternative in the home care category.",
 
     challengeIntro:
       "Zavaine, India’s first detergent tablet and a sister brand of Triplex, needed to establish credibility, awareness, and sales in a highly competitive detergent market. As the first brand consultants to market the product in India, the challenge was to create the brand identity, positioning, and go-to-market strategy from the ground up.",
@@ -1361,11 +1361,11 @@ moreWork: {
     type: "foundation",
     title: "Strategy & Direction",
     description:
-      "We designed a comprehensive digital-first strategy supported by influencer marketing, events, and structured annual planning.",
+      "We designed a comprehensive digital first strategy supported by influencer marketing, events, and structured annual planning.",
     coreInsight:
-      " Modern consumers seek time-saving, clutter-free, and eco-conscious solutions without compromising wash performance.",
+      " Modern consumers seek time saving, clutter free, and eco-conscious solutions without compromising wash performance.",
     strategicPivot:
-      "Position Zavaine as a smart, next-generation detergent for urban, convenience-driven households.",
+      "Position Zavaine as a smart, next generation detergent for urban, convenience driven households.",
     brandPromise:
       " Powerful cleaning made simple, compact, and sustainable.",
   },
@@ -1381,7 +1381,7 @@ work: {
         image: "../assets/Zavaiine.jpg",
         brandName: "Zavaine",
         caption:
-          "Built Zavaine’s brand identity and narrative from scratch. Positioned the product as high-quality, convenient, and eco-friendly. Executed a digital-first launch strategy. Designed a social media engagement system to educate and convert users. Launched and scaled sales through Amazon and Flipkart. Created a budget-efficient roadmap to maximize ROI.",
+          "Built Zavaine’s brand identity and narrative from scratch. Positioned the product as high quality, convenient, and eco-friendly. Executed a digital-first launch strategy. Designed a social media engagement system to educate and convert users. Launched and scaled sales through Amazon and Flipkart. Created a budget-efficient roadmap to maximize ROI.",
       },
       colorPalette: {
         colors: ["#16c9f1","#FFFFFF"],
@@ -1410,7 +1410,7 @@ work: {
     {
       title: "Mobile Experience",
       description:
-        "Mobile-first design with 78% improvement in conversion rate",
+        "Mobile first design with 78% improvement in conversion rate",
     },
     {
       title: "Product Pages",
@@ -1463,7 +1463,7 @@ impact: {
         "Improved brand recall by 217x",
         "Achieved 124,299 sales in the first 3 months via e-commerce",
         "Expanded presence into 3 new markets",
-        "Established Zavaine as a credible innovation-led detergent brand",
+        "Established Zavaine as a credible innovation led detergent brand",
       ],
     },
    
@@ -1704,7 +1704,7 @@ moreWork: {
     title: "Lvl-Up",
     tag: " Brand identity, Launch, Brand positioning, Scale readiness (store system that can expand to new cities).",
     description:
-      "Converted a “premium-only fashion store” idea into an aspirational retail brand and store system that attracts both premium and mass shoppers, enabling faster traction, repeat purchases, and scalable expansion with lower long-term marketing effort per ROI.",
+      "Converted a “premium only fashion store” idea into an aspirational retail brand and store system that attracts both premium and mass shoppers, enabling faster traction, repeat purchases, and scalable expansion with lower long term marketing effort per ROI.",
 
     client: " LVL UP (Khammam)",
     industry: "Fashion Retail",
@@ -1720,14 +1720,14 @@ moreWork: {
       "Operational Enablement (staff brand training, vendor management)",
     ],
     timeline: "Pre-launch to store establishment, Launch window referenced as August–November 2024",
-    outcome: "De-risked the business model through market validation and built a repeatable brand plus in-store operating system (positioning, guidelines, staff training, vendor execution) that improved discovery, retention, and expansion readiness.",
+    outcome: "De-risked the business model through market validation and built a repeatable brand plus in store operating system (positioning, guidelines, staff training, vendor execution) that improved discovery, retention, and expansion readiness.",
 
     challengeIntro:
       "The client wanted a premium luxury fashion store in Khammam from scratch, but market signals indicated that a premium-only positioning would constrain footfall and slow growth due to limited premium audience density.",
     challengeHighlight:
       "Main Insight (Sharp strategic truth) In Tier-2 markets, exclusivity is often created by “aspirational access,” not by premium exclusion, brands grow faster when they let the broader audience enter while still protecting premium cues.",
     stakes:
-      "Reason Identified (Why the problem existed) - Premium audience availability in Khammam was not strong enough to sustain a premium-only store. A luxury-only model risked low footfall, slower inventory turns, and higher marketing dependency. The client needed a positioning that could scale without constant discounting or heavy ad spend",
+      "Reason Identified (Why the problem existed) - Premium audience availability in Khammam was not strong enough to sustain a premium-only store. A luxury only model risked low footfall, slower inventory turns, and higher marketing dependency. The client needed a positioning that could scale without constant discounting or heavy ad spend",
 
   strategy: [
   {
@@ -1748,7 +1748,7 @@ moreWork: {
     type: "foundation",
     title: "Strategy & Direction",
     description:
-      "We designed a comprehensive digital-first strategy supported by influencer marketing, events, and structured annual planning.",
+      "We designed a comprehensive digital first strategy supported by influencer marketing, events, and structured annual planning.",
     coreInsight:
       " Common audience footprints contribute to perceived exclusivity when the brand system signals elevation, progression, and premium experience.",
     strategicPivot:
@@ -2020,7 +2020,7 @@ moreWork: {
     coreInsight:
       "Clarity, trust, and emotional resonance drive engagement for social impact organizations.",
     strategicPivot:
-      "Create a distinct, professional, and hopeful identity while highlighting the NGO’s core mission and volunteer-driven impact.",
+      "Create a distinct, professional, and hopeful identity while highlighting the NGO’s core mission and volunteer driven impact.",
     brandPromise:
       " A trusted, transparent, and compassionate organization driving measurable social impact.",
   },
@@ -2058,7 +2058,7 @@ work: {
         image: "../assets/sadananda-compressed.png",
         brandName: "Sri Santh Sadananda NGO",
         caption:
-          "Developed new brand name and tagline. Designed distinctive visual identity (logo, colors, typography). Built e-commerce-enabled website for donations and communication. Positioned the NGO as the go-to choice for impact-driven philanthropy.Executed a strategic launch plan to increase awareness and credibility",
+          "Developed new brand name and tagline. Designed distinctive visual identity (logo, colors, typography). Built e-commerce-enabled website for donations and communication. Positioned the NGO as the go-to choice for impact driven philanthropy.Executed a strategic launch plan to increase awareness and credibility",
       },
       colorPalette: {
         colors: ["#f06727", "#f9fafb", "#f9fafb", "#f9fafb"],
@@ -2120,7 +2120,7 @@ moreWork: {
       emoji: "🏠",
       title: "UrbanNest: Premium Living Redefined",
       description:
-        "Positioning a luxury real estate brand for ultra-high-net-worth individuals",
+        "Positioning a luxury real estate brand for ultra high networth individuals",
     },
   ],
 },

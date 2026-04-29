@@ -25,7 +25,7 @@ const serviceData = {
     title: 'Brand ',
     title_two: 'Expresso',
     subtitle: 'Quick, Concentrated Brand Solutions',
-    heroDescription: 'Re-energize your brand in 90 days. We refine your identity, sharpen your presence, and prepare you for a confident, comeback-ready launch.',
+    heroDescription: 'Re-energize your brand in 90 days. We refine your identity, sharpen your presence, and prepare you for a confident, comeback ready launch.',
     features: [
       {
         name: 'Initial Consultation And Assessment:',
@@ -163,7 +163,7 @@ const BrandExpressoPage = () => {
 
   {/* CONTENT */}
   <h1 className="text-2xl md:text-5xl lg:text-3xl font-semibold text-black leading-tight max-w-4xl">
-    Re-energize your brand in 90 days. We refine your identity, sharpen your presence, and prepare you for a confident, comeback-ready launch.
+    Re-energize your brand in 90 days. We refine your identity, sharpen your presence, and prepare you for a confident, comeback ready launch.
   </h1>
 
 </section>
@@ -233,7 +233,7 @@ const BrandExpressoPage = () => {
           </div>
 
           <p className="text-gray-700 text-sm leading-relaxed">
-            Re-architected TDH from a “single-roof, hero-product-led” brand into a future-ready Group plus vertical system.
+            Re-architected TDH from a “single roof, hero product led” brand into a future ready Group plus vertical system.
           </p>
 
           <div className="flex justify-end mt-6">
@@ -255,7 +255,7 @@ const BrandExpressoPage = () => {
           </div>
 
           <p className="text-gray-700 text-sm leading-relaxed">
-            Built Triplex’s digital-first presence, transforming a strong regional detergent brand into a high-engagement, multi-market digital player.
+            Built Triplex’s digital first presence, transforming a strong regional detergent brand into a high-engagement, multi market digital player.
           </p>
 
           <div className="flex justify-end mt-6">

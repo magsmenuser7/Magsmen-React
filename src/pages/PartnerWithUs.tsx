@@ -54,7 +54,7 @@ const PartnerWithUs = () => {
       title: 'Vendor Partnership Program',
       subtitle: 'Become a trusted partner in our brand transformation ecosystem',
       benefits: [
-        'Access to high-value projects with premium clients',
+        'Access to high value projects with premium clients',
         'Consistent project flow and long-term partnerships',
         'Co-branding opportunities and joint marketing',
         'Priority consideration for new opportunities',
@@ -82,7 +82,7 @@ const PartnerWithUs = () => {
       title: 'External Consultant Network',
       subtitle: 'Join our elite network of strategic consultants and thought leaders',
       benefits: [
-        'Collaborate on Fortune 500 and high-growth projects',
+        'Collaborate on Fortune 500 and high growth projects',
         'Flexible engagement models and competitive compensation',
         'Access to Magsmen\'s proprietary frameworks and tools',
         'Thought leadership opportunities and co-authoring',
@@ -111,7 +111,7 @@ const PartnerWithUs = () => {
       subtitle: 'Shape the future of brand strategy through academic collaboration',
       benefits: [
         'Influence curriculum development and research initiatives',
-        'Access to real-world case studies and data',
+        'Access to real world case studies and data',
         'Speaking opportunities at industry conferences',
         'Collaboration on research papers and publications',
         'Mentorship opportunities with emerging professionals',
@@ -240,12 +240,12 @@ const PartnerWithUs = () => {
               {
                 icon: <Star className="w-8 h-8 text-[#683FBF]" />,
                 title: 'Premium Clients',
-                description: 'Work with Fortune 500 companies and high-growth Indian brands'
+                description: 'Work with Fortune 500 companies and high growth Indian brands'
               },
               {
                 icon: <TrendingUp className="w-8 h-8 text-[#683FBF]" />,
                 title: 'Growth Opportunities',
-                description: 'Scale your business through consistent, high-value projects'
+                description: 'Scale your business through consistent, high value projects'
               },
               {
                 icon: <Globe className="w-8 h-8 text-[#683FBF]" />,

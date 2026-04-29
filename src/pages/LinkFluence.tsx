@@ -251,7 +251,7 @@ const AnimatedIcon: React.FC<{ icon: React.ReactNode; gradient: string }> = ({ i
           </div>
 
           <p className="text-gray-700 text-sm leading-relaxed">
-            Re-architected TDH from a “single-roof, hero-product-led” brand into a future-ready Group plus vertical system.
+            Re-architected TDH from a “single roof, hero product led” brand into a future ready Group plus vertical system.
           </p>
 
           <div className="flex justify-end mt-6">
