@@ -574,7 +574,7 @@ const Home = () => {
           
 
           <p className="text-gray-700 text-sm leading-relaxed">
-           Stabilised and scaled a regional paints brand through a structured digital and brand-led growth strategy.
+           Stabilised and scaled a regional paints brand through a structured digital and brand led growth strategy.
           </p>
 
           <div className="flex justify-end mt-6 ">
@@ -597,7 +597,7 @@ const Home = () => {
           </div>
 
           <p className="text-gray-700 text-sm leading-relaxed">
-            Built Triplex’s digital-first presence, transforming a strong regional detergent brand into a high-engagement, multi-market digital player.
+            Built Triplex’s digital first presence, transforming a strong regional detergent brand into a high engagement, multi market digital player.
           </p>
 
           <div className="flex justify-end mt-6">
@@ -620,7 +620,7 @@ const Home = () => {
           </div>
 
           <p className="text-gray-700 text-sm leading-relaxed">
-            Re-architected TDH from a “single-roof, hero-product-led” brand into a future-ready Group plus vertical system.
+            Re-architected TDH from a “single roof, hero product led” brand into a future ready Group plus vertical system.
           </p>
 
           <div className="flex justify-end mt-6">
@@ -665,7 +665,7 @@ const Home = () => {
           </div>
 
           <p className="text-gray-700 text-sm leading-relaxed">
-            Built India’s first detergent tablet brand from scratch and positioned it as a modern, eco-friendly alternative in the home-care category.
+            Built India’s first detergent tablet brand from scratch and positioned it as a modern, eco friendly alternative in the home-care category.
           </p>
 
           <div className="flex justify-end mt-6">
@@ -960,7 +960,7 @@ const Home = () => {
               
               <h3 className="text-2xl font-bold text-white mb-6 tracking-tight"> Impact Performance</h3>
               <p className="text-gray-300 font-light leading-relaxed">
-                Smart systems that convert attention into trust — and trust into long-term loyalty.
+                Smart systems that convert attention into trust and trust into long-term loyalty.
               </p>
             </div>
             <div className="absolute bottom-0 left-0 w-full h-1 bg-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />

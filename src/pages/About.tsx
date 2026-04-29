@@ -343,7 +343,7 @@ We build what brands are built on.
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-            Strategic clarity. Market positioning. Long-term advantage.
+            Strategic clarity. Market positioning. Long term advantage.
 For Indian businesses ready to stop competing on price and start competing on meaning.
 
             </motion.p>
@@ -368,7 +368,7 @@ It was direction.
 
         </p>
          <p className="text-lg text-gray-100 leading-relaxed pt-5">
-          Magsmen was founded to bring strategic clarity into brand building by replacing guesswork with structure and short-term noise with long-term positioning.
+          Magsmen was founded to bring strategic clarity into brand building by replacing guesswork with structure and short term noise with long term positioning.
 We don’t just build brands,
 We architect growth systems.
 
@@ -619,17 +619,17 @@ We architect growth systems.
           {
             year: "2019",
             title: "The Beginning",
-            desc: "Magsmen was founded with one belief: brands deserve more than last-minute logos and borrowed frameworks. We started small, but we started with the purpose of helping businesses grow with clarity, strategy, and depth.",
+            desc: "Magsmen was founded with one belief: brands deserve more than last minute logos and borrowed frameworks. We started small, but we started with the purpose of helping businesses grow with clarity, strategy, and depth.",
           },
           {
             year: "2020",
             title: "The Growth",
-            desc: "We expanded our offerings and partnered with fast-growing regional brands across FMCG and services. Founders began trusting us not just with campaigns, but with their long-term positioning. Our team grew. So did their results.",
+            desc: "We expanded our offerings and partnered with fast growing regional brands across FMCG and services. Founders began trusting us not just with campaigns, but with their long term positioning. Our team grew. So did their results.",
           },
           {
             year: "2022",
             title: "The Recognition",
-            desc: "Category leaders and challenger brands came to us. We delivered positioning shifts that translated into measurable business impact. National visibility followed. Not because we chased awards—but because we chased outcomes.",
+            desc: "Category leaders and challenger brands came to us. We delivered positioning shifts that translated into measurable business impact. National visibility followed. Not because we chased awards but because we chased outcomes.",
           },
           {
             year: "Today — The Future",
