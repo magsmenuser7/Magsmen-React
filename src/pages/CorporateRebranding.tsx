@@ -163,7 +163,7 @@ const CorporateRebrandingPage = () => {
           
 
           <p className="text-gray-700 text-sm leading-relaxed">
-           Stabilised and scaled a regional paints brand through a structured digital and brand-led growth strategy.
+           Stabilised and scaled a regional paints brand through a structured digital and brand led growth strategy.
           </p>
 
           <div className="flex justify-end mt-6 ">
@@ -185,7 +185,7 @@ const CorporateRebrandingPage = () => {
           </div>
 
           <p className="text-gray-700 text-sm leading-relaxed">
-            Built Triplex’s digital-first presence, transforming a strong regional detergent brand into a high-engagement, multi-market digital player.
+            Built Triplex’s digital first presence, transforming a strong regional detergent brand into a high engagement, multi market digital player.
           </p>
 
           <div className="flex justify-end mt-6">
@@ -208,7 +208,7 @@ const CorporateRebrandingPage = () => {
           </div>
 
           <p className="text-gray-700 text-sm leading-relaxed">
-            Built a strong digital-first food brand by driving awareness, engagement, and B2B growth through an integrated marketing strategy.
+            Built a strong digital first food brand by driving awareness, engagement, and B2B growth through an integrated marketing strategy.
           </p>
 
           <div className="flex justify-end mt-6">

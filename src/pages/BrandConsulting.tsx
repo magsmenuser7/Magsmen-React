@@ -27,7 +27,7 @@ const serviceData = {
       {
         name: 'Brand Strategy',
         icon: <Target className="w-6 h-6" />,
-        description: 'Crystalize who your brand is for – and who it’s not for. We’ll map when, where and how your customers interact with your brand - and areas of critical impact to guide future brand strategy and creative development.'
+        description: 'Crystalize who your brand is for and who it’s not for. We’ll map when, where and how your customers interact with your brand and areas of critical impact to guide future brand strategy and creative development.'
       },
       {
         name: 'Brand Architecture',
@@ -362,7 +362,7 @@ const AnimatedIcon: React.FC<AnimatedIconProps> = ({ icon, gradient }) => {
           </div>
 
           <p className="text-gray-700 text-sm leading-relaxed">
-            Built a strong digital-first food brand by driving awareness, engagement, and B2B growth through an integrated marketing strategy.
+            Built a strong digital first food brand by driving awareness, engagement, and B2B growth through an integrated marketing strategy.
           </p>
 
           <div className="flex justify-end mt-6">
@@ -385,7 +385,7 @@ const AnimatedIcon: React.FC<AnimatedIconProps> = ({ icon, gradient }) => {
           
 
           <p className="text-gray-700 text-sm leading-relaxed">
-           Stabilised and scaled a regional paints brand through a structured digital and brand-led growth strategy.
+           Stabilised and scaled a regional paints brand through a structured digital and brand led growth strategy.
           </p>
 
           <div className="flex justify-end mt-6 ">
@@ -407,7 +407,7 @@ const AnimatedIcon: React.FC<AnimatedIconProps> = ({ icon, gradient }) => {
           </div>
 
           <p className="text-gray-700 text-sm leading-relaxed">
-            Re-architected TDH from a “single-roof, hero-product-led” brand into a future-ready Group plus vertical system.
+            Re-architected TDH from a “single roof, hero product led” brand into a future ready Group plus vertical system.
           </p>
 
           <div className="flex justify-end mt-6">

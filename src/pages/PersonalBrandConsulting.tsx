@@ -22,7 +22,7 @@ const serviceData = {
     title: 'Personal Brand',
     title_two: 'Consulting',
     subtitle: 'Elevate Your Professional Presence',
-    heroDescription: ' We help individuals identify the right platforms for their goals and craft a powerful presence that connects with the right audience. Don’t just build a brand — build influence.',
+    heroDescription: ' We help individuals identify the right platforms for their goals and craft a powerful presence that connects with the right audience. Don’t just build a brand build influence.',
     features: [
       {
         name: 'We Tell Your Story',
@@ -159,7 +159,7 @@ const AnimatedIcon: React.FC<{ icon: React.ReactNode; gradient: string }> = ({ i
 
   {/* CONTENT */}
   <h1 className="text-2xl md:text-5xl lg:text-3xl  font-semibold text-black leading-tight max-w-4xl">
-We help individuals identify the right platforms for their goals and craft a powerful presence that connects with the right audience. Don’t just build a brand — build influence.
+We help individuals identify the right platforms for their goals and craft a powerful presence that connects with the right audience. Don’t just build a brand build influence.
   </h1>
 
 </section>
@@ -238,7 +238,7 @@ We help individuals identify the right platforms for their goals and craft a pow
         Related Work
       </h1>
       <p className='pt-5'>
-        We explore how strategy, identity, and execution come together to shape meaningful brands. From positioning frameworks to visual systems, this work reflects our approach to building brands with clarity and long-term intent.
+        We explore how strategy, identity, and execution come together to shape meaningful brands. From positioning frameworks to visual systems, this work reflects our approach to building brands with clarity and long term intent.
       </p>
     </div>
 
@@ -257,7 +257,7 @@ We help individuals identify the right platforms for their goals and craft a pow
           </div>
 
           <p className="text-gray-700 text-sm leading-relaxed">
-            Built Triplex’s digital-first presence, transforming a strong regional detergent brand into a high-engagement, multi-market digital player.
+            Built Triplex’s digital first presence, transforming a strong regional detergent brand into a high-engagement, multi-market digital player.
           </p>
 
           <div className="flex justify-end mt-6">
@@ -301,7 +301,7 @@ We help individuals identify the right platforms for their goals and craft a pow
           </div>
 
           <p className="text-gray-700 text-sm leading-relaxed">
-            Re-architected TDH from a “single-roof, hero-product-led” brand into a future-ready Group plus vertical system.
+            Re-architected TDH from a “single roof, hero productn led” brand into a future ready Group plus vertical system.
           </p>
 
           <div className="flex justify-end mt-6">
