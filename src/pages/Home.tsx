@@ -436,7 +436,7 @@ const Home = () => {
   <div
     className="absolute inset-0 bg-cover bg-center"
     style={{
-      backgroundImage: "url('/assets/webpage copy.jpg')"
+      backgroundImage: "url('/assets/Untitled design (3).png')"
     }}
   />
 
@@ -484,20 +484,13 @@ const Home = () => {
 
 </section> */}
 
-<section className="relative text-black overflow-hidden lg:py-5 bg-gray-100">
-
-        {/* <Link to="/" className="flex items-center justify-center">
-          <img
-            src={logo01}
-            alt="MagsmenLogo"
-            className="h-16 sm:h-10 md:h-[14rem] w-auto"
-          />
-        </Link> */}
+      {/* old section  */}
+      <section className="relative text-black overflow-hidden lg:py-5 bg-gray-100">
 
         <div className="absolute inset-0 top-0 left-0 mx-auto">
           <motion.div
             className="absolute inset-0 bg-cover bg-center"
-            // style={{ backgroundImage: `url(${backgroundImages[currentBgIndex]})` }}
+           
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
@@ -526,25 +519,6 @@ const Home = () => {
             >
               A good logo is nice.<br />
  {" "} A smart strategy is better.
-
-              {/* <AnimatePresence>
-                <motion.span
-                  key={currentTextIndex}
-                  className="absolute text-right ml-4 font-normal font-semibold tracking-normal text-[#683FBF]"
-                  initial={{ opacity: 0, y: 20, scale: 0.8 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: -20, scale: 0.8 }}
-                  transition={{ duration: 0.8, delay: 1.2 }}
-                >
-                  {clients[currentTextIndex] ? (
-                    <img
-                      src={clients[currentTextIndex].src}
-                      alt={clients[currentTextIndex].alt || 'client logo'}
-                      className="inline-block w-12 h-12 object-contain -mt-1"
-                    />
-                  ) : null}
-                </motion.span>
-              </AnimatePresence> */}
 
               <p className='md:text-2xl text-xl tracking-wider py-5 font-normal text-black'>We study your customers and culture, so your brand doesn’t just look good, it works.
 </p>
