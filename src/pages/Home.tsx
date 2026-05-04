@@ -75,6 +75,7 @@ import bannerseven from "/assets/banners/banner-seven.jpeg";
 import { image } from 'framer-motion/client';
 
 import sumasignature from "/assets/testimonials/suma copy.png"
+import bgimg from "/assets/Gemini_Generated_Image_yumhdqyumhdqyumh copy.jpg"
 
 
 import BrandingPatternLYN from '/assets/works/Branding-Pattern-LYN.jpg'
@@ -428,7 +429,62 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero section old  */}
-      <section className="relative text-black overflow-hidden lg:py-5 bg-gray-100">
+      
+    {/* <section className="relative w-full min-h-screen flex items-center justify-center bg-black overflow-hidden">
+
+  
+  <div
+    className="absolute inset-0 bg-cover bg-center"
+    style={{
+      backgroundImage: "url('/assets/webpage copy.jpg')"
+    }}
+  />
+
+  
+  <div className="absolute inset-0 bg-black/30"></div>
+
+  
+  <div className="relative z-10 max-w-7xl text-center px-4 sm:px-6 pt-20 sm:pt-44 pb-24 sm:pb-64">
+
+    
+    <h1 className="text-white font-light tracking-wide leading-tight">
+      <span className="block text-2xl sm:text-3xl md:text-5xl mb-4">
+        A GOOD LOGO IS NICE.
+      </span>
+
+      <span className="block text-3xl sm:text-4xl md:text-7xl font-semibold">
+        A SMART STRATEGY IS BETTER.
+      </span>
+    </h1>
+
+   
+    <p className="text-gray-300 text-sm md:text-lg mt-6 max-w-2xl mx-auto">
+      We study your customers and culture, so your brand doesn’t just look good, it works.
+    </p>
+
+   
+    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-32 mt-8 sm:mt-10 sm:pr-16">
+
+      <Link
+        to="/contact"
+        className="w-full sm:w-auto text-center px-6 py-3 rounded-full border border-white/20 text-white bg-white/10 backdrop-blur-md hover:bg-white/20 text-xs transition-all duration-300"
+      >
+        BOOK YOUR FREE BRAND DISCOVERY CALL →
+      </Link>
+
+      <Link
+        to="/brand-audit"
+        className="w-full sm:w-auto text-center px-6 py-3 rounded-full border border-white/20 text-white bg-white/10 backdrop-blur-md hover:bg-white/20 text-xs transition-all duration-300"
+      >
+        TAKE THE 2-MINUTE BRAND AUDIT →
+      </Link>
+
+    </div>
+  </div>
+
+</section> */}
+
+<section className="relative text-black overflow-hidden lg:py-5 bg-gray-100">
 
         {/* <Link to="/" className="flex items-center justify-center">
           <img

@@ -134,7 +134,7 @@ const Header = () => {
               <img
                 src={claritylogo ? claritylogo : newlogowhite}
                 alt="MagsmenLogo"
-                className="h-8 sm:h-10 md:h-20 md:w-24 object-contain"
+                className="h-12 sm:h-10 md:h-20 md:w-24 object-contain"
               />
             </div>
           </Link>

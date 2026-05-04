@@ -60,6 +60,7 @@ import BrandAssesment from './pages/BrandAssesment.tsx';
 import ServicesDeck from './pages/ServiceDeck.tsx'
 import GrowthPartnerBriefing from "./pages/GrowthPartnerBriefing.tsx"
 import Kalanikethan from "./pages/Kalanekithan.tsx"
+import FoodBrandArchitecture from './pages/MultiCategoryFoodBrandArchitecture.tsx';
 // 2. Define a Layout Component that includes Header and Footer
 const MainLayout = () => {
   return (
@@ -145,6 +146,7 @@ function App() {
           <Route path="/service-deck" element={<ServicesDeck />} />
           <Route path="/growth-partner-briefing" element={<GrowthPartnerBriefing />} />
           <Route path="/kalanikethan-brand-creation-proposal" element={<Kalanikethan />} />
+          <Route path="/subbayya-gari-hotel-multi-category-barnd-architecture-example" element={<FoodBrandArchitecture />} />
 
 
 
