@@ -427,10 +427,10 @@ const Home = () => {
 
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen mr-[-2]">
       {/* Hero section old  */}
       
-    {/* <section className="relative w-full min-h-screen flex items-center justify-center bg-black overflow-hidden">
+    <section className="relative w-full min-h-screen flex items-center justify-center bg-black overflow-hidden">
 
   
   <div
@@ -482,10 +482,10 @@ const Home = () => {
     </div>
   </div>
 
-</section> */}
+</section>
 
       {/* old section  */}
-      <section className="relative text-black overflow-hidden lg:py-5 bg-gray-100">
+      {/* <section className="relative text-black overflow-hidden lg:py-5 bg-gray-100">
 
         <div className="absolute inset-0 top-0 left-0 mx-auto">
           <motion.div
@@ -551,7 +551,7 @@ const Home = () => {
             </motion.div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
     
       {/* new success stories section */}

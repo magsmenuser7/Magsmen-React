@@ -21,7 +21,7 @@ const NewsletterViewer = () => {
   if (!newsletter) {
     return (
       <div className="min-h-screen flex items-center justify-center text-black text-xl">
-        Newsletter not found
+        Page not found
       </div>
     );
   }
