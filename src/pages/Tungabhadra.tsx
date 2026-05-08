@@ -421,7 +421,7 @@ export default function App() {
     const r = form.role || 'Franchise Team';
     const x = form.msg;
     const sub = encodeURIComponent('OFFICIAL CONFIRMATION — Tungabhadra Warriors × Magsmen Strategic Brand Partnership · APL Season 5');
-    const body = encodeURIComponent(`Dear Magsmen Team,\n\nI am writing on behalf of Tungabhadra Warriors, the APL Season 4 champions, to formally confirm our intent to enter into the Strategic Brand Partnership as proposed by Magsmen Brand Consultants for APL Season 5 and beyond.\n\nFROM: ${n}\nDESIGNATION: ${r}\nCONTACT EMAIL: ${e}\nORGANISATION: Tungabhadra Warriors — APL Season 4 Champions\n\nENGAGEMENT CONFIRMED\n\nWe have reviewed the Strategic Brand Partnership Proposal dated May 2026 and formally confirm our intent to engage Magsmen Brand Consultants as the Official Strategy Partner for Tungabhadra Warriors beginning APL Season 5.\n\nCOMMERCIAL TERMS ACCEPTED\nStrategic Services Fee: INR 6,00,000 + GST per season\nPlacement Value Offset: INR 2,00,000\nNet Cash Component: INR 4,00,000 + GST per season\nPayment Structure: 50% at signing · 25% Phase 2 · 25% Phase 3\nSeason 6 Incentive: 15% reduction acknowledged\n\nPLACEMENTS CONFIRMED\nOfficial Strategy Partner across all franchise communications\nJersey: upper chest panel left side — Position C\nTeam bus side panel branding across Visakhapatnam, Mangalagiri, and Kadapa\nDigital content credit and broadcast mention on Sony Sports and FanCode\nEvent branding at Jersey Launch, Opening Ceremony, and Player Auction\n\nSCOPE — ALL 13 DELIVERABLES ACKNOWLEDGED\nPhase 1: Brand Audit · Brand Architecture · Positioning Framework · IP Advisory · Owner Narrative\nPhase 2: Fan Community Architecture · 52-Week Content Framework · IPL Pipeline Narrative · Off-Season Program\nPhase 3: Sponsorship Strategy Redesign · Revised Sponsor Deck · Brand Health Dashboard · Season 6 Brief\n\nWe request the initial 60-minute strategic alignment call within 5 working days.${x ? '\n\nADDITIONAL NOTE:\n' + x : ''}\n\nYours sincerely,\n${n}\n${r}\nTungabhadra Warriors — APL Season 4 Champions\nReply to: ${e}\n\n---\nSent via Magsmen Strategic Partnership Proposal · May 2026`);
+    const body = encodeURIComponent(`Dear Magsmen Team,\n\nI am writing on behalf of Tungabhadra Warriors, the APL Season 4 champions, to formally confirm our intent to enter into the Strategic Brand Partnership as proposed by Magsmen Strategy Consultants for APL Season 5 and beyond.\n\nFROM: ${n}\nDESIGNATION: ${r}\nCONTACT EMAIL: ${e}\nORGANISATION: Tungabhadra Warriors — APL Season 4 Champions\n\nENGAGEMENT CONFIRMED\n\nWe have reviewed the Strategic Brand Partnership Proposal dated May 2026 and formally confirm our intent to engage Magsmen Strategy Consultants as the Official Strategy Partner for Tungabhadra Warriors beginning APL Season 5.\n\nCOMMERCIAL TERMS ACCEPTED\nStrategic Services Fee: INR 6,00,000 + GST per season\nPlacement Value Offset: INR 2,00,000\nNet Cash Component: INR 4,00,000 + GST per season\nPayment Structure: 50% at signing · 25% Phase 2 · 25% Phase 3\nSeason 6 Incentive: 15% reduction acknowledged\n\nPLACEMENTS CONFIRMED\nOfficial Strategy Partner across all franchise communications\nJersey: upper chest panel left side — Position C\nTeam bus side panel branding across Visakhapatnam, Mangalagiri, and Kadapa\nDigital content credit and broadcast mention on Sony Sports and FanCode\nEvent branding at Jersey Launch, Opening Ceremony, and Player Auction\n\nSCOPE — ALL 13 DELIVERABLES ACKNOWLEDGED\nPhase 1: Brand Audit · Brand Architecture · Positioning Framework · IP Advisory · Owner Narrative\nPhase 2: Fan Community Architecture · 52-Week Content Framework · IPL Pipeline Narrative · Off-Season Program\nPhase 3: Sponsorship Strategy Redesign · Revised Sponsor Deck · Brand Health Dashboard · Season 6 Brief\n\nWe request the initial 60-minute strategic alignment call within 5 working days.${x ? '\n\nADDITIONAL NOTE:\n' + x : ''}\n\nYours sincerely,\n${n}\n${r}\nTungabhadra Warriors — APL Season 4 Champions\nReply to: ${e}\n\n---\nSent via Magsmen Strategic Partnership Proposal · May 2026`);
     window.location.href = `mailto:connect@magsmen.com,sandeep@magsmen.com?subject=${sub}&body=${body}`;
     setModalOpen(false);
     setToastOn(true);
@@ -440,6 +440,10 @@ export default function App() {
       setChatMsgs(m => [...m, { type: 'bot', text: findAns(question) }]);
     }, 1200);
   };
+
+  type UserData = {
+  email: string;
+};
 
   const interactiveProps = { onMouseEnter: addHover, onMouseLeave: removeHover };
 
@@ -1009,9 +1013,9 @@ export default function App() {
 
       {/* FOOTER */}
       <footer>
-        <div className="fl"><img src={LOGO_BASE64} alt="Magsmen" /></div>
-        <div className="fm">Magsmen Brand Consultants · connect@magsmen.com · www.magsmen.com</div>
-        <div className="fr">Confidential · May 2026<br />Valid until 30 June 2026</div>
+        <div className="fl"><img src={LOGO} alt="Magsmen" /></div>
+        <div className="fm">Magsmen Strategy Consultants · connect@magsmen.com · www.magsmen.com</div>
+        <div className="fr mr-6">Confidential · May 2026<br />Valid until 30 June 2026</div>
       </footer>
 
       {/* MODAL */}
