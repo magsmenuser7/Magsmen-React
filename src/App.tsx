@@ -64,7 +64,7 @@ import FoodBrandArchitecture from './pages/MultiCategoryFoodBrandArchitecture.ts
 import StremedyProposal from './pages/StremedyProposal.tsx';
 import MagsmenAnnaulAdvisoryProgramme from "./pages/AnnaulAdvisoryProgramme.tsx"
 import NirvaFranchiseProposal from './pages/NirvaFranchiseProposal.tsx';
-
+import TungabhadraWarriorsProposal from './pages/Tungabhadra.tsx';
 
 
 // 2. Define a Layout Component that includes Header and Footer
@@ -156,6 +156,8 @@ function App() {
           <Route path="/stremedy-proposal" element={<StremedyProposal />} />
            <Route path="/annual-advisory-programme" element={<MagsmenAnnaulAdvisoryProgramme />} />
            <Route path="/nirva-franchise-proposal" element={<NirvaFranchiseProposal />} />
+           <Route path="/tungabhadra-warriors-proposal" element={<TungabhadraWarriorsProposal />} />
+
 
 
 
