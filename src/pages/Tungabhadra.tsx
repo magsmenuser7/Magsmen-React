@@ -969,7 +969,7 @@ export default function App() {
               <div className="t-lbl">Investment Structure</div>
               <table className="tt">
                 <tbody>
-                  {[['Strategic Services Fee','INR 6,00,000 + GST per season'],['Placement Value Offset','INR 2,00,000 (jersey, bus, events, digital)'],['Net Cash Component','INR 4,00,000 + GST per season'],['Payment Terms','50% at signing · 25% Phase 2 · 25% Phase 3'],['Season 6 Incentive','15% reduction if Warriors retain Magsmen'],['Valid Until','30 June 2026']].map(([a,b]) => (
+                  {[['Strategic Services Fee','INR 15,00,000 + GST per season'],['Valid Until','30 June 2026']].map(([a,b]) => (
                     <tr key={a}><td>{a}</td><td>{b}</td></tr>
                   ))}
                 </tbody>
