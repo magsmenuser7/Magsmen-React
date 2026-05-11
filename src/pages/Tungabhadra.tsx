@@ -533,7 +533,7 @@ export default function App() {
                flex items-center justify-center md:justify-end 
                p-4 md:p-6 font-sans"
     style={{
-      backgroundImage: `url('/assets/Final Brand presentation for printing.png')`
+      backgroundImage: `url('/assets/bg-for-lock.png')`
     }}
   >
         {/* Optional overlay for better readability */}
