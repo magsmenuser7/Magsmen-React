@@ -66,6 +66,7 @@ import MagsmenAnnaulAdvisoryProgramme from "./pages/AnnaulAdvisoryProgramme.tsx"
 import NirvaFranchiseProposal from './pages/NirvaFranchiseProposal.tsx';
 import TungabhadraWarriorsProposal from './pages/Tungabhadra.tsx';
 import SiyaraBrandIdentity from './pages/SiyaraBrandIdentity.tsx'
+import MagsmenServices from './pages/MagsmenServices.tsx'
 
 // 2. Define a Layout Component that includes Header and Footer
 const MainLayout = () => {
@@ -158,6 +159,7 @@ function App() {
            <Route path="/nirva-franchise-proposal" element={<NirvaFranchiseProposal />} />
            <Route path="/tungabhadra-warriors-proposal" element={<TungabhadraWarriorsProposal />} />
            <Route path="/siyara-brand-identity" element={<SiyaraBrandIdentity />} />
+           <Route path="/services-internal-document" element={<MagsmenServices />} />
            
 
 

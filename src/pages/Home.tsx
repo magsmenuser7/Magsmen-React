@@ -430,7 +430,7 @@ const Home = () => {
     <div className="min-h-screen mr-[-2]">
       {/* Hero section old  */}
       
-    <section className="relative w-full min-h-screen flex items-center justify-center bg-black overflow-hidden">
+    <section className="relative w-full h-[110vh] flex items-center justify-center bg-black overflow-hidden">
 
   
   <div
