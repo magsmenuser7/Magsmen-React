@@ -17,7 +17,7 @@ const Footer = () => {
             {/* <div className="text-2xl font-bold mb-4">MAGSMEN</div> */}
             <img src={Favi01} alt="MagsmenLogo" className="h-[10rem] w-auto " />
             <p className="text-gray-300 mb-4 mt-5 text-justify">
-              As one of the leading brand consulting firms, Magsmen is a great choice for businesses that want to turn themselves into a brand. With 9 awards on brand strategy, Magsmen partnered with some of the industry's leading brands in India.
+              As one of the leading strategy consulting firms, Magsmen is a great choice for businesses that want to turn themselves into a brand. With 9 awards on brand strategy, Magsmen partnered with some of the industry's leading brands in India.
             </p>
             <div className="flex space-x-7 mt-10">
               <a href="https://www.linkedin.com/company/magsmen" target='_blank' className="text-gray-300 hover:text-[#683FBF] transition-colors">
