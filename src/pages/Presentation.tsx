@@ -17,7 +17,7 @@ import { useMemo as useMemoDep } from 'react';
 
 
 
-import magsmenpresentation from "/assets/Magsmen Strategy Consultants -- Brand Presentation.pdf"
+import magsmenpresentation from "/assets/magsmen-strategy-consultants-brand-presentation.pdf"
 
 // --- TYPE DEFINITIONS ---
 interface UserData {

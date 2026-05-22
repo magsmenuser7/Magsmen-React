@@ -132,7 +132,7 @@ const Header = () => {
           >
             <div className="p-2 md:p-3">
               <img
-                src={newlogowhite ? newlogowhite : claritylogo}
+                src={useWhiteLogo ? newlogowhite : claritylogo}
                 alt="MagsmenLogo"
                 className="h-12 sm:h-10 md:h-20 md:w-24 object-contain"
               />
