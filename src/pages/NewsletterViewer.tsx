@@ -21,34 +21,39 @@ const NewsletterViewer = () => {
 
   const pdfUrl = encodeURI(newsletter.pdf);
 
-  // ✅ Detect iOS (TS-safe: guards against SSR/undefined globals)
   const isIOS =
     typeof navigator !== "undefined" &&
-    /iPad|iPhone|iPod/.test(navigator.userAgent) &&
-    !(typeof window !== "undefined" && "MSStream" in window);
+    /iPad|iPhone|iPod/.test(navigator.userAgent);
 
-  // ✅ Google Docs Viewer fallback for iOS
-  const viewerUrl = isIOS
-    ? `https://docs.google.com/gview?embedded=1&url=${window.location.origin}${pdfUrl}`
-    : pdfUrl;
+  // ✅ Most reliable iOS solution
+  useEffect(() => {
+    if (isIOS) {
+      window.location.replace(pdfUrl);
+    }
+  }, [isIOS, pdfUrl]);
+
+  // ✅ Loader while redirecting
+  if (isIOS) {
+    return (
+      <div className="min-h-screen flex items-center justify-center text-black text-lg">
+        Opening PDF...
+      </div>
+    );
+  }
 
   return (
     <div className="w-full h-screen">
       <iframe
         key={slug}
-        src={viewerUrl}
+        src={pdfUrl}
         title={newsletter.title}
         className="w-full h-full border-0"
-        loading="lazy"
       />
     </div>
   );
 };
 
 export default NewsletterViewer;
-
-
-
 
 
 
