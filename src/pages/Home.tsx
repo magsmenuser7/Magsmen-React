@@ -113,8 +113,9 @@ import edibleoilbrandstrategyindia from "/assets/blogs/edible-oil-brands.jpg"
 import fashionjewlleryinindia from "/assets/blogs/Fashion-Jewellery-in-India.jpg"
 import indiandairybrands from "/assets/blogs/indian-diary-brands.jpg"
 import packagedwaterindustry from "/assets/blogs/packaged-water-industry.jpg"
-
-
+import advisoryimage from "/assets/advisory-images/naruto-uzumaki-minato-namikaze-black-background-amoled-5k-8k-7680x4320-8096.jpg"
+import seshubabu from "/assets/advisory-images/seshu-babu2.jpg"
+import mamatha from "/assets/advisory-images/mamatha.jpg"
 
 
 
@@ -713,6 +714,9 @@ const Home = () => {
   </div>
       </section>
 
+
+        
+
               {/* <section className="py-24 bg-white">
    <div className="grid md:grid-cols-2 gap-10 mx-auto items-center justify-center max-w-7xl px-6 md:px-14">  
     <div> <h1 className="text-4xl md:text-6xl font-light text-black tracking-tight md:mb-6"> Success <br /> <span className="font-thin">Stories</span> </h1>
@@ -1293,7 +1297,90 @@ const Home = () => {
       </section>
 
 
+     {/* Advisory section */}
+       {/* <section className="py-24 bg-white">
+  <div className="max-w-7xl mx-auto px-6 md:px-14">
+
+   
+    <div className="mb-16">
+      <h1 className="text-4xl md:text-6xl font-light text-black tracking-tight">
+        Advisory <br />
+        <span className="font-thin">Section</span>
+      </h1>
+    </div>
+
+   
+    <div className="grid md:grid-cols-3 gap-12">
+
+      <Link to="/case-studies/tenali-double-horse">
+        <div className="bg-[#f5f5f5] rounded-[40px] p-6 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border-black/40 border-[0.5px]">
+
+          <div className="rounded-[28px] overflow-hidden mb-6">
+            <img className="w-full h-[240px] object-cover"
+               src={seshubabu} alt="image" />
+            
+          </div>
+
+          <p className="text-gray-700 text-sm leading-relaxed">
+            Re-architected TDH from a “single roof, hero product led” brand into a future ready Group plus vertical system.
+          </p>
+
+          <div className="flex justify-end mt-6">
+            <button className="bg-black text-white text-xl px-8 py-2 rounded-2xl hover:bg-purple-700 transition font-medium">
+              More
+            </button>
+          </div>
+        </div>
+      </Link>
+
      
+     
+      <Link to="/case-studies/vsb-group">
+        <div className="bg-[#f5f5f5] rounded-[40px] p-6 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border-black/40 border-[0.5px]">
+
+          <div className="rounded-[28px] overflow-hidden mb-6">
+            <img className="w-full h-[240px] object-cover" 
+               src={mamatha} alt="image" />
+            
+          </div>
+
+          <p className="text-gray-700 text-sm leading-relaxed">
+            Transformed VSB Group into a globally consistent yet locally adaptable export brand across 45 international markets.
+          </p>
+
+          <div className="flex justify-end mt-6">
+            <button className="bg-black text-white text-xl px-8 py-2 rounded-2xl hover:bg-purple-700 transition font-medium">
+              More
+            </button>
+          </div>
+        </div>
+      </Link>
+
+     
+      <Link to="/case-studies/zavaine">
+        <div className="bg-[#f5f5f5] rounded-[40px] p-6 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border-black/40 border-[0.5px]">
+
+          <div className="rounded-[28px] overflow-hidden mb-6">
+            <img className="w-full h-[240px] object-cover" 
+               src={advisoryimage} alt="image" />
+            
+          </div>
+
+          <p className="text-gray-700 text-sm leading-relaxed">
+            Built India’s first detergent tablet brand from scratch and positioned it as a modern, eco friendly alternative in the home-care.
+          </p>
+
+          <div className="flex justify-end mt-6">
+            <button className="bg-black font-medium text-white text-xl px-8 py-2 rounded-2xl hover:bg-purple-700 transition">
+              More
+            </button>
+          </div>
+        </div>
+      </Link>
+
+    </div>
+  </div>
+      </section> */}
 
 
 
