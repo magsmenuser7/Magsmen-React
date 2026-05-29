@@ -116,7 +116,8 @@ import packagedwaterindustry from "/assets/blogs/packaged-water-industry.jpg"
 import advisoryimage from "/assets/advisory-images/naruto-uzumaki-minato-namikaze-black-background-amoled-5k-8k-7680x4320-8096.jpg"
 import seshubabu from "/assets/advisory-images/seshu-babu2.jpg"
 import mamatha from "/assets/advisory-images/mamatha.jpg"
-
+import advisoryimage1 from "/assets/advisory-images/advisory_consulting_1.pptx (6).jpg"
+import advisorymembers from "/assets/advisory-images/advisory_consulting_1.pptx (7).jpg"
 
 
 
@@ -485,6 +486,39 @@ const Home = () => {
 
 </section>
 
+
+<section className="relative w-full h-[30vh] sm:h-[60vh] lg:min-h-screen bg-black overflow-hidden">
+
+  
+  <div
+    className="absolute inset-0 bg-cover bg-center"
+    style={{
+      backgroundImage: "url('/assets/advisory-images/advisory_consulting_1.pptx (8).jpg')"
+    }}
+  />
+
+  
+  {/* <div className="absolute inset-0 bg-black/30"></div> */}
+
+</section>
+
+
+
+ <section className="relative w-full h-[40vh] sm:h-[60vh] lg:min-h-screen bg-black overflow-hidden">
+
+  
+  <div
+    className="absolute inset-0 bg-contain bg-no-repeat bg-center"
+    style={{
+      backgroundImage: "url('/assets/advisory-images/advisory_consulting_1.pptx (7).jpg')"
+    }}
+  />
+
+  
+  {/* <div className="absolute inset-0 bg-black/30"></div> */}
+
+</section>
+
       {/* old section  */}
       {/* <section className="relative text-black overflow-hidden lg:py-5 bg-gray-100">
 
@@ -553,6 +587,11 @@ const Home = () => {
           </motion.div>
         </div>
       </section> */}
+
+
+
+     
+
 
     
       {/* new success stories section */}
