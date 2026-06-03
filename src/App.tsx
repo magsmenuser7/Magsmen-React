@@ -69,6 +69,7 @@ import SiyaraBrandIdentity from './pages/SiyaraBrandIdentity.tsx'
 import MagsmenServices from './pages/MagsmenServices.tsx'
 import MagsmenPresentation from './pages/Presentation.tsx'
 import DoubleHorseOrganicsProposal from './pages/DobuleHorseOrganics.tsx'
+import SorvetAdvisoryProposal from './pages/SorvetAdvisoryProposal.tsx';
 
 // 2. Define a Layout Component that includes Header and Footer
 const MainLayout = () => {
@@ -164,7 +165,8 @@ function App() {
            <Route path="/services-internal-document" element={<MagsmenServices />} />
             <Route path="/presentation" element={<MagsmenPresentation />} />
             <Route path="/tdh-brand-creation-proposal" element={<DoubleHorseOrganicsProposal />} />
-           
+            <Route path="/sorvet-advisory-proposal" element={<SorvetAdvisoryProposal />} />
+            
 
 
 
