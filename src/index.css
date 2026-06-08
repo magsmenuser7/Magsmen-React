@@ -36,3 +36,21 @@ body {
     /* padding: 0 1.5rem !important; */
   }
 }
+
+
+nav.st-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 800;
+    background: rgba(255, 255, 255, .97);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--violet-border);
+    height: 64px;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly !important;
+}

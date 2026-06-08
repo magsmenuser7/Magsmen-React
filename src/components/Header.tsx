@@ -11,6 +11,8 @@ import newlogoblack from "/assets/Artboard 1 copy 5@72x-100.jpg11.png"
 
 import claritylogo from "/assets/logos/magsmen-new-logo-removebg-preview.png"
 import claritylogowhite from "/assets/logos/Artboard 1 copy 5@72x-8.png"
+
+
 const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
@@ -33,6 +35,7 @@ const navigation = [
   { name: "Careers", href: "/careers" },
   { name: "Partner With Us", href: "/partner-with-us" },
   { name: "Contact", href: "/contact" },
+  { name: "Stature By Magsmen", href: "/stature-strategic-identity-architecture-magsmen" },
 ];
 
 const Header = () => {

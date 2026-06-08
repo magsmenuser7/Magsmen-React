@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from "/assets/Artboard 1 copy 272x-8 (1).png"
+import logo from "/assets/magsmen-new-logo-white-landscape.png"
 import { useState, useEffect, FormEvent } from 'react';
 import { 
   ChevronRight, 

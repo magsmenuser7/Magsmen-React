@@ -4,7 +4,7 @@ import {
   BookOpen, X, Tag, ShieldCheck, Gem, Star, Phone, Mail, Globe 
 } from 'lucide-react';
 import logo from "/assets/white_logo22.png"
-import horizontallogo from "/assets/Artboard 1 copy 272x-8 (1).png"
+import horizontallogo from "/assets/magsmen-new-logo-white-landscape.png"
 
 Chart.defaults.font.family = "'DM Sans', sans-serif";
 Chart.defaults.color = '#64748b';
