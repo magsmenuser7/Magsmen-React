@@ -2,64 +2,280 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Magsmen - Strategy Consultants for Indian Businesses. </title>
-    
-    <meta name="description" content="Magsmen builds strategic brands for founders across india. Brand consulting, positioning and legal brand protection - trusted by IPL sponsors and Fortune 25 clients. ">
-    <link rel="icon" type="image/png" href="public/assets/banners/logo-01.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet"> -->
 
+    <!-- ═══════════════════════════════════════════════
+         PRIMARY META TAGS
+         Audit Fix: Issues #08, #09 — keyword-bearing title & description
+         Primary keyword: brand consulting firm India
+         Secondary keyword: brand strategy consultant Guntur
+    ════════════════════════════════════════════════ -->
+    <title>Magsmen | Strategy Consultants for Indian Businesses</title>
+    <meta name="description" content="Magsmen builds strategic brands for founders across India. Brand consulting, positioning, and legal brand protection trusted by IPL sponsors and Fortune 25 clients." />
 
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
+    <!-- ═══════════════════════════════════════════════
+         CANONICAL TAG
+         Audit Fix: Issue #03 — self-referencing canonical on every page
+    ════════════════════════════════════════════════ -->
+    <link rel="canonical" href="https://www.magsmen.com/" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet">
+    <!-- ═══════════════════════════════════════════════
+         OPEN GRAPH (Social Sharing)
+    ════════════════════════════════════════════════ -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.magsmen.com/" />
+    <meta property="og:title" content="Strategy Consulting Firm India | Magsmen Strategy Consultants" />
+    <meta property="og:description" content="Magsmen is a leading strategy consulting firm in India helping founders, MSMEs, and corporates build strategic brands. Brand strategy, positioning, naming, and legal brand protection." />
+    <meta property="og:image" content="https://www.magsmen.com/assets/banners/logo-1.png " />
+    <meta property="og:site_name" content="Magsmen Strategy Consultants" />
+    <meta property="og:locale" content="en_IN" />
 
-    <link rel="stylesheet" href="...fontawesome-free/css/all.min.css">
+    <!-- ═══════════════════════════════════════════════
+         TWITTER CARD
+    ════════════════════════════════════════════════ -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://www.magsmen.com/" />
+    <meta name="twitter:title" content="Strategy Consulting Firm India | Magsmen Strategy Consultants" />
+    <meta name="twitter:description" content="Magsmen is a leading strategy consulting firm in India helping founders, MSMEs, and corporates build strategic brands." />
+    <meta name="twitter:image" content="https://www.magsmen.com/assets/banners/logo-1.png " />
 
+    <!-- ═══════════════════════════════════════════════
+         ADDITIONAL SEO META
+    ════════════════════════════════════════════════ -->
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Magsmen Brand Consultants" />
+    <meta name="geo.region" content="IN-AP" />
+    <meta name="geo.placename" content="Guntur" />
+    <meta name="geo.position" content="17.3850;78.4867" />
+    <meta name="ICBM" content="17.3850, 78.4867" />
 
-    
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0T64GDKHJK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- ═══════════════════════════════════════════════
+         FAVICON
+    ════════════════════════════════════════════════ -->
+    <link rel="icon" type="image/png" href="/assets/banners/logo-01.png" />
 
-  gtag('config', 'G-0T64GDKHJK');
-</script>
+    <!-- ═══════════════════════════════════════════════
+         FONTS — Deduplicated (original had duplicate preconnects)
+    ════════════════════════════════════════════════ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="...fontawesome-free/css/all.min.css" />
 
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    <!-- ═══════════════════════════════════════════════
+         SCHEMA MARKUP — ORGANIZATION
+         Audit Fix: Issue #06 — Organization schema absent sitewide
+         Place on every page. Confirms legal entity, logo, social profiles, contact.
+    ════════════════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Magsmen Strategy Consultants",
+      "alternateName": "Magsmen",
+      "url": "https://www.magsmen.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.magsmen.com/assets/banners/logo-01.png"
+      },
+      "description": "Magsmen is a Strategy consulting firm in India specialising in brand strategy, brand positioning, personal brand consulting, corporate rebranding, brand naming, and legal brand protection for founders and MSMEs.",
+      "email": "connect@magsmen.com",
+      "telephone": "+919044910449",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Guntur",
+        "addressRegion": "Andhra Pradesh",
+        "addressCountry": "IN"
+      },
+      "areaServed": "India",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Guntur, India"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/magsmen",
+        "https://www.instagram.com/magsmen",
+        "https://twitter.com/magsmen"
+      ]
+    }
+    </script>
+
+    <!-- ═══════════════════════════════════════════════
+         SCHEMA MARKUP — LOCAL BUSINESS
+         Audit Fix: Issue #05 — LocalBusiness schema missing from homepage
+         Also needed for Google Business Profile signals and local SEO.
+    ════════════════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://www.magsmen.com/#localbusiness",
+      "name": "Magsmen Strategy Consultants",
+      "image": "https://www.magsmen.com/assets/banners/logo-01.png",
+      "description": "Strategy consulting firm in Guntur, India. We help founders, MSMEs, and corporates build strategic brands through brand strategy, positioning, rebranding, and legal brand protection.",
+      "url": "https://www.magsmen.com",
+      "telephone": "+919044910449",
+      "email": "connect@magsmen.com",
+      "priceRange": "₹₹₹",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Guntur",
+        "addressRegion": "Andhra Pradesh",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 16.3067,
+        "longitude": 80.4365
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "serviceArea": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Brand Consulting Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Brand Consulting",
+              "url": "https://www.magsmen.com/brand-consulting"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Personal Brand Consulting",
+              "url": "https://www.magsmen.com/personal-brand-consulting"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Corporate Rebranding",
+              "url": "https://www.magsmen.com/corporate-rebranding"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Brand Naming",
+              "url": "https://www.magsmen.com/brand-naming"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Brand Expresso",
+              "url": "https://www.magsmen.com/brand-expresso"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Image Consulting",
+              "url": "https://www.magsmen.com/image-consulting"
+            }
+          }
+        ]
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/magsmen",
+        "https://www.instagram.com/magsmen"
+      ]
+    }
+    </script>
+
+    <!-- ═══════════════════════════════════════════════
+         SCHEMA MARKUP — WEBSITE (Sitelinks Search Box eligibility)
+    ════════════════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Magsmen Strategy Consultants",
+      "url": "https://www.magsmen.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.magsmen.com/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- ═══════════════════════════════════════════════
+         SCHEMA MARKUP — BREADCRUMB (Homepage)
+         Audit Fix: Issue #20 — BreadcrumbList schema absent sitewide
+    ════════════════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.magsmen.com/"
+        }
+      ]
+    }
+    </script>
+
+    <!-- ═══════════════════════════════════════════════
+         GOOGLE TAG MANAGER
+    ════════════════════════════════════════════════ -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-WGLC42GX');</script>
-<!-- End Google Tag Manager -->
 
-
-
-
+    <!-- ═══════════════════════════════════════════════
+         GOOGLE ANALYTICS (gtag.js)
+    ════════════════════════════════════════════════ -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0T64GDKHJK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-0T64GDKHJK');
+    </script>
 
   </head>
   <body>
-    
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WGLC42GX"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WGLC42GX"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
 
-
   </body>
 </html>
+
