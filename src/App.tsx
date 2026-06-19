@@ -72,11 +72,14 @@ import DoubleHorseOrganicsProposal from './pages/DobuleHorseOrganics.tsx'
 import SorvetAdvisoryProposal from './pages/SorvetAdvisoryProposal.tsx';
 import StatureByMagsmen from './pages/StatureByMagsmen.tsx';
 import ZoomRedirect from './pages/ZoomRedirect.tsx';
+import { HelmetProvider } from 'react-helmet-async'; // ✅ NEW
+import SEOHead from './components/SEOHead.tsx'; // ✅ NEW
 
 // 2. Define a Layout Component that includes Header and Footer
 const MainLayout = () => {
   return (
     <>
+      <SEOHead /> {/* ✅ Canonical + Meta title + Meta description — automatic */}
       <Header />
       <main>
         <Outlet /> {/* This renders the child route's element (Home, About, etc.) */}
@@ -86,8 +89,23 @@ const MainLayout = () => {
   );
 };
 
+
+// ── Layout 2: No Header, No Footer + SEOHead ─────────────────
+// Client pages కి కూడా canonical tag వస్తుంది
+const BareLayout = () => {
+  return (
+    <>
+      <SEOHead /> {/* ✅ Client pages కి కూడా canonical tag */}
+      <Outlet />
+    </>
+  );
+};
+
 function App() {
   return (
+
+    // ✅ HelmetProvider — SEOHead.tsx పని చేయాలంటే ఇది mandatory
+    <HelmetProvider>
     <Router>
 
       <div className="min-h-screen bg-white">
@@ -125,6 +143,7 @@ function App() {
 
           {/* GROUP 2: Pages WITHOUT Header & Footer */}
           {/* This sits outside the MainLayout */}
+          <Route element={<BareLayout />}>
           <Route path="/:slug" element={<NewsletterViewer />} />
           <Route path="/andhra-pradesh-aviation-network" element={<AndhrapradeshAviationNetwork />} />
           <Route path="/brand-audit-sreenidhi-global-school" element={<BrandaAditSreenidhiGlobalSchool />} />
@@ -170,9 +189,11 @@ function App() {
            <Route path="/sorvet-advisory-proposal" element={<SorvetAdvisoryProposal />} />
            <Route path="/stature-strategic-identity-architecture-magsmen" element={<StatureByMagsmen />} />
            <Route path="/zoom" element={<ZoomRedirect />} />
+           </Route>
         </Routes>
       </div>
     </Router>
+    </HelmetProvider>
   );
 }
 

@@ -265,6 +265,7 @@ const PAGE_SEO: Record<string, { title: string; description: string }> = {
     title: 'Magsmen Presentation | Brand Consulting India',
     description: 'Magsmen Brand Consultants — strategic brand consulting presentation for Indian businesses.',
   },
+   
 };
 
 // ── Default fallback — page SEO data లేకపోతే ──────────────────
