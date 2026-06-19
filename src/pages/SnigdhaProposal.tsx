@@ -1,6 +1,6 @@
 import React from 'react';
 import '../SnigdhaProposal.css'; // Make sure this path matches where you save the CSS file
-import whitelogo from "../../public/assets/magsmen-new-logo-white-landscape.png";
+import whitelogo from "/assets/magsmen-new-logo-white-landscape.png";
 /* eslint-disable react/prop-types */
 import { useState, useEffect, FormEvent } from 'react';
 import emailjs from '@emailjs/browser';
