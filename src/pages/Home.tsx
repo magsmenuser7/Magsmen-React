@@ -402,8 +402,10 @@ const Home = () => {
       ───────────────────────────────────────────── */}
       <section className="relative w-full min-h-screen flex items-center justify-center bg-black overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/assets/Untitled design (3).png')" }}
+          className="absolute inset-0 bg-cover bg-bottom bg-no-repeat"
+          style={{ backgroundImage: "url('/assets/hero-banner.png')" }}
+          role="img"
+          aria-label="Brand consulting firm India — Magsmen strategy consultants"
         />
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="relative z-10 max-w-7xl text-center px-4 sm:px-6 pt-20 sm:pt-44 pb-24 sm:pb-64">

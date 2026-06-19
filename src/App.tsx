@@ -71,6 +71,7 @@ import MagsmenPresentation from './pages/Presentation.tsx'
 import DoubleHorseOrganicsProposal from './pages/DobuleHorseOrganics.tsx'
 import SorvetAdvisoryProposal from './pages/SorvetAdvisoryProposal.tsx';
 import StatureByMagsmen from './pages/StatureByMagsmen.tsx';
+import ZoomRedirect from './pages/ZoomRedirect.tsx';
 
 // 2. Define a Layout Component that includes Header and Footer
 const MainLayout = () => {
@@ -168,11 +169,7 @@ function App() {
            <Route path="/tdh-brand-creation-proposal" element={<DoubleHorseOrganicsProposal />} />
            <Route path="/sorvet-advisory-proposal" element={<SorvetAdvisoryProposal />} />
            <Route path="/stature-strategic-identity-architecture-magsmen" element={<StatureByMagsmen />} />
-    
-
-
-
-
+           <Route path="/zoom" element={<ZoomRedirect />} />
         </Routes>
       </div>
     </Router>
