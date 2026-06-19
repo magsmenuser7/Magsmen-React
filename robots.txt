@@ -1,3 +1,8 @@
-User Agent: *
-Disallow:
-Sitemap:https://magsmen.com/sitemap.xml
+# robots.txt — Magsmen Brand Consultants
+# Generated: 2026-05-26
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.magsmen.com/sitemap.xml
