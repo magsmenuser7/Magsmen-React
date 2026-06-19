@@ -126,7 +126,7 @@ function App() {
             <Route path="/partner-with-us" element={<PartnerWithUs />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/brand-consulting" element={<BrandConsultingPage />} />
-            <Route path="/personal-brand-consulting" element={<PersonalBrandConsultingPage />} />
+            <Route path="/stature-by-magsmen" element={<PersonalBrandConsultingPage />} />
             <Route path="/image-consulting" element={<ImageConsultingPage />} />
             <Route path="/corporate-rebranding" element={<CorporateRebrandingPage />} />
             <Route path="/brand-expresso" element={<BrandExpressoPage />} />

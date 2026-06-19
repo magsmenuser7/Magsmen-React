@@ -37,7 +37,7 @@ const services: Service[] = [
     id: "branding",
     number: "01",
     title: "Brand Consulting",
-     slug: "/brand-consulting",
+    slug: "/brand-consulting",
     description:
       "We partner with brands as strategic allies, blending sharp thinking with creative firepower to build strong, scalable foundations.",
     leftItems: [
@@ -52,64 +52,64 @@ const services: Service[] = [
     ],
     image:
       "public/assets/services/brand_consulting.jpg",
-     
-      
+
+
   },
   {
     id: "personal",
     number: "02",
-    title: "Personal Brand Consulting",
-     slug: "/personal-brand-consulting",
+    title: "Stature by Magsmen",
+    slug: "/stature-by-magsmen",
     description:
       " We help individuals identify the right platforms for their goals and craft a powerful presence that connects with the right audience. Don’t just build a brand, build influence.",
     leftItems: ["Positioning", "Narrative", "Platform Strategy"],
     rightItems: ["Visual Identity", "Brand Systems", "Growth Enablement"],
     image:
       "public/assets/services/personal_brand_consulting.jpg",
-     
-      
+
+
   },
   {
     id: "corporate",
     number: "03",
     title: "Corporate Rebranding",
-     slug: "/corporate-rebranding",
+    slug: "/corporate-rebranding",
     description:
       "We refresh and realign your brand to keep pace with evolving markets , refining what exists while strengthening what’s next.",
     leftItems: ["Brand Audit", "Identity Evolution", "Narrative Alignment"],
     rightItems: ["Architecture", "Naming", "Brand Governance"],
     image:
       "public/assets/services/corporate_rebranding.jpg",
-     
-      
+
+
   },
   {
     id: "expresso",
     number: "04",
     title: "Brand Expresso",
-       slug: "/brand-expresso",
+    slug: "/brand-expresso",
     description:
       "Re-energize your brand in 90 days. We refine your identity, sharpen your presence, and prepare you for a confident, comeback-ready launch.",
     leftItems: ["Rapid Brand Audit", "Identity Refresh", "Core Messaging & Tone"],
     rightItems: ["Visual System Optimisation", "Brand Guidelines", "Launch-Ready Brand Assets"],
     image:
       "public/assets/services/brand_expresso.jpg",
-   
-      
+
+
   },
   {
     id: "creation",
     number: "05",
     title: "Brand Creation",
-     slug: "/brand-creation",
+    slug: "/brand-creation",
     description:
       "An idea to a lasting impact in 90 days, we shape distinctive brands with thoughtful strategy and a tailored approach built around your vision.",
     leftItems: ["Brand Strategy & Positioning", "Naming & Brand Foundations", "Visual Identity Design"],
     rightItems: ["Tone of Voice & Messaging", "Brand Systems & Guidelines", "Launch-Ready Brand Assets"],
     image:
       "public/assets/services/barnd_creation.jpg",
-     
-      
+
+
   },
   {
     id: "linkfluence",
@@ -122,27 +122,27 @@ const services: Service[] = [
     rightItems: ["Content Pillars & Narrative", "Tone of Voice & Messaging", "Visual Direction for LinkedIn"],
     image:
       "public/assets/services/linkfluence.jpg",
-      
-      
-   },
-   {
+
+
+  },
+  {
     id: "launch",
     number: "07",
     title: "Launchpad",
-      slug: "/launchpad",
+    slug: "/launchpad",
     description:
       "We craft brands with clarity, confidence, and cohesion,  built to stand out today and scale tomorrow.",
     leftItems: ["Strategy", "Positioning", "Identity"],
     rightItems: ["Voice", "Systems", "Launch Toolkit"],
     image:
       "public/assets/services/launchpad.jpg",
-  
+
   },
 ];
 
 const serviceRouteMap: Record<string, string> = {
   branding: "/brand-consulting",
-  personal: "/personal-brand-consulting",
+  personal: "/stature-by-magsmen",
   corporate: "/corporate-rebranding",
   expresso: "/brand-expresso",
   creation: "/brand-creation",
@@ -236,9 +236,9 @@ export default function ServicesPage() {
   </div>
 </section> */}
 
-{/* new lyout 2 */}
+      {/* new lyout 2 */}
 
-{/* <section className="w-full bg-white text-black py-28 px-6 md:px-16">
+      {/* <section className="w-full bg-white text-black py-28 px-6 md:px-16">
   <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20">
 
    
@@ -306,78 +306,78 @@ export default function ServicesPage() {
   </div>
 </section> */}
 
-{/* new layout 3 */}
-<section className="w-full bg-white text-black py-24 px-6 md:px-16">
-  <div className="max-w-7xl mx-auto">
+      {/* new layout 3 */}
+      <section className="w-full bg-white text-black py-24 px-6 md:px-16">
+        <div className="max-w-7xl mx-auto">
 
-   
-    <div className="mb-16 max-w-2xl">
-      <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
-        Our Services
-      </h2>
-      <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-        We provide structured, strategic solutions to help brands grow with clarity, consistency, and impact.
-      </p>
-    </div>
 
-   
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-
-      {services.map((service, index) => (
-        <div
-  key={service.id}
-  className="group border border-gray-200 rounded-xl p-8 hover:shadow-sm transition duration-300"
->
-  
-  <div className="flex justify-between items-start mb-6">
-    <h3 className="text-xl md:text-2xl font-medium transition-colors duration-300 group-hover:text-purple-600">
-      {service.title}
-    </h3>
-    <span className="text-sm text-gray-400">
-      {String(index + 1).padStart(2, "0")}
-    </span>
-  </div>
-
-          
-          <p className="text-gray-600 text-base leading-relaxed mb-6">
-            {service.description}
-          </p>
-
-         
-          <div className="border-t border-gray-200 my-6"></div>
-
-         
-          <div className="grid grid-cols-2 gap-6 text-sm text-gray-500">
-            <ul className="space-y-2">
-              {service.leftItems.map((item) => (
-                <li key={item}>• {item}</li>
-              ))}
-            </ul>
-
-            <ul className="space-y-2">
-              {service.rightItems.map((item) => (
-                <li key={item}>• {item}</li>
-              ))}
-            </ul>
+          <div className="mb-16 max-w-2xl">
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
+              Our Services
+            </h2>
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+              We provide structured, strategic solutions to help brands grow with clarity, consistency, and impact.
+            </p>
           </div>
 
-         
-          <button
-            onClick={() => navigate(service.slug)}
-            className="mt-8 text-sm font-medium text-black hover:underline hover:text-purple-600 transition"
-          >
-            Inquire now
-          </button>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+            {services.map((service, index) => (
+              <div
+                key={service.id}
+                className="group border border-gray-600 rounded-xl p-8 hover:shadow-sm transition duration-300"
+              >
+
+                <div className="flex justify-between items-start mb-6">
+                  <h3 className="text-xl md:text-2xl font-medium transition-colors duration-300 group-hover:text-purple-600">
+                    {service.title}
+                  </h3>
+                  <span className="text-md text-gray-400">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                </div>
+
+
+                <p className="text-gray-600 text-base leading-relaxed mb-6">
+                  {service.description}
+                </p>
+
+
+                <div className="border-t border-gray-400 my-6"></div>
+
+
+                <div className="grid grid-cols-2 gap-6 text-sm text-gray-500">
+                  <ul className="space-y-2">
+                    {service.leftItems.map((item) => (
+                      <li key={item}>• {item}</li>
+                    ))}
+                  </ul>
+
+                  <ul className="space-y-2">
+                    {service.rightItems.map((item) => (
+                      <li key={item}>• {item}</li>
+                    ))}
+                  </ul>
+                </div>
+
+
+                <button
+                  onClick={() => navigate(service.slug)}
+                  className="mt-8 text-sm font-medium text-black hover:underline hover:text-purple-600 transition"
+                >
+                  Inquire now
+                </button>
+              </div>
+            ))}
+
+          </div>
         </div>
-      ))}
-
-    </div>
-  </div>
-</section>
+      </section>
 
 
-    {/* existing layout */}
- {/* <section className="w-full text-black px-6 md:px-16 py-24 mx-auto max-w-7xl">
+      {/* existing layout */}
+      {/* <section className="w-full text-black px-6 md:px-16 py-24 mx-auto max-w-7xl">
         
        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
@@ -434,89 +434,6 @@ export default function ServicesPage() {
 
 
 
-
-
-// export default function ServicesPage() {
-
-//   const navigate = useNavigate();
-//   return (
-//     <div className="min-h-screen w-full bg-white">
-//       {/* HERO */}
-//       <section
-//         className="relative min-h-[530px] bg-gray-200 bg-cover bg-center flex justify-center items-center h-full text-center"
-
-//         >
-//         <div className="absolute max-w-6xl mx-auto w-full px-6 ">
-         
-//           <h1 className="text-4xl md:text-6xl leading-tight md:leading-none">From identity to execution, we build brands that stand out, scale, and stay unforgettable.</h1>
-           
-//           </div>
-//         </section>
-
-//       {/* CARDS LIST */}
-//       <section className="w-full bg-[#f5f5f4] text-black">
-//       {services.map((service) => (
-//         <div
-//           key={service.id}
-//           className="border-b border-black/10 px-6 md:px-16 py-24"
-//         >
-//           {/* Top row */}
-//           <div className="flex justify-between items-start mb-16">
-//             <h1 className="text-4xl md:text-6xl font-extrathin tracking-tight leading-none ">
-//               {service.title.toUpperCase()}
-//             </h1>
-
-//             <span className="text-xl md:text-5xl font-medium text-purple-600">
-//               {service.number}
-//             </span>
-//           </div>
-
-//           {/* Content */}
-//           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-//             {/* Left */}
-//             <div>
-//               <p className="text-xl md:text-2xl leading-relaxed mb-12 max-w-xl">
-//                 {service.description}
-//               </p>
-
-//               <div className="grid grid-cols-2 gap-8 text-sm md:text-base">
-//                 <ul className="space-y-2">
-//                   {service.leftItems.map((item) => (
-//                     <li key={item}>{item}</li>
-//                   ))}
-//                 </ul>
-
-//                 <ul className="space-y-2">
-//                   {service.rightItems.map((item) => (
-//                     <li key={item}>{item}</li>
-//                   ))}
-//                 </ul>
-//               </div>
-
-//   <button
-//   onClick={() => navigate(service.slug)}
-//   className="mt-10 border-b border-black pb-1 text-sm font-medium hover:opacity-70 transition text-purple-600"
-// >
-//   Inquire now
-// </button>
-
-//             </div>
-
-//             {/* Right image */}
-//             <div className="w-full h-[420px] bg-black/5 overflow-hidden">
-//               <img
-//                 src={service.image}
-//                 alt={service.title}
-//                 className="w-full h-full object-cover"
-//               />
-//             </div>
-//           </div>
-//         </div>
-//       ))}
-//     </section>
-
-//   </div>
-//   )};
 
 
 
