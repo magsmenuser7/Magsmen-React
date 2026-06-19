@@ -53,7 +53,7 @@ import SkinAffairSprintReport from './pages/SkinAffairSprintReport.tsx';
 import BctProposal from './pages/BctProposal.tsx';
 import SnigdhaProposal from './pages/SnigdhaProposal.tsx';
 import SubbayaGariHotel from './pages/SubbayiGariHotel.tsx';
-import  SkinAffairSubBrandName from './pages/SkinAffairSubBrandName.tsx';
+import SkinAffairSubBrandName from './pages/SkinAffairSubBrandName.tsx';
 import SkinAffairStrategicAnalysis from './pages/SkinAffairStrategicAnalysis.tsx';
 import BiomInnovations from './pages/BiomInnovations.tsx'
 import BrandAssesment from './pages/BrandAssesment.tsx';
