@@ -75,6 +75,8 @@ import ZoomRedirect from './pages/ZoomRedirect.tsx';
 import { HelmetProvider } from 'react-helmet-async'; // ✅ NEW
 import SEOHead from './components/SEOHead.tsx'; // ✅ NEW
 import MagsmenBrandJourney from './pages/MagsmenBrandJourney.tsx';
+import SEOCommandCenter from './pages/SEOCommandCenter.tsx';
+import SkinAffairProposal from './pages/SkinAffairProposal.tsx';
 
 // 2. Define a Layout Component that includes Header and Footer
 const MainLayout = () => {
@@ -191,6 +193,8 @@ function App() {
            <Route path="/stature-strategic-identity-architecture-magsmen" element={<StatureByMagsmen />} />
            <Route path="/magsmen-brand-journey" element={<MagsmenBrandJourney />} />
            <Route path="/zoom" element={<ZoomRedirect />} />
+           <Route path="/seo-command-center" element={<SEOCommandCenter />} />
+           <Route path="/skin-affair-proposal" element={<SkinAffairProposal />} />
 
            </Route>
         </Routes>
