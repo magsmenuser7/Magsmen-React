@@ -122,7 +122,7 @@ function App() {
           {/* We wrap them in the MainLayout route */}
           <Route element={<MainLayout />}>
 
-          <Route path="/" element={<FinalHomePage />} />
+            
             {/* <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/expertise" element={<Expertise />} />
@@ -146,6 +146,7 @@ function App() {
             <Route path="/faqs" element={<Faqs />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/blog/:slug" element={<BlogDetail />} /> */}
+            <Route path="/" element={<FinalHomePage />} />
 
           </Route>
 

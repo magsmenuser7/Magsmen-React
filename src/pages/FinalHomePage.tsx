@@ -1,10 +1,21 @@
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef, FormEvent, SetStateAction } from "react"
 import { ArrowRight, ChevronDown, Menu, Check } from "lucide-react"
 
 import LOGO  from "/assets/magsmen-new-logo-black-horizontal-landscape.png";
-import popupimage from  "/assets/Your-strategic-journey-to-brand-success-begins-here-Presentation-popup.jpg";
-import popupimag2 from  "../../public/assets/your-strategic-journey-to-brand-success-begins-here-3-popup.jpg";
+import popupimag2 from  "/assets/your-strategic-journey-to-brand-success-begins-here-3-popup.jpg";
+import blogpostone from  "/assets/blogs/why-is-my-business-not-growing-in-andhra-pradesh.jpg";
+import blogposttwo from  "/assets/blogs/why-your-brand-needs-a-unique-tone-of-voice.jpg";
+import whyismybusinessnotgrowinginandhrapradesh from "../../public/assets/blogs/why-is-my-business-not-growing-in-andhra-pradesh.jpg";
+import legalprotectionisnotaseparatefunctionitisbrandstrategy from "/assets/blogs/legal-protection-is-not-a-separate-function-it-is-brand-strategy.png";
+import themarketingtrapwhymostindianfounderswalkstraightintoit from "/assets/blogs/the-marketing-trap-why-most-indian-founders-walk-straight-into-it..png";
+import whatstatureactuallyisandwhypersonalbrandinggetsitwrong from "/assets/blogs/what-stature-actually-is-and-why-personal-branding-gets-it-wrong.png";
+import thegunturfounderhasthesamerighttobrandarchitectureasthebangalorestartup from "../../public/assets/blogs/the-guntur-founder-has-the-same-right-to-brand-architecture-as-the-bangalore-startup.jpg";
 
+
+
+
+
+import { image } from "d3";
 
 const CSS = `
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,700&display=swap');
@@ -242,10 +253,10 @@ h2.h2{font-size:clamp(1.9rem,3.8vw,3.2rem);font-weight:800;line-height:1.06;lett
 
 /* ── CLIENT BAR ──────────────────────────────────────────────────────────────── */
 .client-bar{background:#FAFAFA;padding:22px 56px;border-top:1px solid #EBEBEB;border-bottom:1px solid #EBEBEB;overflow:hidden}
-.cb-label{font-size:15px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:#CCC;text-align:center;margin-bottom:16px}
+.cb-label{font-size:15px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:rgba(71, 69, 69, 0.6);text-align:center;margin-bottom:16px}
 .cb-track{display:flex;gap:32px;animation:cbscroll 28s linear infinite;width:max-content}
 @keyframes cbscroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.cb-item{font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#AAA;white-space:nowrap;padding:7px 16px;border:1px solid #E8E8E8;border-radius:4px}
+.cb-item{font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#AAA;white-space:nowrap;padding:7px 16px;border:1px solid #c8c3c3;border-radius:4px}
 
 /* ── GRIDS ───────────────────────────────────────────────────────────────────── */
 .g2{display:grid;grid-template-columns:1fr;gap:2rem;margin-top:2.5rem}
@@ -676,6 +687,9 @@ function getSessionStatements() {
   return [...HERO_STATEMENTS].sort(() => Math.random() - 0.5).slice(0, 5)
 }
 
+
+
+
 const TESTIMONIALS_DATA = [
   { quote: "Sandeep has been an incredible asset to our brand. From introducing a new phase of Tenali Double Horse to managing time effectively and being transparent with us every step of the way, they have truly exceeded expectations. We are 1.5 years into our journey and could not be more pleased.", who: "Tenali Double Horse", role: "FMCG Brand, Andhra Pradesh" },
   { quote: "Telugu Foods had a remarkable experience with Sandeep's brand consulting. His tailored approach and practical strategies helped us launch combos across all mediums, increase distribution leads, and boost our brand visibility to get closer to our customers in less than two months.", who: "Telugu Foods", role: "Food Processing Brand, Andhra Pradesh" },
@@ -698,7 +712,7 @@ const FAQS = [
 ]
 
 const BLOGS = [
-  { id:"brand-economic-asset", cat:"Brand Strategy", title:"Brand Is an Economic Asset. Stop Treating It Like a Marketing Budget.", excerpt:"Most Indian founders treat brand as an expense. That framing is the root cause of why they can never stop spending on advertising.", date:"June 2025", rt:"6 min", icon:"\ud83d\udcca", content:[
+  { id:"brand-economic-asset", cat:"Brand Strategy", title:"Brand Is an Economic Asset. Stop Treating It Like a Marketing Budget.", excerpt:"Most Indian founders treat brand as an expense. That framing is the root cause of why they can never stop spending on advertising.", date:"June 2025", rt:"6 min", image:whyismybusinessnotgrowinginandhrapradesh, content:[
     { t:"p", text:"There is a calculation every founder eventually runs. How much did I spend on marketing this quarter? How many leads did it produce? Was it worth it?" },
     { t:"p", text:"This calculation is the problem. It treats marketing as the question. Brand is the answer the calculation never reaches." },
     { t:"pq", text:"A brand architectured correctly does three things economically. It commands a price premium. It reduces customer acquisition cost. It creates resilience during volatility. None of these are marketing outcomes." },
@@ -709,7 +723,7 @@ const BLOGS = [
     { t:"p", text:"If your business is growing but you are spending more and more on advertising to maintain that growth, you have a brand problem, not a marketing problem. The solution is a brand architecture engagement, not a better advertising strategy." },
     { t:"p", text:"At Magsmen, we have seen this pattern across fifty brands. The founders who understood brand as an economic asset built businesses that outlasted the ones who understood it only as a marketing tool." },
   ]},
-  { id:"legal-is-brand", cat:"Legal Brand Protection", title:"Legal Protection Is Not a Separate Function. It Is Brand Strategy.", excerpt:"An unregistered trademark is a brand asset that someone else can take from you while you are busy building it.", date:"May 2025", rt:"5 min", icon:"\ud83d\udee1\ufe0f", content:[
+  { id:"legal-is-brand", cat:"Legal Brand Protection", title:"Legal Protection Is Not a Separate Function. It Is Brand Strategy.", excerpt:"An unregistered trademark is a brand asset that someone else can take from you while you are busy building it.", date:"May 2025", rt:"5 min", image:legalprotectionisnotaseparatefunctionitisbrandstrategy, content:[
     { t:"p", text:"Most founders separate brand strategy and legal protection into two different conversations, two different vendors, two different timelines. This separation is not logical. It is expensive." },
     { t:"pq", text:"An unregistered trademark is not just a legal risk. It is a brand asset that someone else can take from you while you are busy building it. The name you chose. The identity you built. The trust your customers associate with it." },
     { t:"h2", text:"Where the Gap Lives" },
@@ -718,7 +732,7 @@ const BLOGS = [
     { t:"h2", text:"The Three Risks Most Founders Carry Without Knowing" },
     { t:"p", text:"The first risk is name conflict. A competitor has been using the same or similar name and you discover this when you receive a legal notice. The second is prior registration. You have been trading under a name for five years and someone else filed the trademark first. The third is identity misuse. Your name, image, or likeness is being used commercially without consent. All three are preventable with integrated legal brand strategy from the start." },
   ]},
-  { id:"marketing-trap", cat:"Business Growth", title:"The Marketing Trap. Why Most Indian Founders Walk Straight Into It.", excerpt:"Spend on marketing. Get activity. Feel like something is happening. Repeat next month. The exit is not more marketing.", date:"April 2025", rt:"7 min", icon:"\ud83c\udfaf", content:[
+  { id:"marketing-trap", cat:"Business Growth", title:"The Marketing Trap. Why Most Indian Founders Walk Straight Into It.", excerpt:"Spend on marketing. Get activity. Feel like something is happening. Repeat next month. The exit is not more marketing.", date:"April 2025", rt:"7 min", image:themarketingtrapwhymostindianfounderswalkstraightintoit, content:[
     { t:"p", text:"Marketing produces visible, measurable, short-term activity. Impressions. Clicks. Leads. Brand investment feels abstract and slow. So founders skip it. They choose the visible over the structural. This is the marketing trap." },
     { t:"pq", text:"You can escape the marketing trap only by building the brand foundation first. Then marketing becomes amplification of something real rather than a substitute for something missing." },
     { t:"h2", text:"What the Trap Looks Like from the Inside" },
@@ -728,7 +742,7 @@ const BLOGS = [
     { t:"p", text:"The exit is straightforward but uncomfortable. Stop advertising temporarily. Invest the money in a brand audit and positioning engagement. Build the architecture. Then resume advertising with a brand that actually gives customers a reason to choose it." },
     { t:"p", text:"The founders who make this decision early build brands that compound over time. The founders who do not keep spending to maintain growth rather than earning it." },
   ]},
-  { id:"stature-explained", cat:"Stature", title:"What Stature Actually Is. And Why Personal Branding Gets It Wrong.", excerpt:"Every digital agency offers personal branding. The phrase has been diluted to mean content calendars and headshot photography.", date:"March 2025", rt:"6 min", icon:"\u2b50", content:[
+  { id:"stature-explained", cat:"Stature", title:"What Stature Actually Is. And Why Personal Branding Gets It Wrong.", excerpt:"Every digital agency offers personal branding. The phrase has been diluted to mean content calendars and headshot photography.", date:"March 2025", rt:"6 min", image:whatstatureactuallyisandwhypersonalbrandinggetsitwrong, content:[
     { t:"p", text:"Visibility without credibility is noise. Credibility without visibility is wasted potential. Most personal branding services give you the first. Stature builds both, in that order." },
     { t:"pq", text:"The individual already has achievement. Stature converts that achievement into authority. The difference between the two is not talent or effort. It is architecture." },
     { t:"h2", text:"What Stature Actually Is" },
@@ -737,27 +751,98 @@ const BLOGS = [
     { t:"h2", text:"What We Have Seen in Practice" },
     { t:"p", text:"A doctor with 20 years of expertise but no structured public identity was losing patients to a colleague with 3 years and a strong LinkedIn presence. Not because the newer doctor was better. Because the patient could only evaluate what was visible. Stature corrects this asymmetry." },
   ]},
-  { id:"regional-brand", cat:"Regional Business", title:"The Guntur Founder Has the Same Right to Brand Architecture as the Bangalore Startup.", excerpt:"After eight years across AP and Telangana, regional businesses are not underperforming because they lack ambition. They are underserved.", date:"February 2025", rt:"5 min", icon:"\ud83c\udfd7\ufe0f", content:[
+  { id:"regional-brand", cat:"Regional Business", title:"The Guntur Founder Has the Same Right to Brand Architecture as the Bangalore Startup.", excerpt:"After eight years across AP and Telangana, regional businesses are not underperforming because they lack ambition. They are underserved.", date:"February 2025", rt:"5 min", image:thegunturfounderhasthesamerighttobrandarchitectureasthebangalorestartup, content:[
     { t:"p", text:"Most brand strategy frameworks were built for Bangalore startups or global multinationals. When a family business in Vijayawada or a food processing brand in Tenali tries to apply those frameworks, the fit is wrong. The dynamics are different. The buying behaviour is different. The role of family trust and community reputation in brand perception is fundamentally different." },
     { t:"pq", text:"The Guntur founder has the same right to brand architecture as the Bangalore startup. Not a simplified version of it. The real thing, built with a complete understanding of the market they actually operate in." },
     { t:"h2", text:"What Regional Brands Actually Need" },
     { t:"p", text:"A brand strategy built for AP and Telangana must understand that customers here buy through relationships before they buy through advertising. Community trust is the primary brand signal. Family business structures carry trust equity that is an asset, not a liability." },
     { t:"p", text:"The families that built Tenali Double Horse and Telugu Foods into what they are did not need a Bangalore playbook. They needed a strategist who understood this market from the inside, could speak the language of family business dynamics, and could build a brand architecture that respected the trust equity already earned." },
   ]},
-  { id:"brand-volatility-matrix", cat:"Proprietary Framework", title:"The Brand Volatility Matrix. Why the Most Dangerous Business Is Not the Failing One.", excerpt:"A framework for understanding why Fragile Success is the most urgent and least-recognised position in business — and what the window for correction looks like.", date:"July 2025", rt:"8 min", icon:"◈", content:[
-    { t:"p", text:"The businesses that are in the most structural danger are rarely the ones that are failing. They are the ones that grew successfully without building the brand architecture that would allow that success to sustain itself." },
-    { t:"pq", text:"The most dangerous belief in business is this: we have been growing, so we must be doing something right. Growth is evidence that the commercial model is working. It is not evidence that the brand is architectured." },
-    { t:"h2", text:"The Four Quadrants" },
-    { t:"p", text:"The Brand Volatility Matrix maps businesses across Brand Architecture Strength and Business Performance. Most Indian MSME businesses sit in Quadrant 3: Fragile Success. High performance. Low architecture. The volatility is invisible until a competitor, a dispute, or an expansion attempt reveals the absence of a structural foundation." },
-    { t:"p", text:"The window for correction is open while performance is strong. When performance weakens, the same correction requires three times the investment and produces half the result. That is the core insight this framework is built to communicate." },
-  ]},
-  { id:"fragile-success", cat:"Strategy", title:"Why the Business That Grew Without Structure Is the Most Urgent Client in the Room.", excerpt:"The most dangerous business is the one growing through relationships alone, with no brand architecture beneath it.", date:"January 2025", rt:"6 min", icon:"\u26a0\ufe0f", content:[
-    { t:"p", text:"The most dangerous position in business is not failure. It is fragile success. A business that has achieved revenue growth through relationships, hard work, and market timing but has no brand architecture underneath it." },
-    { t:"pq", text:"When the founder steps back, the brand has nowhere to stand. The relationships do not transfer. The trust does not transfer. What transfers is a logo and a name that mean different things to different people." },
-    { t:"h2", text:"The Window" },
-    { t:"p", text:"There is a window for this work. It is not infinite. A competitor with better positioning and the same product can displace a business that has not built its brand architecture. One bad press cycle can erase years of informal reputation. One leadership change can create brand confusion that takes years to resolve." },
-    { t:"p", text:"The businesses that have the most to gain from brand architecture work are also the ones most at risk of procrastinating on it. The very success that creates the urgency also creates the sense that the work is not urgent. This is the most expensive illusion in business." },
-  ]},
+  // { id:"brand-volatility-matrix", cat:"Proprietary Framework", title:"The Brand Volatility Matrix. Why the Most Dangerous Business Is Not the Failing One.", excerpt:"A framework for understanding why Fragile Success is the most urgent and least-recognised position in business — and what the window for correction looks like.", date:"July 2025", rt:"8 min", icon:"◈", content:[
+  //   { t:"p", text:"The businesses that are in the most structural danger are rarely the ones that are failing. They are the ones that grew successfully without building the brand architecture that would allow that success to sustain itself." },
+  //   { t:"pq", text:"The most dangerous belief in business is this: we have been growing, so we must be doing something right. Growth is evidence that the commercial model is working. It is not evidence that the brand is architectured." },
+  //   { t:"h2", text:"The Four Quadrants" },
+  //   { t:"p", text:"The Brand Volatility Matrix maps businesses across Brand Architecture Strength and Business Performance. Most Indian MSME businesses sit in Quadrant 3: Fragile Success. High performance. Low architecture. The volatility is invisible until a competitor, a dispute, or an expansion attempt reveals the absence of a structural foundation." },
+  //   { t:"p", text:"The window for correction is open while performance is strong. When performance weakens, the same correction requires three times the investment and produces half the result. That is the core insight this framework is built to communicate." },
+  // ]},
+  // { id:"fragile-success", cat:"Strategy", title:"Why the Business That Grew Without Structure Is the Most Urgent Client in the Room.", excerpt:"The most dangerous business is the one growing through relationships alone, with no brand architecture beneath it.", date:"January 2025", rt:"6 min", icon:"\u26a0\ufe0f", content:[
+  //   { t:"p", text:"The most dangerous position in business is not failure. It is fragile success. A business that has achieved revenue growth through relationships, hard work, and market timing but has no brand architecture underneath it." },
+  //   { t:"pq", text:"When the founder steps back, the brand has nowhere to stand. The relationships do not transfer. The trust does not transfer. What transfers is a logo and a name that mean different things to different people." },
+  //   { t:"h2", text:"The Window" },
+  //   { t:"p", text:"There is a window for this work. It is not infinite. A competitor with better positioning and the same product can displace a business that has not built its brand architecture. One bad press cycle can erase years of informal reputation. One leadership change can create brand confusion that takes years to resolve." },
+  //   { t:"p", text:"The businesses that have the most to gain from brand architecture work are also the ones most at risk of procrastinating on it. The very success that creates the urgency also creates the sense that the work is not urgent. This is the most expensive illusion in business." },
+  // ]},
+  // { id:"brand-economic-asset", cat:"Brand Strategy", title:"Why Is My Business Not Growing in Andhra Pradesh.", excerpt:"Most businesses in Andhra Pradesh stop growing not because of bad products or low effort but because the brand is architecturally weak. Customers cannot clearly understand why they should choose you over a competitor, so they either default to price comparison or do not choose at all. This is a strategic problem, not a marketing one.", date:"16 JUNE 2026 ", rt:"6 min", image: blogpostone, content:[
+  //   { t:"p", text:"You have put in the years. The product works. The team is in place. The revenue was growing for a while and then it stopped. You tried new advertising, a new agency, a new social media approach. Nothing compounded. The business stayed in the same band." },
+  //   { t:"p", text:"If you are a business owner in Andhra Pradesh who has experienced this, you are not alone. It is one of the most common patterns across MSMEs and established businesses in the region. And almost every owner who experiences it reaches the same wrong conclusion." },
+  //   { t:"pq", text:"They assume the problem is marketing. It is not." },
+  //   { t:"h2", text:"What Is Actually Stopping Your Business From Growing" },
+  //   { t:"p", text:"The real problem in most cases is that the business does not have a clear, specific, defensible reason for a customer to choose it." },
+  //   { t:"p", text:"Not a general one. Not 'quality service' or 'customer satisfaction' or 'years of experience.' A specific reason that the customer can articulate after encountering your business for the first time." },
+  //   { t:"p", text:"When a customer cannot articulate why they should choose you, they do one of three things. They compare you on price, which makes you vulnerable to anyone cheaper. They delay the decision, which means you lose the sale. Or they choose the business that made the reason clearest, even if that business is technically weaker than yours." },
+  //   { t:"p", text:"This is a brand architecture problem. And it cannot be fixed by running more advertisements, redesigning the logo, or posting more content on Instagram." }, 
+    
+  //   { t:"h2", text:"Why Does Business Growth Plateau in AP and Telangana Specifically" },
+  //   { t:"p", text:"Business culture in Andhra Pradesh is built on relationship capital. Founders know the right people. They went to the right institutions. They have been reliable in their communities for a long time." },
+  //   { t:"p", text:"That relational trust is the engine of early growth. It is real and powerful. It is also not scalable." },
+  //   { t:"p", text:"When someone who does not know you searches for a service you offer in Vizag or Guntur or Nellore, they cannot access your relational reputation. They can only see what your brand communicates. If your brand communicates nothing specific, they will choose based on price, proximity, or whoever appears first on Google." },
+  //   { t:"p", text:"This is the ceiling that most AP businesses hit. The relational network has been fully activated. The next layer of growth requires strangers to trust you. Strangers trust brands, not relationships they cannot access." },
+
+  //   { t:"h2", text:"How Do I Know If My Business Has a Brand Problem" },
+  //   { t:"p", text:"There are three clear signs." },
+  //   { t:"h3", text:"You compete on price more than you should" },
+  //   { t:"p", text:"When your customers regularly ask for discounts or leave for competitors who charge less, the problem is rarely your price. It is that your brand has not communicated enough specific value to justify the price you have set. Price pressure is a symptom of unclear positioning." },
+  //    { t:"h3", text:"Referrals work but direct acquisition is expensive or inconsistent" },
+  //   { t:"p", text:"Referrals work because the person referring transfers their personal trust to the transaction. Without that transfer, your brand has to do the work of building trust from zero. If direct acquisition is consistently expensive or unreliable, your brand is not doing its job." },
+  //   { t:"h3", text:"Your marketing produces activity but not compounding results" },
+  //   { t:"p", text:"If you have changed agencies, tried different platforms, and gotten different results each time with none of them building on the other, you are applying tactical solutions to a structural problem. Tactics work when the brand is clear. Without a clear brand, each marketing effort starts from scratch." },
+
+  //   { t:"h2", text:"What Should I Do to Start Growing Again" },
+  //   { t:"p", text:"The sequence is fixed and not negotiable." },
+  //   { t:"p", text:"First, establish what specific position your business can claim in its category. Not 'best quality' or 'most experienced.' A claim that is true, verifiable, and that your direct competitors cannot honestly make. This is your positioning." },
+  //   { t:"p", text:"Second, build a communication system so that every channel through which your business speaks to customers carries the same signal. Website, sales conversation, invoice, packaging, customer service. The same message, the same tone, the same level of quality across all of them." },
+  //   { t:"p", text:"Third, make your evidence visible. Case studies, outcome numbers, client results, credentials. AP business buyers, whether in Vijayawada, Tirupati, or Visakhapatnam, are skeptical in a healthy way. They need to see proof before they pay. Build the proof into your brand before the conversation starts." },
+  //   { t:"p", text:"None of this requires a large budget. It requires strategic clarity, operational discipline, and patience. Three things any business owner in Andhra Pradesh has access to regardless of size." },
+
+  //   { t:"h2", text:"What Role Does a Brand Consultant Play in This Process" },
+  //   { t:"p", text:"A brand consultant does not make your marketing look better. The role is to diagnose where your brand architecture is broken, design the structure that fixes it, and build the systems your team can maintain without depending on the consultant permanently." },
+  //   { t:"p", text:"At Magsmen, we begin every engagement by understanding how your brand is currently perceived, not how you intend it to be perceived. The gap between those two things is where the growth work starts." },
+  //   { t:"p", text:"If your business has stopped growing and you have already exhausted the marketing route, the conversation you need to have is about architecture." },
+    
+
+  //   { t:"h2", text:"Frequently Asked Questions" },
+  //   { t:"h3", text:"Why is my small business not growing even though I am working hard?" },
+  //   { t:"p",  text:"Hard work does not compensate for unclear positioning. If customers cannot quickly understand why they should choose you over alternatives, they will not. The most common cause of stagnation in small businesses is a brand that has no specific, defensible claim in the market."},
+  //   { t:"h3", text:"How long does it take for a business to start growing after fixing the brand?" },
+  //   { t:"p", text:"Brand changes take time to produce market results. Positioning clarity can be established within weeks. Market perception shifts over months. Revenue impact from repositioning typically appears within six to twelve months of consistent execution." },
+  //   { t:"h3", text:"Is business stagnation common in Andhra Pradesh?" },
+  //   { t:"p", text:"Growth plateaus are extremely common in AP and Telangana because most businesses here are built on relational trust, which does not scale beyond the founder's personal network. The solution is building a brand that transfers trust to strangers, not just people who already know you." },
+  //   { t:"h3", text:"Do I need to rebrand if my business is not growing?" },
+  //   { t:"p", text:"Not necessarily. A rebrand is appropriate when the perception problem is about identity. Many businesses that are not growing have a positioning problem, not an identity problem. The diagnosis must come before the solution. A rebrand without a clear positioning change is expensive decoration." },
+  //   { t:"pq", text:"If you want clarity on where your brand stands and what it needs, speak with Magsmen. We work with businesses across Andhra Pradesh and Telangana to build brands that generate commercial outcomes. Reach us at connect@magsmen.com or visit www.magsmen.com." },
+  // ]},
+
+  // { id:"legal-is-brand", cat:"Legal Brand Protection", title:"How to Choose a Business Name in Telugu: What Works, What Fails, and What Gets You Sued.", excerpt:"A good business name in Telugu markets must work phonetically in at least two languages, carry no negative associations across Telugu, Hindi, and English, be distinctive enough to trademark, and not describe the category so generically that it cannot be protected. Most founders get one or two of these right and leave themselves commercially exposed on the rest.", date:"May 2025", rt:"5 min", image:blogposttwo, content:[
+  //   { t:"p", text:"Every week, a founder in Hyderabad or Vijayawada names a business in under twenty-four hours. They find a word that sounds clean, check if the Instagram handle is available, and consider the matter closed." },
+  //   { t:"p", text:"Three years later, that founder either receives a legal notice from a prior trademark holder, discovers the name means something unintended in a neighboring market, or realizes the name has built no equity because it describes every business in the category and belongs to none of them." },
+  //   { t:"pq", text:"Choosing a business name is the most consequential brand decision you will make. This guide explains how to get it right the first time."},
+  //   // { t:"pq", text:"An unregistered trademark is not just a legal risk. It is a brand asset that someone else can take from you while you are busy building it. The name you chose. The identity you built. The trust your customers associate with it." },
+  //   { t:"h2", text:"What Makes a Business Name Work in Telugu Markets" },
+  //   { t:"p", text:"A name that works in Telugu markets must perform on five dimensions simultaneously. Each one is non-negotiable." },
+  //   // { t:"p", text:"At Magsmen, brand naming, trademark search, positioning strategy, and filing happen within the same engagement. The name you launch is the name you own." },
+  //   { t:"h2", text:"It must sound right in Telugu and in English" },
+  //   { t:"p", text:"Telugu phonetics are distinct. Sounds that flow naturally in Hindi can feel uncomfortable when spoken by a Telugu speaker. A name that is elegant in English but clumsy in Telugu will create a disconnect in your primary market. Test every candidate name by speaking it in Telugu conversation at normal speed. If it requires effort or sounds foreign, it is not the right name." },
+  //   { t:"p", text:"The reverse test matters equally. If your business will ever operate outside the Telugu-speaking market, the name must be pronounceable by Hindi, Tamil, and English speakers without distortion. Names with retroflex consonants that exist only in Telugu create friction for media, investors, and national partners." },
+  //   { t:"h2", text:"It must be specific enough to be memorable but not so descriptive that it cannot be trademarked" },
+  //   { t:"p", text:"There is a fundamental tension in naming between clarity and protectability. Descriptive names communicate immediately what the business does. They are easy to understand and require little explanation. The problem is that descriptive names are harder to trademark because they use common language that the market needs to describe the category. A business called Andhra Sweets or Hyderabad Builders tells you what it does but cannot be protected from the hundreds of other businesses using similar descriptions."},
+  //   { t:"p", text:"Distinctive names, invented words, or words used in unexpected contexts can be fully protected and build exclusive equity over time. They require more initial investment in communication to teach the market what they mean. But once the meaning is established, no competitor can share it."},
+  //   { t:"h2", text:"It must have no negative meaning across the languages your customers speak" },
+  //   { t:"p", text:"Telugu business owners serving customers across AP, Telangana, and potentially Karnataka, Maharashtra, and Tamil Nadu must check every candidate name in all five languages. A word that sounds aspirational in Telugu may carry a slang meaning in Hindi or a commercial meaning in Kannada that contradicts the brand's intention. This cross-linguistic check is not optional. It is the most frequently skipped step in naming processes in this region, and the one that produces the most embarrassing post-launch corrections."},
+  //   { t:"h2", text:"What Are the Most Common Naming Mistakes Telugu Businesses Make" },
+  //   { }
+  
+  
+  // ]},
 ]
 
 const POPUP_QS = [
@@ -767,16 +852,19 @@ const POPUP_QS = [
   { q:"When are you looking to begin?", opts:["Immediately. This is urgent","Within the next 1 to 3 months","Planning for later this year","Just exploring right now"] },
 ]
 
-function getRec(a) {
-  const q2 = a[1]||""
-  if (q2.includes("All of these")) return { label:"Strategic Partner", desc:"You need integrated advisory across brand, business, and legal. The Strategic Partner model is built for exactly this." }
-  if (q2.includes("legally")) return { label:"OTC focused on Legal Brand Protection", desc:"Your most urgent priority is protecting what you have built. An OTC session focused on legal brand protection is the right first step." }
-  if (q2.includes("structural")) return { label:"OTC focused on Business Structuring", desc:"Your business needs structural clarity. An OTC engagement will diagnose the gaps and produce a clear framework." }
-  return { label:"Brand Advisory Retainer", desc:"An ongoing Advisory Retainer would give your business the strategic counsel and accountability to make real progress." }
+interface RecResult { label: string; desc: string }
+interface RecInput extends Array<string | undefined> {}
+
+function getRec(a: RecInput): RecResult {
+  const q2 = a[1] || ""
+  if (q2.includes("All of these")) return { label: "Strategic Partner", desc: "You need integrated advisory across brand, business, and legal. The Strategic Partner model is built for exactly this." }
+  if (q2.includes("legally")) return { label: "OTC focused on Legal Brand Protection", desc: "Your most urgent priority is protecting what you have built. An OTC session focused on legal brand protection is the right first step." }
+  if (q2.includes("structural")) return { label: "OTC focused on Business Structuring", desc: "Your business needs structural clarity. An OTC engagement will diagnose the gaps and produce a clear framework." }
+  return { label: "Brand Advisory Retainer", desc: "An ongoing Advisory Retainer would give your business the strategic counsel and accountability to make real progress." }
 }
 
 // ─── HOOKS ────────────────────────────────────────────────────────────────────
-function useReveal(ref) {
+function useReveal(ref: React.RefObject<HTMLElement | null>) {
   useEffect(() => {
     if (!ref?.current) return
     const obs = new IntersectionObserver(entries => {
@@ -787,7 +875,7 @@ function useReveal(ref) {
   }, [ref])
 }
 
-function useTimelineReveal(ref) {
+function useTimelineReveal(ref: React.RefObject<HTMLElement | null>) {
   useEffect(() => {
     if (!ref?.current) return
     const obs = new IntersectionObserver(entries => {
@@ -807,7 +895,7 @@ function useTimelineReveal(ref) {
   }, [ref])
 }
 
-function Counter({ target }) {
+function Counter({ target }: { target: string }) {
   const [v, setV] = useState(0)
   const ref = useRef(null)
   const started = useRef(false)
@@ -868,10 +956,18 @@ function Counter({ target }) {
 // }
 
 // ─── HERO STATEMENT COMPONENT ──────────────────────────────────────────────────
-function StatementHero() {
-  const [stmts] = useState(() => getSessionStatements())
-  const [cur, setCur] = useState(0)
-  const [phase, setPhase] = useState("visible")
+interface StatementLine {
+  t: string
+  w?: number
+  i?: boolean
+}
+
+type Statement = StatementLine[]
+
+function StatementHero(): JSX.Element {
+  const [stmts] = useState<Statement[]>(() => getSessionStatements())
+  const [cur, setCur] = useState<number>(0)
+  const [phase, setPhase] = useState<"visible" | "entering" | "exiting">("visible")
 
   useEffect(() => {
     const iv = setInterval(() => {
@@ -885,7 +981,7 @@ function StatementHero() {
     return () => clearInterval(iv)
   }, [stmts.length])
 
-  const goTo = i => {
+  const goTo = (i: number): void => {
     if (i === cur) return
     setPhase("exiting")
     setTimeout(() => {
@@ -899,7 +995,7 @@ function StatementHero() {
     <>
       <div className="hero-stmt-wrap">
         <div className={`hero-stmt ${phase}`}>
-          {stmt.map((line, i) => (
+          {stmt.map((line: StatementLine, i: number) => (
             <div key={i} className="stmt-line">
               <span className="stmt-inner">
                 <span className={line.i ? "stmt-w300i" : line.w === 900 ? "stmt-w900" : "stmt-w300"}>
@@ -911,7 +1007,7 @@ function StatementHero() {
         </div>
       </div>
       <div className="stmt-dots">
-        {stmts.map((_, i) => (
+        {stmts.map((_, i: number) => (
           <div key={i} className={`stmt-dot${i === cur ? " active" : ""}`} onClick={() => goTo(i)}/>
         ))}
       </div>
@@ -1005,11 +1101,20 @@ function ClientBar() {
   )
 }
 
-function FAQSection({ items }) {
-  const [open, setOpen] = useState(null)
+interface FAQItem {
+  q: string
+  a: string | React.ReactNode
+}
+
+interface FAQSectionProps {
+  items: FAQItem[]
+}
+
+function FAQSection({ items }: FAQSectionProps) {
+  const [open, setOpen] = useState<number | null>(null)
   return (
     <div>
-      {items.map((f, i) => (
+      {items.map((f: FAQItem, i: number) => (
         <div key={i} className={`faq-item${open===i?" open":""}`}>
           <button className="faq-q" onClick={() => setOpen(open===i?null:i)}>
             {f.q}<span className="faq-icon">+</span>
@@ -1021,15 +1126,29 @@ function FAQSection({ items }) {
   )
 }
 
-function ContactForm({ title, sub, context }) {
-  const [form, setForm] = useState({ name:"", company:"", mobile:"", service:context||"" })
-  const [done, setDone] = useState(false)
-  const up = (k,v) => setForm(p=>({...p,[k]:v}))
-  const valid = form.name.trim() && form.mobile.trim()
+interface ContactFormData {
+  email: string;
+  name: string
+  company: string
+  mobile: string
+  service: string
+}
+
+interface ContactFormProps {
+  title?: string
+  sub?: string
+  context?: string
+}
+
+function ContactForm({ title, sub, context }: ContactFormProps) {
+  const [form, setForm] = useState<ContactFormData>({ name:"", company:"", mobile:"", email:"", service:context||"" })
+  const [done, setDone] = useState<boolean>(false)
+  const up = (k: keyof ContactFormData, v: string): void => setForm(p=>({...p,[k]:v}))
+  const valid = form.name.trim() && form.mobile.trim() && (!form.email.trim() || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim()))
   const submit = () => {
     if (!valid) return
     const subj = `Inquiry from ${form.name}${form.company?" ("+form.company+")":""}`
-    const body = `Name: ${form.name}\nCompany: ${form.company||"Not specified"}\nMobile: ${form.mobile}\n\nService Interest:\n${form.service||"General inquiry"}`
+    const body = `Name: ${form.name}\nCompany: ${form.company||"Not specified"}\nMobile: ${form.mobile}\nEmail: ${form.email||"Not specified"}\n\nService Interest:\n${form.service||"General inquiry"}`
     window.location.href = `mailto:connect@magsmen.com?subject=${encodeURIComponent(subj)}&body=${encodeURIComponent(body)}`
     setDone(true)
   }
@@ -1046,6 +1165,7 @@ function ContactForm({ title, sub, context }) {
       {sub && <p style={{fontSize:".93rem",color:"#555",marginBottom:"2rem",lineHeight:1.8,fontWeight:300}}>{sub}</p>}
       <div className="cform-grid">
         <div className="cfield req"><label>Full Name</label><input type="text" placeholder="Your full name" value={form.name} onChange={e=>up("name",e.target.value)}/></div>
+        <div className="cfield req"><label>Email</label><input type="email" placeholder="your@email.com" value={form.email} onChange={e=>up("email",e.target.value)}/></div>
         <div className="cfield"><label>Company</label><input type="text" placeholder="Your company or brand" value={form.company} onChange={e=>up("company",e.target.value)}/></div>
         <div className="cfield req"><label>Mobile</label><input type="tel" placeholder="+91 98765 43210" value={form.mobile} onChange={e=>up("mobile",e.target.value)}/></div>
         <div className="cfield"><label>How can we help?</label>
@@ -1069,18 +1189,40 @@ function ContactForm({ title, sub, context }) {
   )
 }
 
-function InlineForm({ title, sub, questions }) {
-  const [answers, setAnswers] = useState({})
-  const [stage, setStage] = useState("q")
-  const [form, setForm] = useState({ name:"", company:"", mobile:"" })
-  const [done, setDone] = useState(false)
-  const toggle = (qi,opt) => setAnswers(p=>({...p,[qi]:p[qi]===opt?"":opt}))
-  const allAns = questions.every((_,i)=>answers[i])
-  const upf = (k,v) => setForm(p=>({...p,[k]:v}))
-  const valid = form.name.trim() && form.mobile.trim()
+interface Question {
+  q: string
+  opts: string[]
+}
+
+interface InlineFormProps {
+  title: string
+  sub: string
+  questions: Question[]
+}
+
+interface FormData {
+  email: any;
+  name: string
+  company: string
+  mobile: string
+}
+
+interface Answers {
+  [key: number]: string
+}
+
+function InlineForm({ title, sub, questions }: InlineFormProps) {
+  const [answers, setAnswers] = useState<Answers>({})
+  const [stage, setStage] = useState<string>("q")
+  const [form, setForm] = useState<FormData>({ name:"", company:"", mobile:"", email:"" })
+  const [done, setDone] = useState<boolean>(false)
+  const toggle = (qi: number, opt: string): void => setAnswers(p=>({...p,[qi]:p[qi]===opt?"":opt}))
+  const allAns: boolean = questions.every((_,i)=>answers[i])
+  const upf = (k: keyof FormData, v: string): void => setForm(p=>({...p,[k]:v}))
+  const valid: boolean = !!(form.name.trim() && form.mobile.trim() && form.email.trim())
   const submit = () => {
     if (!valid) return
-    const body = `Name: ${form.name}\nCompany: ${form.company||"Not specified"}\nMobile: ${form.mobile}\n\n` + questions.map((q,i)=>`Q: ${q.q}\nA: ${answers[i]||""}`).join("\n\n")
+    const body = `Name: ${form.name}\nCompany: ${form.company||"Not specified"}\nMobile: ${form.mobile}\nEmail: ${form.email}\n\n` + questions.map((q,i)=>`Q: ${q.q}\nA: ${answers[i]||""}`).join("\n\n")
     window.location.href = `mailto:connect@magsmen.com?subject=${encodeURIComponent("Assessment from "+form.name)}&body=${encodeURIComponent(body)}`
     setDone(true)
   }
@@ -1118,6 +1260,7 @@ function InlineForm({ title, sub, questions }) {
           <p className="iform-sub">Our strategy associate will reach out personally within 24 hours.</p>
           <div className="cform-grid">
             <div className="cfield req"><label>Full Name</label><input type="text" placeholder="Your full name" value={form.name} onChange={e=>upf("name",e.target.value)}/></div>
+            <div className="cfield req"><label>Email</label><input type="email" placeholder="your@email.com" value={form.email} onChange={e=>upf("email",e.target.value)}/></div>
             <div className="cfield"><label>Company</label><input type="text" placeholder="Your company" value={form.company} onChange={e=>upf("company",e.target.value)}/></div>
             <div className="cfield req"><label>Mobile</label><input type="tel" placeholder="+91 98765 43210" value={form.mobile} onChange={e=>upf("mobile",e.target.value)}/></div>
           </div>
@@ -1132,44 +1275,54 @@ function InlineForm({ title, sub, questions }) {
   )
 }
 
-function PopupForm({ onClose }) {
+function PopupForm({ onClose }: { onClose: () => void }) {
   const [step, setStep] = useState(0);
-  const [answers, setAnswers] = useState({});
-  const [rec, setRec] = useState(null);
-  const [form, setForm] = useState({ name: "", company: "", mobile: "" });
-  const [done, setDone] = useState(false);
-  const [stage, setStage] = useState("quiz");
+  const [answers, setAnswers] = useState<string[]>(Array(POPUP_QS.length).fill(""));
+  const [rec, setRec] = useState<RecResult | null>(null);
+  interface FormData {
+    email: string; name: string; company?: string; mobile: string 
+}
+  interface Recommendation { label: string; desc?: string }
+  interface PopupQuestion { q: string; opts?: string[] }
 
-  const sel = opt => setAnswers(p => ({ ...p, [step]: opt }));
+  const [form, setForm] = useState<FormData>({ name: "", company: "", mobile: "", email: "" });
+    const [done, setDone] = useState<boolean>(false);
+    const [stage, setStage] = useState<string>("quiz");
+
+  const sel = (opt: string): void => setAnswers((p: string[]) => {
+    const next = [...p];
+    next[step] = opt;
+    return next;
+  });
   
-  const next = () => {
+  const next = (): void => {
     if (step < POPUP_QS.length - 1) {
       setStep(s => s + 1);
     } else { 
       // Ensure getRec is defined in your scope. 
       // Fallback added just in case it's missing during testing.
-      const recommendation = typeof getRec === 'function' 
+      const recommendation: RecResult = typeof getRec === 'function' 
         ? getRec(answers) 
         : { label: "Integrated Advisory", desc: "A comprehensive approach to align your brand, business, and legal structures." };
       
-      setRec(recommendation); 
+      setRec(recommendation);
       setStage("contact"); 
     }
   };
 
-  const upf = (k, v) => setForm(p => ({ ...p, [k]: v }));
+  const upf = (k: keyof FormData, v: string): void => setForm(p => ({ ...p, [k]: v }));
   
-  const valid = form.name.trim() && form.mobile.trim();
+  const valid: boolean = Boolean(form.name.trim() && form.mobile.trim());
   
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent): void => {
     e.preventDefault();
     if (!valid) return;
-    const body = `Name: ${form.name}\nCompany: ${form.company || "Not specified"}\nMobile: ${form.mobile}\n\nRecommended: ${rec?.label}\n\n` + POPUP_QS.map((q, i) => `Q: ${q.q}\nA: ${answers[i] || ""}`).join("\n\n");
+    const body = `Name: ${form.name}\nCompany: ${form.company || "Not specified"}\nMobile: ${form.mobile}\nEmail: ${form.email || "Not specified"}\n\nRecommended: ${rec?.label}\n\n` + POPUP_QS.map((q, i) => `Q: ${q.q}\nA: ${answers[i] || ""}`).join("\n\n");
     window.location.href = `mailto:connect@magsmen.com?subject=${encodeURIComponent("Inquiry from " + form.name)}&body=${encodeURIComponent(body)}`;
     setDone(true);
   };
 
-  const q = POPUP_QS[step];
+  const q: PopupQuestion | undefined = POPUP_QS[step];
 
 
   return (
@@ -1337,7 +1490,7 @@ function PopupForm({ onClose }) {
                       </div>
                       
                       <div className="iform-opts">
-                        {q.opts.map((opt, i) => (
+                        {q?.opts?.map((opt, i) => (
                           <div key={i} className={`iform-opt${answers[step] === opt ? " sel" : ""}`} onClick={() => sel(opt)}>
                             <div className="iform-cb">
                               {answers[step] === opt && <span style={{color: '#fff', fontSize: '10px'}}>✓</span>}
@@ -1375,6 +1528,10 @@ function PopupForm({ onClose }) {
                         <label>Full Name</label>
                         <input type="text" placeholder="Your name" value={form.name} onChange={e => upf("name", e.target.value)} required />
                       </div>
+                      <div className="cfield req">
+                        <label>Email</label>
+                        <input type="email" placeholder="your@email.com" value={form.email} onChange={e => upf("email", e.target.value)} required />
+                      </div>
                       <div className="cfield">
                         <label>Company</label>
                         <input type="text" placeholder="Your company" value={form.company} onChange={e => upf("company", e.target.value)} />
@@ -1402,16 +1559,18 @@ function PopupForm({ onClose }) {
   );
 }
 
-function Nav({ page, navigate }) {
-  const [scrolled, setScrolled] = useState(false)
-  const [mob, setMob] = useState(false)
+interface NavProps { page: string; navigate: (path: string) => void }
+
+function Nav({ page, navigate }: NavProps) {
+  const [scrolled, setScrolled] = useState<boolean>(false)
+  const [mob, setMob] = useState<boolean>(false)
   useEffect(() => {
     const h = () => setScrolled(window.scrollY > 40)
     window.addEventListener("scroll",h,{passive:true}); h()
     return () => window.removeEventListener("scroll",h)
   },[])
-  const go = p => { navigate(p); setMob(false); window.scrollTo({top:0,behavior:"smooth"}) }
-  const isA = (...ps) => ps.some(p => page===p || page.startsWith(p+"/") || page.startsWith(p))
+  const go = (p: string): void => { navigate(p); setMob(false); window.scrollTo({top:0,behavior:"smooth"}) }
+  const isA = (...ps: string[]): boolean => ps.some(p => page===p || page.startsWith(p+"/") || page.startsWith(p))
   return (
     <>
       <nav className={scrolled?"scrolled":""}>
@@ -1422,23 +1581,23 @@ function Nav({ page, navigate }) {
             <button style={{display:"flex",alignItems:"center",gap:4}}>Solutions <ChevronDown size={12}/></button>
             <div className="nav-drop">
               <a onClick={()=>go("brand")}>
-                <span className="drop-icon">🏗️</span>
+                {/* <span className="drop-icon">🏗️</span> */}
                 <div><span className="drop-label">Brand Architecture</span><span className="drop-sub">Positioning, identity, communication</span></div>
               </a>
               <a onClick={()=>go("brand/creation")}>
-                <span className="drop-icon">✦</span>
+                {/* <span className="drop-icon">✦</span> */}
                 <div><span className="drop-label">Brand Creation</span><span className="drop-sub">13-stage end-to-end engagement</span></div>
               </a>
               <a onClick={()=>go("stature")}>
-                <span className="drop-icon">⭐</span>
+                {/* <span className="drop-icon">⭐</span> */}
                 <div><span className="drop-label">Stature</span><span className="drop-sub">Personal identity architecture</span></div>
               </a>
               <a onClick={()=>go("business")}>
-                <span className="drop-icon">📊</span>
+                {/* <span className="drop-icon">📊</span> */}
                 <div><span className="drop-label">Business Structuring</span><span className="drop-sub">Operational and revenue frameworks</span></div>
               </a>
               <a onClick={()=>go("legal")}>
-                <span className="drop-icon">⚖️</span>
+                {/* <span className="drop-icon">⚖️</span> */}
                 <div><span className="drop-label">Legal Brand Protection</span><span className="drop-sub">Trademark, IP, personality rights</span></div>
               </a>
             </div>
@@ -1447,15 +1606,15 @@ function Nav({ page, navigate }) {
             <button style={{display:"flex",alignItems:"center",gap:4}}>Advisory <ChevronDown size={12}/></button>
             <div className="nav-drop">
               <a onClick={()=>go("advisory")}>
-                <span className="drop-icon">🤝</span>
+                {/* <span className="drop-icon">🤝</span> */}
                 <div><span className="drop-label">Advisory Retainer</span><span className="drop-sub">Monthly strategic counsel</span></div>
               </a>
               <a onClick={()=>go("otc")}>
-                <span className="drop-icon">🔍</span>
+                {/* <span className="drop-icon">🔍</span> */}
                 <div><span className="drop-label">One-Time Consulting</span><span className="drop-sub">Diagnostic engagement</span></div>
               </a>
               <a onClick={()=>go("advisory")}>
-                <span className="drop-icon">🏛️</span>
+                {/* <span className="drop-icon">🏛️</span> */}
                 <div><span className="drop-label">Strategic Partner</span><span className="drop-sub">Annual integrated engagement</span></div>
               </a>
             </div>
@@ -1491,8 +1650,17 @@ function Nav({ page, navigate }) {
   )
 }
 
-function Footer({ navigate }) {
-  const go = p => { navigate(p); window.scrollTo({top:0,behavior:"smooth"}) }
+interface NavigationPath {
+  path: string;
+}
+
+interface ScrollBehaviorOptions {
+  top: number;
+  behavior: ScrollBehavior;
+}
+
+function Footer({ navigate }: { navigate: (path: string) => void }) {
+  const go = (p: string): void => { navigate(p); window.scrollTo({top:0,behavior:"smooth"} as ScrollBehaviorOptions) }
   return (
     <footer>
       <div className="fi">
@@ -1560,7 +1728,7 @@ function Footer({ navigate }) {
 }
 
 // ─── HOME ──────────────────────────────────────────────────────────────────────
-function Home({ navigate }) {
+function Home({ navigate }: { navigate: (path: string) => void }) {
   const ref = useRef(null)
   useReveal(ref)
   useTimelineReveal(ref)
@@ -1674,20 +1842,31 @@ function Home({ navigate }) {
         <div className="si">
           <div className="lbl rv">Featured Insight</div>
           <h2 className="h2 rv">Thinking that changes how you make decisions.</h2>
-          <div className="insight-feat rv" style={{cursor:"pointer"}} onClick={()=>navigate("blog/brand-economic-asset")}>
-            <div className="if-thumb">📊</div>
+          <div className="insight-feat rv" style={{ cursor: "pointer" }} onClick={() => navigate("blog/brand-economic-asset")}>
+            <div className="if-thumb">
+              <img
+                src={featuredBlog.image}
+                alt={featuredBlog.title}
+              />
+            </div>
             <div>
               <div className="if-cat">Brand Strategy</div>
-              <div className="if-title">Brand Is an Economic Asset. Stop Treating It Like a Marketing Budget.</div>
-              <p className="if-excerpt">Most Indian founders treat brand as an expense. That framing is the root cause of why they can never stop spending on advertising. A brand architectured correctly commands a price premium, reduces customer acquisition cost, and creates resilience during volatility.</p>
-              <div className="if-meta">June 2025 · 6 min read</div>
+              <div className="if-title">Why Is My Business Not Growing in Andhra Pradesh.</div>
+              <p className="if-excerpt">Most Indian founders treat brand as an expense. That framing is the root cause of why they can never stop spending on advertising.</p>
+              <div className="if-meta">16 JUNE 2026 · 6 min read</div>
               <div style={{marginTop:"1.25rem",fontSize:"13px",fontWeight:700,display:"flex",alignItems:"center",gap:6}}>Read the full insight <ArrowRight size={13}/></div>
             </div>
           </div>
           <div className="blog-grid" style={{marginTop:"2.5rem"}}>
             {BLOGS.slice(1,4).map((b,i)=>(
               <div key={i} className={`blog-card rv d${i}`} onClick={()=>navigate("blog/"+b.id)}>
-                <div className="blog-img">{b.icon}</div>
+                <div className="blog-img">
+                  <img
+                    src={b.image}
+                    alt={b.title}
+                    className="blog-image"
+                  />
+                </div>
                 <div className="blog-body">
                   <div className="blog-cat">{b.cat}</div>
                   <div className="blog-title">{b.title}</div>
@@ -1801,7 +1980,7 @@ function Home({ navigate }) {
 }
 
 
-function BrandPage({navigate}){const ref=useRef(null);useReveal(ref);return(<div ref={ref} className="pg page-anim">
+function BrandPage({navigate}:{navigate:(path:string)=>void}){const ref=useRef(null);useReveal(ref);return(<div ref={ref} className="pg page-anim">
 <div className="hero"><div className="hero-noise"/><div className="hero-inner">
 <div className="hero-tag">01 · Brand Architecture</div>
 <div style={{marginBottom:"2.5rem"}}>
@@ -1850,7 +2029,7 @@ questions={[
 </div></div>
 </div>)}
 
-function BrandAuditPage({navigate}){const ref=useRef(null);useReveal(ref);useTimelineReveal(ref);return(<div ref={ref} className="pg page-anim">
+function BrandAuditPage({navigate}:{navigate:(path:string)=>void}){const ref=useRef(null);useReveal(ref);useTimelineReveal(ref);return(<div ref={ref} className="pg page-anim">
 <div className="sec nb" style={{paddingTop:120,background:"#F8F8F8"}}><div className="si">
 <div style={{fontSize:"11px",fontWeight:300,letterSpacing:".14em",textTransform:"uppercase",color:"#CCC",marginBottom:"1.25rem",cursor:"pointer"}} onClick={()=>navigate("brand")}>← Brand Architecture</div>
 <div className="lbl rv">Brand Audit</div>
@@ -1918,7 +2097,7 @@ function BrandAuditPage({navigate}){const ref=useRef(null);useReveal(ref);useTim
 </div></div>
 </div>)}
 
-function BrandCreationPage({navigate}){const ref=useRef(null);useReveal(ref);useTimelineReveal(ref);const stages=[
+function BrandCreationPage({navigate}: {navigate: (page: string) => void}){const ref=useRef(null);useReveal(ref);useTimelineReveal(ref);const stages=[
 {p:"Stage 01",h:"Discovery and Founder Intent Mapping",t:"The most strategically consequential session in the engagement. The quality of the strategy that emerges in Stage 04 is determined directly by the quality of information extracted here. The Lead Strategist conducts the session. The exact language the founder uses is recorded. The Research Analyst reviews all public information before the session. Discovery is a directed conversation, not an interrogation.",d:.0},
 {p:"Stage 02",h:"Market and Category Intelligence",t:"Full competitive landscape mapping. Category definition and sizing. Customer segment analysis with demographic and psychographic profiling. Pricing landscape review. Trend analysis for the category over three to five years. Identification of whitespace positions where competition is absent or weak.",d:.04},
 {p:"Stage 03",h:"Business Feasibility Validation",t:"Confirming the positioning identified in Stage 04 can be operationally supported before the strategy is committed to. Production capacity verification. Pricing feasibility against cost structure. Distribution channel viability. Regulatory compliance assessment for the category.",d:.04},
@@ -1971,7 +2150,7 @@ return(<div ref={ref} className="pg page-anim">
 </div></div>
 </div>)}
 
-function BrandPositioningPage({navigate}){const ref=useRef(null);useReveal(ref);useTimelineReveal(ref);return(<div ref={ref} className="pg page-anim">
+function BrandPositioningPage({navigate}:{navigate:(path:string)=>void}){const ref=useRef(null);useReveal(ref);useTimelineReveal(ref);return(<div ref={ref} className="pg page-anim">
 <div className="sec nb" style={{paddingTop:120}}><div className="si">
 <div style={{fontSize:"11px",fontWeight:300,letterSpacing:".14em",textTransform:"uppercase",color:"#CCC",marginBottom:"1.25rem",cursor:"pointer"}} onClick={()=>navigate("brand")}>← Brand Architecture</div>
 <div className="lbl rv">Brand Positioning Strategy</div>
@@ -2006,7 +2185,7 @@ function BrandPositioningPage({navigate}){const ref=useRef(null);useReveal(ref);
 </div></div>
 </div>)}
 
-function BrandIdentityPage({navigate}){const ref=useRef(null);useReveal(ref);useTimelineReveal(ref);return(<div ref={ref} className="pg page-anim">
+function BrandIdentityPage({navigate}:{navigate:(path:string)=>void}){const ref=useRef(null);useReveal(ref);useTimelineReveal(ref);return(<div ref={ref} className="pg page-anim">
 <div className="sec nb" style={{paddingTop:120}}><div className="si">
 <div style={{fontSize:"11px",fontWeight:300,letterSpacing:".14em",textTransform:"uppercase",color:"#CCC",marginBottom:"1.25rem",cursor:"pointer"}} onClick={()=>navigate("brand")}>← Brand Architecture</div>
 <div className="lbl rv">Brand Identity Architecture</div>
@@ -2044,7 +2223,7 @@ function BrandIdentityPage({navigate}){const ref=useRef(null);useReveal(ref);use
 </div></div>
 </div>)}
 
-function BrandCommunicationPage({navigate}){const ref=useRef(null);useReveal(ref);return(<div ref={ref} className="pg page-anim">
+function BrandCommunicationPage({navigate}:{navigate:(path:string)=>void}){const ref=useRef(null);useReveal(ref);return(<div ref={ref} className="pg page-anim">
 <div className="sec nb" style={{paddingTop:120}}><div className="si">
 <div style={{fontSize:"11px",fontWeight:300,letterSpacing:".14em",textTransform:"uppercase",color:"#CCC",marginBottom:"1.25rem",cursor:"pointer"}} onClick={()=>navigate("brand")}>← Brand Architecture</div>
 <div className="lbl rv">Brand Communication Framework</div>
@@ -2080,7 +2259,7 @@ function BrandCommunicationPage({navigate}){const ref=useRef(null);useReveal(ref
 </div></div>
 </div>)}
 
-function BrandExpressPage({navigate}){const ref=useRef(null);useReveal(ref);return(<div ref={ref} className="pg page-anim">
+function BrandExpressPage({navigate}: {navigate: (path: string) => void}){const ref=useRef(null);useReveal(ref);return(<div ref={ref} className="pg page-anim">
 <div className="sec nb" style={{paddingTop:120}}><div className="si">
 <div style={{fontSize:"11px",fontWeight:300,letterSpacing:".14em",textTransform:"uppercase",color:"#CCC",marginBottom:"1.25rem",cursor:"pointer"}} onClick={()=>navigate("brand")}>← Brand Architecture</div>
 <div className="lbl rv">Brand Express</div>
@@ -2112,7 +2291,7 @@ function BrandExpressPage({navigate}){const ref=useRef(null);useReveal(ref);retu
 </div>)}
 
 // ─── STATURE ──────────────────────────────────────────────────────────────────
-function StaturePage({navigate}){const ref=useRef(null);useReveal(ref);useTimelineReveal(ref);return(<div ref={ref} className="pg page-anim">
+function StaturePage({navigate}:{navigate:(path:string)=>void}){const ref=useRef(null);useReveal(ref);useTimelineReveal(ref);return(<div ref={ref} className="pg page-anim">
 <div className="hero"><div className="hero-noise"/><div className="hero-inner">
 <div className="hero-tag">Stature by Magsmen</div>
 <div style={{marginBottom:"2.5rem"}}>
@@ -2465,7 +2644,13 @@ function Insights({navigate}){const ref=useRef(null);useReveal(ref);return(<div 
 <h1 className="h1 rv">Thinking that changes <span className="t300i">how you make decisions about brand.</span></h1>
 <p className="lead rv t300" style={{marginTop:"1rem",marginBottom:"2.5rem"}}>Strategic frameworks drawn from eight years of work across 50 brands in Andhra Pradesh, Telangana, and beyond. Not opinions. Not general advice. Specific thinking drawn from real engagements.</p>
 <div className="insight-feat rv" style={{cursor:"pointer"}} onClick={()=>navigate("blog/"+BLOGS[0].id)}>
-<div className="if-thumb">{BLOGS[0].icon}</div>
+<div className="if-thumb">
+   <img
+        src={BLOGS[0].image}
+        alt={BLOGS[0].title}
+        className="blog-image"
+    />
+</div>
 <div>
 <div className="if-cat">{BLOGS[0].cat}</div>
 <div className="if-title">{BLOGS[0].title}</div>
@@ -2477,7 +2662,13 @@ function Insights({navigate}){const ref=useRef(null);useReveal(ref);return(<div 
 <div className="blog-grid" style={{marginTop:"3rem"}}>
 {BLOGS.slice(1).map((b,i)=>(
 <div key={i} className={`blog-card rv d${i%3}`} onClick={()=>navigate("blog/"+b.id)}>
-<div className="blog-img">{b.icon}</div>
+<div className="blog-img">
+  <img
+    src={b.image}
+    alt={b.title}
+    className="blog-image"
+/>
+</div>
 <div className="blog-body">
 <div className="blog-cat">{b.cat}</div>
 <div className="blog-title">{b.title}</div>
@@ -2501,6 +2692,7 @@ function BlogPost({id,navigate}){const post=BLOGS.find(b=>b.id===id)||BLOGS[0];c
 <div className="blog-content rv">
 {post.content.map((block,i)=>{
 if(block.t==="h2") return <h2 key={i}>{block.text}</h2>
+if(block.t==="h3") return <h3 key={i}>{block.text}</h3>
 if(block.t==="pq") return <div key={i} className="pq" dangerouslySetInnerHTML={{__html:block.text.replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>')}}/>
 return <p key={i}>{block.text}</p>
 })}
@@ -2776,8 +2968,8 @@ function Contact({navigate}){const ref=useRef(null);useReveal(ref);return(<div r
 {[
 {icon:"✉️",label:"Email",v1:"sandeep@magsmen.com",v2:"connect@magsmen.com"},
 {icon:"📞",label:"Phone",v1:"+91 90449 10449",v2:"Monday to Saturday, 10am to 7pm IST"},
-{icon:"💬",label:"WhatsApp",v1:"wa.me/919044910449",v2:"Direct response from the team"},
-{icon:"📍",label:"Location",v1:"Guntur, Andhra Pradesh",v2:"Serving businesses across AP, Telangana, and India"},
+{icon:"💬",label:"WhatsApp",v1:"919044910449",v2:"Direct response from the team"},
+{icon:"📍",label:"Location",v1:"Guntur,Hyderabad,Australia",v2:"Serving businesses across AP, Telangana, and India"},
 ].map((c,i)=>(
 <div key={i} style={{display:"flex",gap:"1.25rem",alignItems:"flex-start"}}>
 <div style={{width:40,height:40,border:"1px solid #EBEBEB",borderRadius:7,display:"flex",alignItems:"center",justifyContent:"center",fontSize:"1rem",flexShrink:0}}>{c.icon}</div>
@@ -2968,12 +3160,19 @@ The Brand Volatility Matrix maps businesses across two dimensions: Brand Archite
 
 </div>)}
 
+
+
+
+
+  const featuredBlog = BLOGS[0];
+
 // ─── APP ───────────────────────────────────────────────────────────────────────
 export default function App() {
 //   const [loaded, setLoaded] = useState(false)
   const [page, setPage] = useState("home")
   const [showPopup, setShowPopup] = useState(false)
-  const navigate = p => { setPage(p); window.scrollTo({top:0,behavior:"smooth"}) }
+  const navigate = (p: SetStateAction<string>) => { setPage(p); window.scrollTo({top:0,behavior:"smooth"}) }
+
 
   useEffect(() => {
     const t = setTimeout(() => setShowPopup(true), 9000)
@@ -3022,17 +3221,3 @@ export default function App() {
     </>
   )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
