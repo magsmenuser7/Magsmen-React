@@ -199,14 +199,23 @@ export function ContactForm({ title, sub, context }: { title?: string; sub?: str
     setStatus(ok ? "done" : "error")
   }
 
-  if (status === "done") return (
-    <div className="form-ok">
-      <div className="form-ok-icon">✓</div>
-      <h3>Your details have been sent.</h3>
-      <p>Our strategy associate will reach out to you personally within 24 hours.</p>
-      <button className="bo-sm" style={{ marginTop: "1rem" }} onClick={() => setStatus("idle")}>Send another inquiry</button>
-    </div>
-  )
+if (status === "done") return (
+  <div className="form-ok">
+    <div className="form-ok-icon">✓</div>
+    <h3>Your details have been sent.</h3>
+    <p>Our strategy associate will reach out personally within 24 hours.</p>
+    <button
+      className="bo-sm"
+      style={{ marginTop: "1rem" }}
+      onClick={() => {
+        setStatus("idle")
+        setForm({ name: "", email: "", company: "", mobile: "", service: "" })
+      }}
+    >
+      Send another inquiry
+    </button>
+  </div>
+)
   return (
     <div>
       {title && <h3 style={{ fontSize: "1.25rem", fontWeight: 800, marginBottom: ".35rem" }}>{title}</h3>}

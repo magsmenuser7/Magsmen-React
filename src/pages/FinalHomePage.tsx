@@ -16,6 +16,7 @@ import thegunturfounderhasthesamerighttobrandarchitectureasthebangalorestartup f
 
 
 import { image } from "d3";
+import { JSX } from "react/jsx-runtime";
 
 const CSS = `
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,700&display=swap');
@@ -1142,6 +1143,7 @@ interface ContactFormProps {
 
 function ContactForm({ title, sub, context }: ContactFormProps) {
   const [form, setForm] = useState<ContactFormData>({ name:"", company:"", mobile:"", email:"", service:context||"" })
+  const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle")
   const [done, setDone] = useState<boolean>(false)
   const up = (k: keyof ContactFormData, v: string): void => setForm(p=>({...p,[k]:v}))
   const valid = form.name.trim() && form.mobile.trim() && (!form.email.trim() || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim()))
@@ -1159,34 +1161,157 @@ function ContactForm({ title, sub, context }: ContactFormProps) {
       <p>Our strategy associate will reach out to you personally within 24 hours.</p>
     </div>
   )
+async function submitToFormspree(
+  url: string,
+  payload: Record<string, string>
+): Promise<boolean> {
+  try {
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+      },
+      body: JSON.stringify(payload),
+    })
+    return response.ok
+  } catch {
+    return false
+  }
+}
+
   return (
     <div>
-      {title && <h3 style={{fontSize:"1.25rem",fontWeight:800,marginBottom:".35rem"}}>{title}</h3>}
-      {sub && <p style={{fontSize:".93rem",color:"#555",marginBottom:"2rem",lineHeight:1.8,fontWeight:300}}>{sub}</p>}
-      <div className="cform-grid">
-        <div className="cfield req"><label>Full Name</label><input type="text" placeholder="Your full name" value={form.name} onChange={e=>up("name",e.target.value)}/></div>
-        <div className="cfield req"><label>Email</label><input type="email" placeholder="your@email.com" value={form.email} onChange={e=>up("email",e.target.value)}/></div>
-        <div className="cfield"><label>Company</label><input type="text" placeholder="Your company or brand" value={form.company} onChange={e=>up("company",e.target.value)}/></div>
-        <div className="cfield req"><label>Mobile</label><input type="tel" placeholder="+91 98765 43210" value={form.mobile} onChange={e=>up("mobile",e.target.value)}/></div>
-        <div className="cfield"><label>How can we help?</label>
-          <select value={form.service} onChange={e=>up("service",e.target.value)}>
-            <option value="">Select area of interest</option>
-            <option>Brand Architecture</option>
-            <option>Brand Creation</option>
-            <option>Brand Audit</option>
-            <option>Stature (Personal Identity Architecture)</option>
-            <option>Business Structuring</option>
-            <option>Legal Brand Protection</option>
-            <option>Brand Advisory Retainer</option>
-            <option>Strategic Partner Engagement</option>
-            <option>I want to discuss my full situation first</option>
-          </select>
+      {title && (
+        <h3 style={{ fontSize: "1.25rem", fontWeight: 800, marginBottom: ".35rem" }}>
+          {title}
+        </h3>
+      )}
+      {sub && (
+        <p style={{ fontSize: ".93rem", color: "#555", marginBottom: "2rem", lineHeight: 1.8, fontWeight: 300 }}>
+          {sub}
+        </p>
+      )}
+
+      {/* ── WRAP EVERYTHING IN FORM TAG ── */}
+      <form
+        onSubmit={async (e) => {
+          e.preventDefault()
+          if (!valid || status === "sending") return
+          setStatus("sending")
+
+          const ok = await submitToFormspree(
+            import.meta.env.VITE_FORMSPREE_CONTACT,  // ← URL from .env
+            {
+              _subject: `Contact — ${form.name}`,
+              "Form": "Contact Form",
+              "Full Name": form.name,
+              "Email": form.email,
+              "Company": form.company || "Not provided",
+              "Mobile": form.mobile,
+              "Service Interest": form.service || "Not specified",
+            }
+          )
+
+          setStatus(ok ? "done" : "error")
+        }}
+      >
+        <div className="cform-grid">
+          <div className="cfield req">
+            <label>Full Name</label>
+            <input
+              type="text"
+              placeholder="Your full name"
+              value={form.name}
+              onChange={e => up("name", e.target.value)}
+              required
+            />
+          </div>
+
+          <div className="cfield req">
+            <label>Email</label>
+            <input
+              type="email"
+              placeholder="your@email.com"
+              value={form.email}
+              onChange={e => up("email", e.target.value)}
+              required
+            />
+          </div>
+
+          <div className="cfield">
+            <label>Company</label>
+            <input
+              type="text"
+              placeholder="Your company or brand"
+              value={form.company}
+              onChange={e => up("company", e.target.value)}
+            />
+          </div>
+
+          <div className="cfield req">
+            <label>Mobile</label>
+            <input
+              type="tel"
+              placeholder="+91 98765 43210"
+              value={form.mobile}
+              onChange={e => up("mobile", e.target.value)}
+              required
+            />
+          </div>
+
+          <div className="cfield">
+            <label>How can we help?</label>
+            <select
+              value={form.service}
+              onChange={e => up("service", e.target.value)}
+            >
+              <option value="">Select area of interest</option>
+              <option>Brand Architecture</option>
+              <option>Brand Creation</option>
+              <option>Brand Audit</option>
+              <option>Stature (Personal Identity Architecture)</option>
+              <option>Business Structuring</option>
+              <option>Legal Brand Protection</option>
+              <option>Brand Advisory Retainer</option>
+              <option>Strategic Partner Engagement</option>
+              <option>I want to discuss my full situation first</option>
+            </select>
+          </div>
         </div>
-      </div>
-      <button className="bf" onClick={submit} style={{opacity:valid?1:.4}}>Send details →</button>
-      <p className="form-note">Our strategy associate will reach out to you personally within 24 hours.</p>
+
+        {/* Error message */}
+        {status === "error" && (
+          <div style={{
+            background: "#FEF2F2",
+            border: "1px solid #FECACA",
+            borderRadius: 6,
+            padding: "10px 14px",
+            fontSize: "13px",
+            color: "#991B1B",
+            marginBottom: "1rem"
+          }}>
+            Something went wrong. Please email connect@magsmen.com directly.
+          </div>
+        )}
+
+        {/* ── SUBMIT BUTTON — type="submit" triggers form onSubmit ── */}
+        <button
+          type="submit"
+          className="bf"
+          disabled={!valid || status === "sending"}
+          style={{ opacity: valid && status !== "sending" ? 1 : 0.4 }}
+        >
+          {status === "sending" ? "Sending..." : "Send details →"}
+        </button>
+
+        <p className="form-note">
+          Our strategy associate will reach out to you personally within 24 hours.
+        </p>
+      </form>
     </div>
   )
+
 }
 
 interface Question {
@@ -1279,6 +1404,8 @@ function PopupForm({ onClose }: { onClose: () => void }) {
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<string[]>(Array(POPUP_QS.length).fill(""));
   const [rec, setRec] = useState<RecResult | null>(null);
+  const [status, setStatus] = useState<"idle" | "sending" | "error">("idle")
+  
   interface FormData {
     email: string; name: string; company?: string; mobile: string 
 }
@@ -1314,13 +1441,53 @@ function PopupForm({ onClose }: { onClose: () => void }) {
   
   const valid: boolean = Boolean(form.name.trim() && form.mobile.trim());
   
-  const handleSubmit = (e: React.FormEvent): void => {
-    e.preventDefault();
-    if (!valid) return;
-    const body = `Name: ${form.name}\nCompany: ${form.company || "Not specified"}\nMobile: ${form.mobile}\nEmail: ${form.email || "Not specified"}\n\nRecommended: ${rec?.label}\n\n` + POPUP_QS.map((q, i) => `Q: ${q.q}\nA: ${answers[i] || ""}`).join("\n\n");
-    window.location.href = `mailto:connect@magsmen.com?subject=${encodeURIComponent("Inquiry from " + form.name)}&body=${encodeURIComponent(body)}`;
-    setDone(true);
-  };
+
+const handleSubmit = async (e: React.FormEvent): Promise<void> => {
+  e.preventDefault()
+  if (!valid || status === "sending") return
+  setStatus("sending")
+
+  const answersPayload = POPUP_QS.reduce((acc, q, i) => ({
+    ...acc,
+    [`Q${i + 1}: ${q.q}`]: answers[i] || "Not answered",
+  }), {} as Record<string, string>)
+
+  try {
+    const res = await fetch(import.meta.env.VITE_FORMSPREE_POPUP, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+      },
+      body: JSON.stringify({
+        _subject: `Popup — ${form.name}${form.company ? ` (${form.company})` : ""}`,
+        "Form": "Popup Assessment Form",
+        "Full Name": form.name,
+        "Company": form.company || "Not provided",
+        "Mobile": form.mobile,
+        "Email": form.email || "Not provided",
+        "Recommended Engagement": rec?.label || "",
+        ...answersPayload,
+      }),
+    })
+    if (res.ok) {
+      setStage("done")
+      setStatus("idle")
+    } else {
+      setStatus("error")
+    }
+  } catch (err) {
+    console.error("Formspree error:", err)
+    setStatus("error")
+  }
+}
+  // const handleSubmit = (e: React.FormEvent): void => {
+  //   e.preventDefault();
+  //   if (!valid) return;
+  //   const body = `Name: ${form.name}\nCompany: ${form.company || "Not specified"}\nMobile: ${form.mobile}\nEmail: ${form.email || "Not specified"}\n\nRecommended: ${rec?.label}\n\n` + POPUP_QS.map((q, i) => `Q: ${q.q}\nA: ${answers[i] || ""}`).join("\n\n");
+  //   window.location.href = `mailto:connect@magsmen.com?subject=${encodeURIComponent("Inquiry from " + form.name)}&body=${encodeURIComponent(body)}`;
+  //   setDone(true);
+  // };
 
   const q: PopupQuestion | undefined = POPUP_QS[step];
 
@@ -1468,7 +1635,7 @@ function PopupForm({ onClose }: { onClose: () => void }) {
                 <p style={{ color: '#6b7280', lineHeight: 1.5 }}>Our strategy associate will reach out personally within 24 hours.</p>
               </div>
             ) : (
-              <form method="POST" onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+              <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
                 {stage === "quiz" ? (
                   <>
                     <div className="pop-badge">Find your starting point</div>
@@ -1543,9 +1710,12 @@ function PopupForm({ onClose }: { onClose: () => void }) {
                     </div>
                     
                     <div>
-                      <button type="submit" className="bf" disabled={!valid}>
-                        Send details and get in touch →
-                      </button>
+<button
+  type="submit" className="bf"         // ← must be submit
+  disabled={!valid || status === "sending"}  // ← prevents multiple clicks
+>
+  {status === "sending" ? "Sending..." : "Send details and get in touch →"}
+</button>
                       <button type="button" className="pop-skip" onClick={onClose}>Explore the website first</button>
                     </div>
                   </div>
@@ -3162,8 +3332,6 @@ The Brand Volatility Matrix maps businesses across two dimensions: Brand Archite
 
 
 
-
-
   const featuredBlog = BLOGS[0];
 
 // ─── APP ───────────────────────────────────────────────────────────────────────
@@ -3174,22 +3342,54 @@ export default function App() {
   const navigate = (p: SetStateAction<string>) => { setPage(p); window.scrollTo({top:0,behavior:"smooth"}) }
 
 
+
+useEffect(() => {
+  // Check if user already submitted — never show again
+  const alreadySubmitted = localStorage.getItem("magsmen_popup_submitted")
+  if (alreadySubmitted === "true") return  // ← never show popup
+
+  // Show popup after 12 seconds
+  const t = setTimeout(() => setShowPopup(true), 12000)
+  return () => clearTimeout(t)
+}, [])
+
+// Called after successful form submit
+const handlePopupSubmitDone = () => {
+  localStorage.setItem("magsmen_popup_submitted", "true")  // ← save flag
+  setShowPopup(false)  // ← close popup
+}
+
+
+
+{showPopup && (
+  <PopupForm
+    onClose={() => setShowPopup(false)}
+    onSubmitDone={handlePopupSubmitDone}  // ← new prop
+  />
+)}
+
+
+
+
   // useEffect(() => {
   //   const t = setTimeout(() => setShowPopup(true), 9000)
   //   return () => clearTimeout(t)
   // }, [])
 
-  useEffect(() => {
 
-  const timer = setInterval(() => {
 
-    setShowPopup(true);
 
-  }, 12000);
+//   useEffect(() => {
 
-  return () => clearInterval(timer);
+//   const timer = setInterval(() => {
 
-}, []);
+//     setShowPopup(true);
+
+//   }, 12000);
+
+//   return () => clearInterval(timer);
+
+// }, []);
 
 
   const renderPage = () => {
