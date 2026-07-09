@@ -3168,16 +3168,29 @@ The Brand Volatility Matrix maps businesses across two dimensions: Brand Archite
 
 // ─── APP ───────────────────────────────────────────────────────────────────────
 export default function App() {
-//   const [loaded, setLoaded] = useState(false)
+  // const [loaded, setLoaded] = useState(false)
   const [page, setPage] = useState("home")
   const [showPopup, setShowPopup] = useState(false)
   const navigate = (p: SetStateAction<string>) => { setPage(p); window.scrollTo({top:0,behavior:"smooth"}) }
 
 
+  // useEffect(() => {
+  //   const t = setTimeout(() => setShowPopup(true), 9000)
+  //   return () => clearTimeout(t)
+  // }, [])
+
   useEffect(() => {
-    const t = setTimeout(() => setShowPopup(true), 9000)
-    return () => clearTimeout(t)
-  }, [])
+
+  const timer = setInterval(() => {
+
+    setShowPopup(true);
+
+  }, 12000);
+
+  return () => clearInterval(timer);
+
+}, []);
+
 
   const renderPage = () => {
     if (page==="home")            return <Home navigate={navigate}/>
