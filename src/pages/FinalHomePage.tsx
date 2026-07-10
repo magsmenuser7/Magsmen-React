@@ -9,7 +9,7 @@ import whyismybusinessnotgrowinginandhrapradesh from "../../public/assets/blogs/
 import legalprotectionisnotaseparatefunctionitisbrandstrategy from "/assets/blogs/legal-protection-is-not-a-separate-function-it-is-brand-strategy.png";
 import themarketingtrapwhymostindianfounderswalkstraightintoit from "/assets/blogs/the-marketing-trap-why-most-indian-founders-walk-straight-into-it..png";
 import whatstatureactuallyisandwhypersonalbrandinggetsitwrong from "/assets/blogs/what-stature-actually-is-and-why-personal-branding-gets-it-wrong.png";
-import thegunturfounderhasthesamerighttobrandarchitectureasthebangalorestartup from "../../public/assets/blogs/the-guntur-founder-has-the-same-right-to-brand-architecture-as-the-bangalore-startup.jpg";
+import thegunturfounderhasthesamerighttobrandarchitectureasthebangalorestartup from "/assets/blogs/the-guntur-founder-has-the-same-right-to-brand-architecture-as-the-bangalore-startup.jpg";
 
 
 
