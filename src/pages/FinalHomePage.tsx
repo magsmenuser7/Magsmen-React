@@ -163,7 +163,7 @@ nav.scrolled{border-bottom-color:#EBEBEB;box-shadow:0 1px 12px rgba(0,0,0,.06)}
 .nav-ham{display:flex;align-items:center;justify-content:center;background:none;border:none;padding:8px;color:#0A0A0A}
 .mob-menu{position:fixed;inset:0;background:#FFF;z-index:940;overflow-y:auto;padding:80px 28px 80px}
 .mob-link{font-size:1.1rem;font-weight:700;color:#0A0A0A;padding:.9rem 0;border-bottom:1px solid #F0F0F0;display:block;cursor:pointer}
-.mob-sublabel{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#BBB;padding:.7rem 0 .35rem;display:block}
+.mob-sublabel{font-size:1.1rem;font-weight:700;text-transform:capitalize;color:#000;padding:.7rem 0 .35rem;display:block}
 .mob-sub{font-size:.9rem;font-weight:500;color:#555;padding:.5rem 0 .5rem 14px;border-bottom:1px solid #F8F8F8;display:block;cursor:pointer}
 .mob-cta{margin-top:2rem;display:block;font-size:14px;font-weight:700;color:#FFF;background:#0A0A0A;padding:14px 28px;border-radius:5px;text-align:center}
 
@@ -618,6 +618,72 @@ footer{background:#0A0A0A;padding:6rem 56px 3rem}
   .break-stmt{padding:64px 24px}
   .tl-wrap{padding-left:40px}
 }
+
+.mob-dropdown{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    cursor:pointer;
+    padding:18px 0;
+    font-size:18px;
+    font-weight:700;
+    border-bottom:1px solid #ececec;
+}
+
+.mob-submenu{
+    display:flex;
+    flex-direction:column;
+    padding-left:20px;
+}
+
+.mob-submenu .mob-sub{
+    padding:14px 0;
+    font-size:16px;
+    color:#555;
+    border-bottom:1px solid #f2f2f2;
+    cursor:pointer;
+}
+
+.rotate{
+    transform:rotate(180deg);
+    transition:0.3s;
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+    .if-thumb {
+        height: 200px;
+        border-radius: 8px;
+        font-size: 2.5rem;
+    }
+
+    .if-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .blog-img {
+    height: 180px !important;
+    background: #F5F5F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    overflow: hidden;
+}
+
+.nav-cta{
+display:none
+
+}
+}
+
+
+
+
 `
 
 // ─── DATA ─────────────────────────────────────────────────────────────────────
@@ -853,6 +919,10 @@ const POPUP_QS = [
   { q:"When are you looking to begin?", opts:["Immediately. This is urgent","Within the next 1 to 3 months","Planning for later this year","Just exploring right now"] },
 ]
 
+
+
+
+
 interface RecResult { label: string; desc: string }
 interface RecInput extends Array<string | undefined> {}
 
@@ -1061,15 +1131,15 @@ function WhatsAppFloat() {
 
 function MobileSticky() {
   return (
-    <div className="mob-sticky">
-      <a className="ms-wa" href="https://wa.me/919044910449?text=Hi, I want to discuss my brand situation" target="_blank">
+    <div className="">
+      {/* <a className="ms-wa" href="https://wa.me/919044910449?text=Hi, I want to discuss my brand situation" target="_blank">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         WhatsApp
       </a>
       <a className="ms-call" href="tel:+919044910449">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.82 8.33 19.79 19.79 0 01.77 4.7a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 10.91a16 16 0 006 6l.9-.9a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
         Call
-      </a>
+      </a> */}
     </div>
   )
 }
@@ -1734,6 +1804,10 @@ interface NavProps { page: string; navigate: (path: string) => void }
 function Nav({ page, navigate }: NavProps) {
   const [scrolled, setScrolled] = useState<boolean>(false)
   const [mob, setMob] = useState<boolean>(false)
+  const [solutionsOpen, setSolutionsOpen] = useState(false);
+  const [advisoryOpen, setAdvisoryOpen] = useState(false);
+
+  
   useEffect(() => {
     const h = () => setScrolled(window.scrollY > 40)
     window.addEventListener("scroll",h,{passive:true}); h()
@@ -1790,31 +1864,136 @@ function Nav({ page, navigate }: NavProps) {
             </div>
           </li>
           <li className={`nav-item${page==="engagements"?" active":""}`}><a onClick={()=>go("engagements")}>Engagements</a></li>
-          <li className={`nav-item${page==="insights"||page.startsWith("blog/")?" active":""}`}><a onClick={()=>go("insights")}>Insights</a></li>
-          <li className={`nav-item${page==="about"?" active":""}`}><a onClick={()=>go("about")}>About</a></li>
+          <li className={`nav-item${page === "insights" || page.startsWith("blog/") ? " active" : ""}`}><a onClick={() => go("insights")}>Insights</a></li>
+          <li className={`nav-item${page === "about" ? " active" : ""}`}><a onClick={() => go("about")}>About</a></li>
         </ul>
-        <button className="nav-ham" onClick={()=>setMob(true)}><Menu size={20}/></button>
-        <button className="nav-cta" onClick={()=>navigate("contact")}>Talk To Us →</button>
+        {/* <button className="nav-ham" onClick={()=>setMob(true)}><Menu size={20}/></button> */}
+
+        <button
+          onClick={() => setMob(prev => !prev)}
+        >
+          {mob ? "✕" : "☰"}
+        </button>
+        <button className="nav-cta" onClick={() => navigate("contact")}>Talk To Us →</button>
       </nav>
       {mob && (
         <div className="mob-menu">
-          <button style={{position:"absolute",top:20,right:20,background:"none",border:"none",cursor:"pointer",fontSize:"20px"}} onClick={()=>setMob(false)}>✕</button>
-          {/* <div style={{marginBottom:"2rem"}}><img src={LOGO} alt="" style={{height:22}}/></div> */}
-          <span className="mob-sublabel">Solutions</span>
-          <a className="mob-sub" onClick={()=>go("brand")}>Brand Architecture</a>
-          <a className="mob-sub" onClick={()=>go("brand/creation")}>Brand Creation</a>
-          <a className="mob-sub" onClick={()=>go("stature")}>Stature</a>
-          <a className="mob-sub" onClick={()=>go("business")}>Business Structuring</a>
-          <a className="mob-sub" onClick={()=>go("legal")}>Legal Brand Protection</a>
-          <a className="mob-link" onClick={()=>go("advisory")}>Advisory</a>
-          <a className="mob-link" onClick={()=>go("otc")}>One-Time Consulting</a>
-          <a className="mob-link" onClick={()=>go("engagements")}>Engagements</a>
-          <a className="mob-link" onClick={()=>go("insights")}>Insights</a>
-          <a className="mob-link" onClick={()=>go("about")}>About</a>
-          <a className="mob-link" onClick={()=>go("contact")}>Contact</a>
-          <a className="mob-link" onClick={()=>go("faq")}>FAQ</a>
-          <button className="nav-cta" onClick={()=>navigate("contact")}>Talk To Us →</button>
-        </div>
+
+          <button
+            style={{
+              position: "absolute",
+              top: 20,
+              right: 20,
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+              fontSize: "20px"
+            }}
+            onClick={() => setMob(false)}
+          >
+            ✕
+          </button>
+
+    {/* <div style={{marginBottom:"2rem"}}>
+      <img src={LOGO} alt="" style={{height:22}}/>
+    </div> */}
+
+    {/* ================= SOLUTIONS ================= */}
+
+    <div
+      className="mob-dropdown"
+      onClick={() => setSolutionsOpen(!solutionsOpen)}
+    >
+      <span className="mob-sublabel">Solutions</span>
+
+      <span className={solutionsOpen ? "rotate" : ""}>
+        ▼
+      </span>
+    </div>
+
+    {solutionsOpen && (
+      <>
+        <a className="mob-sub" onClick={() => go("brand")}>
+          Brand Architecture
+        </a>
+
+        <a className="mob-sub" onClick={() => go("brand/creation")}>
+          Brand Creation
+        </a>
+
+        <a className="mob-sub" onClick={() => go("stature")}>
+          Stature
+        </a>
+
+        <a className="mob-sub" onClick={() => go("business")}>
+          Business Structuring
+        </a>
+
+        <a className="mob-sub" onClick={() => go("legal")}>
+          Legal Brand Protection
+        </a>
+      </>
+    )}
+
+    {/* ================= ADVISORY ================= */}
+
+    <div
+      className="mob-dropdown"
+      onClick={() => setAdvisoryOpen(!advisoryOpen)}
+    >
+      <span className="mob-link">Advisory</span>
+
+      <span className={advisoryOpen ? "rotate" : ""}>
+        ▼
+      </span>
+    </div>
+
+    {advisoryOpen && (
+      <>
+       <a className="mob-sub" onClick={() => go("retainer")}>
+      Retainer Advisory
+    </a>
+
+    <a className="mob-sub" onClick={() => go("growth")}>
+      Growth Advisory
+    </a>
+
+    <a className="mob-sub" onClick={() => go("strategy")}>
+      Business Strategy
+    </a>
+      </>
+    )}
+
+    {/* ================= NORMAL LINKS ================= */}
+
+    <a className="mob-link" onClick={() => go("engagements")}>
+      Engagements
+    </a>
+
+    <a className="mob-link" onClick={() => go("insights")}>
+      Insights
+    </a>
+
+    <a className="mob-link" onClick={() => go("about")}>
+      About
+    </a>
+
+    <a className="mob-link" onClick={() => go("contact")}>
+      Contact
+    </a>
+
+    <a className="mob-link" onClick={() => go("faq")}>
+      FAQ
+    </a>
+
+    <button
+      className="nav-cta"
+      onClick={() => navigate("contact")}
+    >
+      Talk To Us →
+    </button>
+
+  </div>
       )}
     </>
   )
@@ -3340,7 +3519,8 @@ export default function App() {
   const [page, setPage] = useState("home")
   const [showPopup, setShowPopup] = useState(false)
   const navigate = (p: SetStateAction<string>) => { setPage(p); window.scrollTo({top:0,behavior:"smooth"}) }
-
+  const [solutionsOpen, setSolutionsOpen] = useState(false);
+  const [advisoryOpen, setAdvisoryOpen] = useState(false);
 
 
 useEffect(() => {
