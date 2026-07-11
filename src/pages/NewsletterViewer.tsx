@@ -141,7 +141,7 @@ const NewsletterViewer = () => {
                 <LayoutDashboard className="w-8 h-8" />
               </div>
               <h1 className="text-xl font-bold text-[#1E293B] uppercase">
-                Newsletter Access
+                Access
               </h1>
               <p className="text-slate-500 text-sm mt-2">
                 Enter your email to view "{newsletter.title}"
@@ -190,7 +190,7 @@ const NewsletterViewer = () => {
                   <Loader2 className="w-5 h-5 animate-spin" />
                 ) : (
                   <>
-                    Access Newsletter
+                    Access
                     <ChevronRight className="w-4 h-4" />
                   </>
                 )}
