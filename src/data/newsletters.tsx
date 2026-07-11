@@ -30,9 +30,14 @@ import brandcornertrademarksanddeceptivepractices  from "/assets/newsletters/bra
 import FinalBrandpresentationforprinting1  from "/assets/newsletters/Magsmen-Brand-presentation.pdf";
 
 import WhyYourNicheStrategyIsStallingYourBrand from "/assets/newsletters/why-your-niche-strategy-is-stalling-your-brand.pdf";
-
+import APRYSSMAGSMENPROGRESSINGPILOTPROJECT from "../../public/assets/newsletters/AP-RYSS-MAGSMEN-PROGRESSING-PILOT-PROJECT.pdf"
 
 export const newsletters = [
+    {
+    slug: "ap-ryss-magsmen-progressing-pilot-project",
+    title: "AP RYSS PILOT PROJECT",
+    pdf: APRYSSMAGSMENPROGRESSINGPILOTPROJECT,
+  },
   {
     slug: "magsmen-brand-portfolio",
     title: "Magsmen Brand Portfolio",
