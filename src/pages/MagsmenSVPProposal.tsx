@@ -730,7 +730,7 @@ img,svg{max-width:100%;height:auto;}
         <div class="price-label">Engagement Investment</div>
         <div class="price-figure">&#8377;5,00,000<span> + GST</span></div>
         <p>Covers full brand narrative architecture, IFSCA compliant communication design, creative brief and oversight, speaker narrative preparation, on-ground brand execution on August 12th, and post-event follow-up architecture.</p>
-        <p style="margin-top:0.8rem;font-size:0.78rem;color:var(--muted);">Payment: 50% on scope confirmation. 50% on August 12th.</p>
+        <p style="margin-top:0.8rem;font-size:0.78rem;color:var(--muted);">Payment: 50% on scope confirmation. 30% while in progress, 20% on August 12th.</p>
       </div>
       <div>
         <div class="section-label" style="margin-bottom:1rem;">Delivery Timeline</div>
