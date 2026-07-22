@@ -79,6 +79,7 @@ import SEOCommandCenter from './pages/SEOCommandCenter.tsx';
 import SkinAffairProposal from './pages/SkinAffairProposal.tsx';
 import FinalHomePage from './pages/FinalHomePage.tsx';
 import MagsmenSVPProposal from './pages/MagsmenSVPProposal.tsx';
+import FareEagleStrategicAnalysis from './pages/FareEagleStrategicAnalysis.tsx'
 
 
 // 2. Define a Layout Component that includes Header and Footer
@@ -202,6 +203,8 @@ function App() {
            <Route path="/seo-command-center" element={<SEOCommandCenter />} />
            <Route path="/skin-affair-proposal" element={<SkinAffairProposal />} />
            <Route path="/magsmen-svp-proposal" element={<MagsmenSVPProposal />} />
+           <Route path="/fare-eagle-strategic-analysis" element={<FareEagleStrategicAnalysis />} />
+
            
 
            </Route>
