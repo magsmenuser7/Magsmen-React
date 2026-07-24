@@ -80,6 +80,8 @@ import SkinAffairProposal from './pages/SkinAffairProposal.tsx';
 import FinalHomePage from './pages/FinalHomePage.tsx';
 import MagsmenSVPProposal from './pages/MagsmenSVPProposal.tsx';
 import FareEagleStrategicAnalysis from './pages/FareEagleStrategicAnalysis.tsx'
+import SkinAffairProjectReport from './pages/SkinAffairProjectReport.tsx';
+import APNRTPortal from './pages/APNRTPortal.tsx';
 
 
 // 2. Define a Layout Component that includes Header and Footer
@@ -204,8 +206,8 @@ function App() {
            <Route path="/skin-affair-proposal" element={<SkinAffairProposal />} />
            <Route path="/magsmen-svp-proposal" element={<MagsmenSVPProposal />} />
            <Route path="/fare-eagle-strategic-analysis" element={<FareEagleStrategicAnalysis />} />
-
-           
+           <Route path="/skin-affair-project-report" element={<SkinAffairProjectReport />} />
+           <Route path="/apnrt-portal" element={<APNRTPortal />} />
 
            </Route>
         </Routes>

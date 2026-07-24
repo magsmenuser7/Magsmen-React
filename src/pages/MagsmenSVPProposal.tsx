@@ -2,7 +2,7 @@
 import { LayoutDashboard, Mail, AlertCircle, Loader2, ChevronRight } from 'lucide-react';
 import React, { FormEvent, useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import magsmennewlogowhitelandscape from "../../public/assets/magsmen-new-logo-black-horizontal-landscape.png"
+import magsmennewlogowhitelandscape from "/assets/magsmen-new-logo-black-horizontal-landscape.png"
 
 interface AnthropicResponse {
   content?: { text: string }[];
