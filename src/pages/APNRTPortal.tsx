@@ -552,13 +552,82 @@ Return ONLY valid JSON:
     const subject = `[APNRT] ${s.title} — ${s.name}${audit ? " | NVBI " + audit.nvbi : ""}`;
 
     try {
-      await emailjs.send(CFG.EJS_SVC, CFG.EJS_TSUB, {
-        name: s.name,
-        email: s.email,
-        phone: s.phone,
-        subject,
-        message,
-      });
+await emailjs.send(
+  CFG.EJS_SVC,
+  CFG.EJS_TSUB,
+  {
+    // =========================
+    // BASIC
+    // =========================
+    name: s.name,
+    designation: s.desig,
+    organisation: s.org,
+    email: s.email,
+    phone: s.phone,
+    city: s.city || "Not Provided",
+
+    // =========================
+    // PROJECT
+    // =========================
+    project_title: s.title,
+    sector: s.sector,
+    stage: s.stage,
+    investment: s.invest || "Not Specified",
+    summary: s.summary,
+
+    // =========================
+    // GOVERNMENT
+    // =========================
+    department: s.dept,
+    support: s.support.length
+      ? s.support.join(", ")
+      : "None",
+
+    // =========================
+    // PROJECT MATERIALS
+    // =========================
+    files: s.files.length
+      ? s.files.map(f => f.name).join(", ")
+      : "No Files",
+
+    website: s.web || "Not Provided",
+
+    linkedin: s.li || "Not Provided",
+
+    notes: s.notes || "None",
+
+    // =========================
+    // AUDIT
+    // =========================
+    nvbi_score: audit?.nvbi ?? "Pending",
+
+    nvbi_label: audit?.nvbi_label ?? "Pending",
+
+    magsmen_opportunity:
+      audit?.magsmen_opportunity ?? "Pending",
+
+    audit_summary:
+      audit?.exec_summary ?? "Pending",
+
+    // =========================
+    // SUBMISSION
+    // =========================
+    submission_id: s.id,
+
+    submission_date:
+      new Date(s.ts).toLocaleString("en-IN"),
+
+    // =========================
+    // SUBJECT
+    // =========================
+    subject,
+
+    // =========================
+    // FULL MESSAGE
+    // =========================
+    message
+  }
+);
       return true;
     } catch (sendErr: any) {
       const reason =
