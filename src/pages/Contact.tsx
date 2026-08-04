@@ -37,7 +37,7 @@ const Contact = () => {
     },
     {
       title: 'Corporate Office',
-      address: 'Metro Pillar No. C1762, 3rd Floor, Plot No. 23, H.No. 1/90/2/A/23, Near Image Hospital, Silicon Valley, Madhapur, Hyderabad, Telangana – 500081',
+      address: '4th Floor, 3/A, Gachibowli - Miyapur Rd, P Janardhan Reddy Nagar, Gachibowli, Hyderabad, Telangana 500032',
       phone: '+91 90449 10449',
       email: 'connect@magsmen.com',
       hours: 'Mon-Fri: 9:00 AM - 6:00 PM IST'
