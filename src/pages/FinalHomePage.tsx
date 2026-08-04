@@ -5,7 +5,7 @@ import LOGO  from "/assets/magsmen-new-logo-black-horizontal-landscape.png";
 import popupimag2 from  "/assets/your-strategic-journey-to-brand-success-begins-here-3-popup.jpg";
 import blogpostone from  "/assets/blogs/why-is-my-business-not-growing-in-andhra-pradesh.jpg";
 import blogposttwo from  "/assets/blogs/why-your-brand-needs-a-unique-tone-of-voice.jpg";
-import whyismybusinessnotgrowinginandhrapradesh from "../../public/assets/blogs/why-is-my-business-not-growing-in-andhra-pradesh.jpg";
+import whyismybusinessnotgrowinginandhrapradesh from "/assets/blogs/why-is-my-business-not-growing-in-andhra-pradesh.jpg";
 import legalprotectionisnotaseparatefunctionitisbrandstrategy from "/assets/blogs/legal-protection-is-not-a-separate-function-it-is-brand-strategy.png";
 import themarketingtrapwhymostindianfounderswalkstraightintoit from "/assets/blogs/the-marketing-trap-why-most-indian-founders-walk-straight-into-it..png";
 import whatstatureactuallyisandwhypersonalbrandinggetsitwrong from "/assets/blogs/what-stature-actually-is-and-why-personal-branding-gets-it-wrong.png";
@@ -779,7 +779,7 @@ const FAQS = [
 ]
 
 const BLOGS = [
-  { id:"brand-economic-asset", cat:"Brand Strategy", title:"Brand Is an Economic Asset. Stop Treating It Like a Marketing Budget.", excerpt:"Most Indian founders treat brand as an expense. That framing is the root cause of why they can never stop spending on advertising.", date:"June 2025", rt:"6 min", image:whyismybusinessnotgrowinginandhrapradesh, content:[
+    { id:"brand-economic-asset", cat:"Brand Strategy", title:"Brand Is an Economic Asset. Stop Treating It Like a Marketing Budget.", excerpt:"Most Indian founders treat brand as an expense. That framing is the root cause of why they can never stop spending on advertising.", date:"June 2025", rt:"6 min", image:whyismybusinessnotgrowinginandhrapradesh, content:[
     { t:"p", text:"There is a calculation every founder eventually runs. How much did I spend on marketing this quarter? How many leads did it produce? Was it worth it?" },
     { t:"p", text:"This calculation is the problem. It treats marketing as the question. Brand is the answer the calculation never reaches." },
     { t:"pq", text:"A brand architectured correctly does three things economically. It commands a price premium. It reduces customer acquisition cost. It creates resilience during volatility. None of these are marketing outcomes." },
@@ -825,91 +825,7 @@ const BLOGS = [
     { t:"p", text:"A brand strategy built for AP and Telangana must understand that customers here buy through relationships before they buy through advertising. Community trust is the primary brand signal. Family business structures carry trust equity that is an asset, not a liability." },
     { t:"p", text:"The families that built Tenali Double Horse and Telugu Foods into what they are did not need a Bangalore playbook. They needed a strategist who understood this market from the inside, could speak the language of family business dynamics, and could build a brand architecture that respected the trust equity already earned." },
   ]},
-  // { id:"brand-volatility-matrix", cat:"Proprietary Framework", title:"The Brand Volatility Matrix. Why the Most Dangerous Business Is Not the Failing One.", excerpt:"A framework for understanding why Fragile Success is the most urgent and least-recognised position in business — and what the window for correction looks like.", date:"July 2025", rt:"8 min", icon:"◈", content:[
-  //   { t:"p", text:"The businesses that are in the most structural danger are rarely the ones that are failing. They are the ones that grew successfully without building the brand architecture that would allow that success to sustain itself." },
-  //   { t:"pq", text:"The most dangerous belief in business is this: we have been growing, so we must be doing something right. Growth is evidence that the commercial model is working. It is not evidence that the brand is architectured." },
-  //   { t:"h2", text:"The Four Quadrants" },
-  //   { t:"p", text:"The Brand Volatility Matrix maps businesses across Brand Architecture Strength and Business Performance. Most Indian MSME businesses sit in Quadrant 3: Fragile Success. High performance. Low architecture. The volatility is invisible until a competitor, a dispute, or an expansion attempt reveals the absence of a structural foundation." },
-  //   { t:"p", text:"The window for correction is open while performance is strong. When performance weakens, the same correction requires three times the investment and produces half the result. That is the core insight this framework is built to communicate." },
-  // ]},
-  // { id:"fragile-success", cat:"Strategy", title:"Why the Business That Grew Without Structure Is the Most Urgent Client in the Room.", excerpt:"The most dangerous business is the one growing through relationships alone, with no brand architecture beneath it.", date:"January 2025", rt:"6 min", icon:"\u26a0\ufe0f", content:[
-  //   { t:"p", text:"The most dangerous position in business is not failure. It is fragile success. A business that has achieved revenue growth through relationships, hard work, and market timing but has no brand architecture underneath it." },
-  //   { t:"pq", text:"When the founder steps back, the brand has nowhere to stand. The relationships do not transfer. The trust does not transfer. What transfers is a logo and a name that mean different things to different people." },
-  //   { t:"h2", text:"The Window" },
-  //   { t:"p", text:"There is a window for this work. It is not infinite. A competitor with better positioning and the same product can displace a business that has not built its brand architecture. One bad press cycle can erase years of informal reputation. One leadership change can create brand confusion that takes years to resolve." },
-  //   { t:"p", text:"The businesses that have the most to gain from brand architecture work are also the ones most at risk of procrastinating on it. The very success that creates the urgency also creates the sense that the work is not urgent. This is the most expensive illusion in business." },
-  // ]},
-  // { id:"brand-economic-asset", cat:"Brand Strategy", title:"Why Is My Business Not Growing in Andhra Pradesh.", excerpt:"Most businesses in Andhra Pradesh stop growing not because of bad products or low effort but because the brand is architecturally weak. Customers cannot clearly understand why they should choose you over a competitor, so they either default to price comparison or do not choose at all. This is a strategic problem, not a marketing one.", date:"16 JUNE 2026 ", rt:"6 min", image: blogpostone, content:[
-  //   { t:"p", text:"You have put in the years. The product works. The team is in place. The revenue was growing for a while and then it stopped. You tried new advertising, a new agency, a new social media approach. Nothing compounded. The business stayed in the same band." },
-  //   { t:"p", text:"If you are a business owner in Andhra Pradesh who has experienced this, you are not alone. It is one of the most common patterns across MSMEs and established businesses in the region. And almost every owner who experiences it reaches the same wrong conclusion." },
-  //   { t:"pq", text:"They assume the problem is marketing. It is not." },
-  //   { t:"h2", text:"What Is Actually Stopping Your Business From Growing" },
-  //   { t:"p", text:"The real problem in most cases is that the business does not have a clear, specific, defensible reason for a customer to choose it." },
-  //   { t:"p", text:"Not a general one. Not 'quality service' or 'customer satisfaction' or 'years of experience.' A specific reason that the customer can articulate after encountering your business for the first time." },
-  //   { t:"p", text:"When a customer cannot articulate why they should choose you, they do one of three things. They compare you on price, which makes you vulnerable to anyone cheaper. They delay the decision, which means you lose the sale. Or they choose the business that made the reason clearest, even if that business is technically weaker than yours." },
-  //   { t:"p", text:"This is a brand architecture problem. And it cannot be fixed by running more advertisements, redesigning the logo, or posting more content on Instagram." }, 
-    
-  //   { t:"h2", text:"Why Does Business Growth Plateau in AP and Telangana Specifically" },
-  //   { t:"p", text:"Business culture in Andhra Pradesh is built on relationship capital. Founders know the right people. They went to the right institutions. They have been reliable in their communities for a long time." },
-  //   { t:"p", text:"That relational trust is the engine of early growth. It is real and powerful. It is also not scalable." },
-  //   { t:"p", text:"When someone who does not know you searches for a service you offer in Vizag or Guntur or Nellore, they cannot access your relational reputation. They can only see what your brand communicates. If your brand communicates nothing specific, they will choose based on price, proximity, or whoever appears first on Google." },
-  //   { t:"p", text:"This is the ceiling that most AP businesses hit. The relational network has been fully activated. The next layer of growth requires strangers to trust you. Strangers trust brands, not relationships they cannot access." },
-
-  //   { t:"h2", text:"How Do I Know If My Business Has a Brand Problem" },
-  //   { t:"p", text:"There are three clear signs." },
-  //   { t:"h3", text:"You compete on price more than you should" },
-  //   { t:"p", text:"When your customers regularly ask for discounts or leave for competitors who charge less, the problem is rarely your price. It is that your brand has not communicated enough specific value to justify the price you have set. Price pressure is a symptom of unclear positioning." },
-  //    { t:"h3", text:"Referrals work but direct acquisition is expensive or inconsistent" },
-  //   { t:"p", text:"Referrals work because the person referring transfers their personal trust to the transaction. Without that transfer, your brand has to do the work of building trust from zero. If direct acquisition is consistently expensive or unreliable, your brand is not doing its job." },
-  //   { t:"h3", text:"Your marketing produces activity but not compounding results" },
-  //   { t:"p", text:"If you have changed agencies, tried different platforms, and gotten different results each time with none of them building on the other, you are applying tactical solutions to a structural problem. Tactics work when the brand is clear. Without a clear brand, each marketing effort starts from scratch." },
-
-  //   { t:"h2", text:"What Should I Do to Start Growing Again" },
-  //   { t:"p", text:"The sequence is fixed and not negotiable." },
-  //   { t:"p", text:"First, establish what specific position your business can claim in its category. Not 'best quality' or 'most experienced.' A claim that is true, verifiable, and that your direct competitors cannot honestly make. This is your positioning." },
-  //   { t:"p", text:"Second, build a communication system so that every channel through which your business speaks to customers carries the same signal. Website, sales conversation, invoice, packaging, customer service. The same message, the same tone, the same level of quality across all of them." },
-  //   { t:"p", text:"Third, make your evidence visible. Case studies, outcome numbers, client results, credentials. AP business buyers, whether in Vijayawada, Tirupati, or Visakhapatnam, are skeptical in a healthy way. They need to see proof before they pay. Build the proof into your brand before the conversation starts." },
-  //   { t:"p", text:"None of this requires a large budget. It requires strategic clarity, operational discipline, and patience. Three things any business owner in Andhra Pradesh has access to regardless of size." },
-
-  //   { t:"h2", text:"What Role Does a Brand Consultant Play in This Process" },
-  //   { t:"p", text:"A brand consultant does not make your marketing look better. The role is to diagnose where your brand architecture is broken, design the structure that fixes it, and build the systems your team can maintain without depending on the consultant permanently." },
-  //   { t:"p", text:"At Magsmen, we begin every engagement by understanding how your brand is currently perceived, not how you intend it to be perceived. The gap between those two things is where the growth work starts." },
-  //   { t:"p", text:"If your business has stopped growing and you have already exhausted the marketing route, the conversation you need to have is about architecture." },
-    
-
-  //   { t:"h2", text:"Frequently Asked Questions" },
-  //   { t:"h3", text:"Why is my small business not growing even though I am working hard?" },
-  //   { t:"p",  text:"Hard work does not compensate for unclear positioning. If customers cannot quickly understand why they should choose you over alternatives, they will not. The most common cause of stagnation in small businesses is a brand that has no specific, defensible claim in the market."},
-  //   { t:"h3", text:"How long does it take for a business to start growing after fixing the brand?" },
-  //   { t:"p", text:"Brand changes take time to produce market results. Positioning clarity can be established within weeks. Market perception shifts over months. Revenue impact from repositioning typically appears within six to twelve months of consistent execution." },
-  //   { t:"h3", text:"Is business stagnation common in Andhra Pradesh?" },
-  //   { t:"p", text:"Growth plateaus are extremely common in AP and Telangana because most businesses here are built on relational trust, which does not scale beyond the founder's personal network. The solution is building a brand that transfers trust to strangers, not just people who already know you." },
-  //   { t:"h3", text:"Do I need to rebrand if my business is not growing?" },
-  //   { t:"p", text:"Not necessarily. A rebrand is appropriate when the perception problem is about identity. Many businesses that are not growing have a positioning problem, not an identity problem. The diagnosis must come before the solution. A rebrand without a clear positioning change is expensive decoration." },
-  //   { t:"pq", text:"If you want clarity on where your brand stands and what it needs, speak with Magsmen. We work with businesses across Andhra Pradesh and Telangana to build brands that generate commercial outcomes. Reach us at connect@magsmen.com or visit www.magsmen.com." },
-  // ]},
-
-  // { id:"legal-is-brand", cat:"Legal Brand Protection", title:"How to Choose a Business Name in Telugu: What Works, What Fails, and What Gets You Sued.", excerpt:"A good business name in Telugu markets must work phonetically in at least two languages, carry no negative associations across Telugu, Hindi, and English, be distinctive enough to trademark, and not describe the category so generically that it cannot be protected. Most founders get one or two of these right and leave themselves commercially exposed on the rest.", date:"May 2025", rt:"5 min", image:blogposttwo, content:[
-  //   { t:"p", text:"Every week, a founder in Hyderabad or Vijayawada names a business in under twenty-four hours. They find a word that sounds clean, check if the Instagram handle is available, and consider the matter closed." },
-  //   { t:"p", text:"Three years later, that founder either receives a legal notice from a prior trademark holder, discovers the name means something unintended in a neighboring market, or realizes the name has built no equity because it describes every business in the category and belongs to none of them." },
-  //   { t:"pq", text:"Choosing a business name is the most consequential brand decision you will make. This guide explains how to get it right the first time."},
-  //   // { t:"pq", text:"An unregistered trademark is not just a legal risk. It is a brand asset that someone else can take from you while you are busy building it. The name you chose. The identity you built. The trust your customers associate with it." },
-  //   { t:"h2", text:"What Makes a Business Name Work in Telugu Markets" },
-  //   { t:"p", text:"A name that works in Telugu markets must perform on five dimensions simultaneously. Each one is non-negotiable." },
-  //   // { t:"p", text:"At Magsmen, brand naming, trademark search, positioning strategy, and filing happen within the same engagement. The name you launch is the name you own." },
-  //   { t:"h2", text:"It must sound right in Telugu and in English" },
-  //   { t:"p", text:"Telugu phonetics are distinct. Sounds that flow naturally in Hindi can feel uncomfortable when spoken by a Telugu speaker. A name that is elegant in English but clumsy in Telugu will create a disconnect in your primary market. Test every candidate name by speaking it in Telugu conversation at normal speed. If it requires effort or sounds foreign, it is not the right name." },
-  //   { t:"p", text:"The reverse test matters equally. If your business will ever operate outside the Telugu-speaking market, the name must be pronounceable by Hindi, Tamil, and English speakers without distortion. Names with retroflex consonants that exist only in Telugu create friction for media, investors, and national partners." },
-  //   { t:"h2", text:"It must be specific enough to be memorable but not so descriptive that it cannot be trademarked" },
-  //   { t:"p", text:"There is a fundamental tension in naming between clarity and protectability. Descriptive names communicate immediately what the business does. They are easy to understand and require little explanation. The problem is that descriptive names are harder to trademark because they use common language that the market needs to describe the category. A business called Andhra Sweets or Hyderabad Builders tells you what it does but cannot be protected from the hundreds of other businesses using similar descriptions."},
-  //   { t:"p", text:"Distinctive names, invented words, or words used in unexpected contexts can be fully protected and build exclusive equity over time. They require more initial investment in communication to teach the market what they mean. But once the meaning is established, no competitor can share it."},
-  //   { t:"h2", text:"It must have no negative meaning across the languages your customers speak" },
-  //   { t:"p", text:"Telugu business owners serving customers across AP, Telangana, and potentially Karnataka, Maharashtra, and Tamil Nadu must check every candidate name in all five languages. A word that sounds aspirational in Telugu may carry a slang meaning in Hindi or a commercial meaning in Kannada that contradicts the brand's intention. This cross-linguistic check is not optional. It is the most frequently skipped step in naming processes in this region, and the one that produces the most embarrassing post-launch corrections."},
-  //   { t:"h2", text:"What Are the Most Common Naming Mistakes Telugu Businesses Make" },
-  //   { }
   
-  
-  // ]},
 ]
 
 const POPUP_QS = [
