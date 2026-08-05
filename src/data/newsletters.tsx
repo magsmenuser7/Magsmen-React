@@ -32,9 +32,15 @@ import FinalBrandpresentationforprinting1  from "/assets/newsletters/Magsmen-Bra
 import WhyYourNicheStrategyIsStallingYourBrand from "/assets/newsletters/why-your-niche-strategy-is-stalling-your-brand.pdf";
 import APRYSSMAGSMENPROGRESSINGPILOTPROJECT from "/assets/newsletters/AP-RYSS-MAGSMEN-PROGRESSING-PILOT-PROJECT.pdf"
 import APRYSSMAGSMEN2 from "/assets/newsletters/ryss-magsmen-2.pdf"
-import sorvetgenzAnalysismagsmen from "../../public/assets/newsletters/sorvet-genz-Analysis-magsmen.pdf"
+import sorvetgenzAnalysismagsmen from "/assets/newsletters/sorvet-genz-Analysis-magsmen.pdf"
+import magsmenzylobrandcollaborationproposal from "/assets/newsletters/magsmen-zylo-brand-collaboration-proposal.pdf"
 
 export const newsletters = [
+  {
+    slug: "magsmen-zylo-brand-collaboration-proposal",
+    title: "Magsmen Zylo Brand Collaboration Proposal",
+    pdf: magsmenzylobrandcollaborationproposal,
+  },
   {
     slug: "sorvet-genz-Analysis-magsmen-2",
     title: "Sorvet Genz Analysis Magsmen",
