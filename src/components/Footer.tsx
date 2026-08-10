@@ -118,14 +118,14 @@ const Footer = () => {
                 <MapPin className="w-5 h-5 mr-3 mt-1 text-[#683FBF]" />
                 <div className="text-gray-300 text-sm">
                   <p className="font-medium">Head Office</p>
-                  <p>4th floor, icon spaces 5-98-57/5, 6th Lane, Brodipet, Guntur, AP 522002</p>
+                  <p>#4th floor, Icon spaces, police station beside road, Brodipet, Guntur,Andhra Pradesh. IN 522007.</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <MapPin className="w-10 h-5 mr-3 mt-1 text-[#683FBF]" />
                 <div className="text-gray-300 text-sm">
                   <p className="font-medium">Corporate Office</p>
-                  <p>Metro Pillar No. C1762, 3rd Floor, Plot No. 23, H.No. 1/90/2/A/23, Near Image Hospital, Silicon Valley, Madhapur, Hyderabad, Telangana – 500081</p>
+                  <p>4th Floor,3/A, Gachibowli Miyapur Rd, P Janardhan Reddy Nagar, Gachibowli, Hyderabad, Telangana 500032</p>
                 </div>
               </div>
               <div className="flex items-start">

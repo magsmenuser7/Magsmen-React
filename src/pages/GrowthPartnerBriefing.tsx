@@ -126,7 +126,7 @@ const Dot = ({ color }) => (
 
 const services = {
   part1: [
-    { name: "OTC — One-Time Consulting", desc: "A rapid 3 step diagnostic: check the brand, find the problem, deliver the fix. No long term commitment needed.", price: "₹35,000 – ₹95,000" },
+    { name: "OTC One-Time Consulting", desc: "A rapid 3 step diagnostic: check the brand, find the problem, deliver the fix. No long term commitment needed.", price: "₹35,000 – ₹95,000" },
     { name: "Brand Expresso", desc: "90 day sprint to revitalise an existing brand identity, strategy, purpose, and momentum.", price: "From ₹3,00,000" },
     { name: "Brand Creation", desc: "Full brand build from zero naming, identity, pricing strategy, launch theme, and consistency guidelines.", price: "From ₹5,00,000" },
     { name: "Brand Consulting", desc: "Strategic advisory to differentiate the business and drive customer preference through aligned communication.", price: "From ₹1,00,000" },
@@ -136,9 +136,9 @@ const services = {
     { name: "Linkfluence", desc: "Digital narrative and reputation management for leaders, CEOs, NGOs, and companies controlling their online presence.", price: "Flat ₹35,000" },
   ],
   part2: [
-    { name: "Level 1 — Brand Advisory", desc: "For stable companies making decisions around brand alignment, messaging, and identity.", price: "₹5,00,000 / year", border: "#ddd" },
-    { name: "Level 2 — Brand + Legal Advisory", desc: "For growing brands needing legal coordination contracts, trademarks, IP audits alongside brand decisions. Includes 72-hour crisis response.", price: "₹7,50,000 / year", border: "#bbb" },
-    { name: "Level 3 — Full Business Advisory", desc: "For founders making interconnected brand, legal, and business decisions. Pricing changes, geographic expansion, business model audits. Includes direct meetings with the Founder.", price: "₹10,00,000 / year", border: "#111", span: 2 },
+    { name: "Level 1  Brand Advisory", desc: "For stable companies making decisions around brand alignment, messaging, and identity.", price: "₹5,00,000 / year", border: "#ddd" },
+    { name: "Level 2  Brand + Legal Advisory", desc: "For growing brands needing legal coordination contracts, trademarks, IP audits alongside brand decisions. Includes 72-hour crisis response.", price: "₹7,50,000 / year", border: "#bbb" },
+    { name: "Level 3  Full Business Advisory", desc: "For founders making interconnected brand, legal, and business decisions. Pricing changes, geographic expansion, business model audits. Includes direct meetings with the Founder.", price: "₹10,00,000 / year", border: "#111", span: 2 },
   ],
   part3: [
     { name: "Legal Consulting & Support", desc: "Structured back office legal infrastructure estate planning, trust drafting, paralegal documentation, and tax accounting. For offshore legal and tax firms needing an India delivery arm.", price: "Dedicated Team / Hourly Retainer / Per Deliverable invoiced in USD", span: 2 },
@@ -146,10 +146,10 @@ const services = {
 };
 
 const clients = [
-  { init: "NRT", name: "AP NRT — AP Government Supported Organisation", desc: "Official strategic partners. When the organisation needs to make a significant direction setting decision, we advise on the strategic path forward. Ongoing engagement.", tag: "Strategic Advisory · Government" },
+  { init: "NRT", name: "AP NRT  AP Government Supported Organisation", desc: "Official strategic partners. When the organisation needs to make a significant direction setting decision, we advise on the strategic path forward. Ongoing engagement.", tag: "Strategic Advisory · Government" },
   { init: "NI", name: "NIRVA", desc: "NIRVA is positioned as a modern gold 9K jewellery brand from Guntur, Andhra Pradesh, designed for regional consumers who value style, trust, and aspirational design within accessible luxury.", tag: "Brand Strategy · AP " },
   { init: "TDH", name: "Tenali Double Horse", desc: "₹500 crore regional FMCG brand. Built their digital communication strategy and brand positioning to match their scale and regional dominance.", tag: "Brand Strategy · FMCG · Regional" },
-  { init: "LU", name: "LVL UP — Multi-Brand Fashion Retail, Khammam", desc: "Positioned and launched from ground up. ₹16 crore in revenue within 17 months of opening. Break-even achieved in 7 months.", tag: "Brand Launch · Retail · AP & TG" },
+  { init: "LU", name: "LVL UP Multi-Brand Fashion Retail, Khammam", desc: "Positioned and launched from ground up. ₹16 crore in revenue within 17 months of opening. Break-even achieved in 7 months.", tag: "Brand Launch · Retail · AP & TG" },
 ];
 
 const idealCards = [
@@ -363,8 +363,8 @@ type UserData = {
 
       {/* Who we are */}
       <div style={s.sectionLabel}>Who we are</div>
-      <div style={s.h2}>Not an agency. A consultancy.</div>
-      <p style={s.p}>Magsmen is a strategy consultancy based in Andhra Pradesh. We work at the level of a founder's vision helping businesses that are ready to grow but don't have the structure to do it correctly.</p>
+      <div style={s.h2}>Not an agency. A consultant.</div>
+      <p style={s.p}>Magsmen is a strategy consultant based in Andhra Pradesh. We work at the level of a founder's vision helping businesses that are ready to grow but don't have the structure to do it correctly.</p>
       <p style={s.p}>Most businesses confuse branding with design or social media. We don't work at that level. We work on brand equity, market positioning, communication architecture, and long term business identity the things that determine how a business is perceived, valued, and chosen in the market.</p>
       <div style={s.highlightBox}>
         <p style={{ ...s.p, marginBottom: 0, fontSize: 14 }}>We are strategy first. We don't take on execution only work. The businesses that work best with us already understand what a consultant does they come to us because strategy is the missing piece, not just design or content.</p>
@@ -376,7 +376,7 @@ type UserData = {
       <div style={s.sectionLabel}>What we do</div>
       <div style={s.h2}>Our services</div>
 
-      <p style={{ ...s.partLabel, marginTop: 0 }}>Part 1 — Core Consulting</p>
+      <p style={{ ...s.partLabel, marginTop: 0 }}>Part 1 Core Consulting</p>
       <div style={s.serviceGrid}>
         {services.part1.map((sv, i) => (
           <div key={i} style={s.serviceCard}>
@@ -387,7 +387,7 @@ type UserData = {
         ))}
       </div>
 
-      <p style={{ ...s.partLabel, marginTop: 20 }}>Part 2 — Advisory Consulting (Annual Programme)</p>
+      <p style={{ ...s.partLabel, marginTop: 20 }}>Part 2 Advisory Consulting (Annual Programme)</p>
       <p style={{ fontSize: 13, color: "#555", marginBottom: 12 }}>A 12-month preventative partnership where Magsmen acts as a senior strategic mind reviewing major decisions <em>before</em> they are made. For founders who understand that the cost of a wrong decision is far higher than the advisory fee.</p>
       <div style={s.serviceGrid}>
         {services.part2.map((sv, i) => (
@@ -399,7 +399,7 @@ type UserData = {
         ))}
       </div>
 
-      <p style={{ ...s.partLabel, marginTop: 20 }}>Part 3 — Legal Consulting</p>
+      <p style={{ ...s.partLabel, marginTop: 20 }}>Part 3 Legal Consulting</p>
       <div style={s.serviceGrid}>
         {services.part3.map((sv, i) => (
           <div key={i} style={{ ...s.serviceCard, gridColumn: sv.span === 2 ? "span 2" : undefined }}>
@@ -481,7 +481,7 @@ type UserData = {
       </div>
 
       <div style={s.boundaryBox}>
-        <div style={s.boundaryTitle}>Important — know your boundaries</div>
+        <div style={s.boundaryTitle}>Important know your boundaries</div>
         {boundaryItems.map((item, i) => (
           <div key={i} style={s.boundaryItem}><Dot color={colors.yellowDot} />{item}</div>
         ))}

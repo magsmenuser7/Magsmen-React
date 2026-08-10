@@ -1966,6 +1966,11 @@ function Footer({ navigate }: { navigate: (path: string) => void }) {
               <li><a onClick={()=>go("faq")}>FAQ</a></li>
               <li><a onClick={()=>go("careers")}>Careers</a></li>
             </ul>
+            <div className="fh" style={{marginTop:"2rem"}}>Legal</div>
+            <ul className="f-ul">
+              <li><a onClick={()=>go("privacy")}>Privacy Policy</a></li>
+              <li><a onClick={()=>go("terms")}>Terms of Service</a></li>
+            </ul>
           </div>
           <div>
             <div className="fh">Contact</div>
@@ -1974,13 +1979,10 @@ function Footer({ navigate }: { navigate: (path: string) => void }) {
               <li><a href="mailto:connect@magsmen.com">connect@magsmen.com</a></li>
               <li><a href="tel:+919044910449">+91 90449 10449</a></li>
               <li><a href="https://wa.me/919044910449" target="_blank">WhatsApp</a></li>
-              <li><a>Guntur, Andhra Pradesh</a></li>
+              <li><a>Head Office: #4th floor, Icon spaces, police station beside road, Brodipet, Guntur,Andhra Pradesh. IN 522007.</a></li>
+              <li><a>Corporate Office: 4th Floor, 3/A, Gachibowli - Miyapur Rd, P Janardhan Reddy Nagar, Gachibowli, Hyderabad, Telangana 500032</a></li>
             </ul>
-            <div className="fh" style={{marginTop:"2rem"}}>Legal</div>
-            <ul className="f-ul">
-              <li><a onClick={()=>go("privacy")}>Privacy Policy</a></li>
-              <li><a onClick={()=>go("terms")}>Terms of Service</a></li>
-            </ul>
+            
           </div>
         </div>
         <div className="f-bot">
