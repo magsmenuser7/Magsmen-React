@@ -1,5 +1,7 @@
 import React from "react";
 
+import magsmennewlogoblackhorizontallandscape from "../../public/assets/magsmen-new-logo-black-horizontal-landscape.png";
+
 export default function VasupradaPlanOfAction() {
   return (
     <div className="poa-root">
@@ -778,6 +780,9 @@ export default function VasupradaPlanOfAction() {
 
         {/* Header */}
         <div className="doc-header">
+            <div>
+                <img src={magsmennewlogoblackhorizontallandscape} alt="Magsmen Logo" className="w-48" />
+            </div>
           <div>
             <div className="eyebrow">Magsmen Strategy Consultants · Confidential Internal Planning</div>
             <div className="doc-title">Dr. Vasuprada Kartic<br />Plan of Action + Budget</div>
