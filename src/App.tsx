@@ -84,6 +84,7 @@ import SkinAffairProjectReport from './pages/SkinAffairProjectReport.tsx';
 import APNRTPortal from './pages/APNRTPortal.tsx';
 import GroupTransformationStrategyRoadmap from './pages/GroupTransformationStrategyRoadmap.tsx';
 import MagsmenStrategyPortal from './pages/MagsmenStrategyPortal.tsx';
+import VasupradaPlanOfAction from './pages/VasupradaPlanOfAction.tsx';
 
 
 // 2. Define a Layout Component that includes Header and Footer
@@ -212,6 +213,7 @@ function App() {
            <Route path="/apnrt-portal" element={<APNRTPortal />} />
            <Route path="/group-transformation-strategy-roadmap" element={<GroupTransformationStrategyRoadmap />} />
            <Route path="/magsmen-strategy-portal" element={<MagsmenStrategyPortal />} />
+           <Route path="/vasu-prada-plan-of-action" element={<VasupradaPlanOfAction />} />
 
 
            </Route>
