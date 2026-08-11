@@ -213,7 +213,7 @@ function App() {
            <Route path="/apnrt-portal" element={<APNRTPortal />} />
            <Route path="/group-transformation-strategy-roadmap" element={<GroupTransformationStrategyRoadmap />} />
            <Route path="/magsmen-strategy-portal" element={<MagsmenStrategyPortal />} />
-           <Route path="/vasu-prada-plan-of-action" element={<VasupradaPlanOfAction />} />
+           <Route path="/dr-vasuprada-plan-of-action" element={<VasupradaPlanOfAction />} />
 
 
            </Route>
